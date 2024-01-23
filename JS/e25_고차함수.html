@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      /*   const add = (a, b) => a + b;
+      const sub = (a, b) => a - b;
+      const calculator = (a, b, calc) => {
+        let sum = calc(a, b);
+        console.log(sum);
+        return sum;
+      };
+
+      calculator(1, 20, add);
+      document.write(calculator(45, 200, sub)); */
+
+      //setTimeout(() => document.write("5초 후에 실행"), 5000);
+
+      const numbers = [10, 20, 30, 40, 50];
+      //case 1. for문 이용
+      //case 2. forEach문 이용
+      numbers.forEach(function (number) {
+        console.log(number);
+      });
+
+      numbers.forEach((number) => console.log(number));
+
+      numbers.forEach(function (number, index) {
+        console.log("index : " + index + " Value : " + number);
+      });
+
+      /*//고차함수 -> 배열 적용
+      1. forEach()
+      - 매개변수로 콜백함수 가짐
+      - 콜백함수의 매개변수 3개
+        - 현재 배열의 원소(필수)
+        - 인덱스(옵션)
+        - 배열정보(옵션) */
+
+      //numbers.forEach(function(a){})
+
+      // const numberss = [5, 10, 15, 20, 25, 30];
+      // numberss.forEach(function (jjak, index) {
+      //   if (jjak % 2 == 0) {
+      //     numberss.splice(index, 1);
+      //   }
+      // });
+      // document.write(numberss);
+
+      const fruits = ["apple", "banana", "melon", "orange", "melon"];
+      // //find(item을 찾아줌)
+      // const favorite1 = fruits.find(function (name) {
+      //   return name === "melon";
+      // });
+      // console.log(favorite1);
+      // //find '=>'이용
+      // const favorite2 = fruits.find((name) => name === "melon");
+      // console.log(favorite2);
+
+      /* //findindex(index 찾음)
+      const index1 = fruits.findIndex(function (name) {
+        return name === "melon";
+      });
+      console.log(index1);
+      const index2 = fruits.findIndex((name) => name === "melon");
+      console.log(index2); */
+
+      /* // some() 배열의 아이템들이 조건을 부분적으로 만족하는지(=or)
+      const some1 = fruits.some((name) => {
+        return name === "melon";
+      });
+      const some2 = fruits.some(name => name === "melon");
+
+      console.log(some1);
+      console.log(some2); */
+
+      /* // every(=and)
+      const every1 = fruits.every(function (name) {
+        return name === "melon";
+      });
+      console.log(every1);
+      const every2 = fruits.every((name) => name === "melon");
+      console.log(every2); */
+
+      //****************
+      //filter()
+      const filter1 = fruits.filter(function (name) {
+        return name == "melon";
+      });
+      console.log(filter1);
+
+      const filter2 = fruits.filter((name) => name === "melon");
+      console.log(filter2);
+
+      //map()
+      const array = [10, 20, 30, 40, 50];
+      const map1 = array.map(function (item) {
+        return item * 2;
+      });
+      console.log(map1);
+      const map2 = array.map((item) => item * 2);
+      console.log(map1);
+    </script>
+  </body>
+</html>

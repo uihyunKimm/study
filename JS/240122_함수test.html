@@ -110,16 +110,53 @@
 
       //document */
 
-      let adder = (a, b) => {
-        let sum = a + b;
-        return sum;
-      };
-      console.log(adder(1, 2));
+      // let adder = (a, b) => {
+      //   let sum = a + b;
+      //   return sum;
+      // };
+      // console.log(adder(1, 2));
 
-      let sum = () => {
-        console.log("안녕하세요");
+      // let sum = () => {
+      //   console.log("안녕하세요");
+      // };
+      // let sum2 = () => console.log("안녕하세요"); //줄 줄이기
+
+      /* const names = ["Ian", "David", "Darren", "peter"];
+      const printName = (a) => {
+        for (let i = 0; i < a.length; i++) {
+          document.write(a[i] + " ");
+        }
       };
-      let sum2 = () => console.log("안녕하세요"); //줄 줄이기
+      const printLongName = (a) => {
+        let big = names[0];
+        for (let i = 1; i < names.length; i++) {
+          if (names[i].length > big.length) {
+            big = names[i];
+          }
+        }
+        return big;
+      };
+      printName(names);
+      document.write("<br>" + printLongName(names));
+*/
+      //6. code
+
+      const printStar = (n) => {
+        if (isNaN(n) || n < 1) {
+          document.write("입력오류입니다");
+          return;
+        }
+
+        for (let i = 1; i <= n; i++) {
+          for (let j = 0; j < i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      };
+
+      const star = prompt("정수_입력");
+      printStar(star);
     </script>
   </body>
 </html>

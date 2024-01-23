@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 #객체</title>
+  </head>
+  <body>
+    <script>
+      /* function Fruits(name, ea, price) {
+        this.name = name;
+        this.ea = ea;
+        this.price = price;
+      }
+
+      let apple = new Fruits("apple", 2, 1000);
+      let banana = new Fruits("banana", 3, 2500);
+      let orange = new Fruits("orange", 5, 5000);
+
+      const fruits = [apple, banana, orange];
+      // const ea = [2, 3, 5];
+      // const price = [1000, 2500, 5000];
+      answer = prompt("원하는 값 부르시오");
+
+      const findfruits = fruits.find(function (num1) {
+        return num1.name == answer;
+      });
+
+      document.write(
+        findfruits.name + "<br>" + findfruits.ea + "<br>" + findfruits.price
+      ); */
+
+      /* //3.
+      const array = ["javascript", "css", "react", "html"];
+
+      array.find((item) => {
+        if (item.length > 4) {
+          document.write(item + " " + item.length + "<br>");
+        }
+      });
+      //const program = array.find((name) => array.name == answer);
+      */
+
+      //4.
+      const numbers = [5, 19, 42, 36, 70];
+      const map = numbers.map(function (item) {
+        item = item * 2;
+        if (item % 3 == 0) {
+          return item * 2;
+        }
+        return item;
+      });
+      document.write(map);
+    </script>
+  </body>
+</html>
