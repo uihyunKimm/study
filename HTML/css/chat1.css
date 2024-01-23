@@ -1,0 +1,27 @@
+/*전체적인 세팅부터*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+/*html화면 100%>> 화면을 꽉 채워 이용*/
+
+body {
+  height: 100%;
+  margin: 0px;
+}
+/*margin: 0px >> margin제거*/
+
+.container {
+  height: 100%;
+  background-color: rgb(120, 160, 200);
+}
+
+.chat-screen {
+  height: calc(100%-120px);
+}
+/*calc(calculate: 계산하다) 100%(속해 있는 전체 영역)에서
+120px 차감한 계산값 사용*/

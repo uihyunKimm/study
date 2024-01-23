@@ -1,0 +1,110 @@
+/*전체적인 세팅부터*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+/*html 화면 100% >> 화면을 꽉 채워서 사용하겠다는 의미임*/
+
+body {
+  height: 100%;
+  margin: 0px;
+}
+/*margin: 0px >> margin 제거*/
+
+.container {
+  height: 100%;
+  background-color: #a8c0d6;
+}
+
+/*스크린 크기 조정*/
+.chat-screen {
+  height: calc(100%-120px);
+}
+/*calc(calculate: 계산하다) 100%(속해 있는 전체 영역)에서
+  120px 차감한 계산 값을 사용  
+*/
+
+/*user 정보 표시되는 부분*/
+.user {
+  background-color: #ffffff;
+  padding: 0.8rem;
+  height: 72px;
+}
+
+/*왼쪽으로 붙이기 위한 부분*/
+.user_column {
+  float: left;
+}
+
+/*사용자 사진 부분*/
+.user_pic {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: rgb(147, 190, 138);
+}
+
+.user_nick,
+.user_count {
+  margin: 5px;
+}
+
+.user_count {
+  font-size: 12px;
+  color: darkgray;
+}
+/*이름보다 중요도가 낮게 크기 조절*/
+
+/*채팅 입력창 꾸미기*/
+
+.chat-form {
+  height: 120px;
+  background-color: antiquewhite;
+}
+
+.chat-form_filed {
+  height: 120px;
+}
+
+.chat-form_msg {
+  width: calc(100%-120px);
+  height: 120px;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  resize: none;
+  float: left;
+}
+/*resize: none 
+>> 화면에서 resizing 을 막는 방법
+*/
+
+.chat-form_btn {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: rgb(105, 145, 165);
+  font-size: 18px;
+}
+
+.chat-form_btn:hover {
+  background-color: pink;
+}
+
+.chat-form_btn:active {
+  background-color: #cb9d12;
+}
+
+.chat-form_msg:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+/*focus 되어 있을 때 아웃라인 제거*/

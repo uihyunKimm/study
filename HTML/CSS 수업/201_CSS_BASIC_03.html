@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스모델이란</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      /*
+            '%'=내가 소한 영역을 기준, 백분율 계산
+            >> 내가 속한 영역에 관련된 값이 존재해야만 적용가능
+            >> body의 height는 적용되지 않음
+                >>body의 width는 기본 값이 화면 크기
+                >>height는 기본값이 없음
+        */
+      .yellow {
+        border-width: 3px;
+        width: 50%;
+        height: 30px;
+        border-color: yellowgreen;
+        border-style: dotted;
+      }
+      .red {
+        border-color: brown;
+        border-width: 5px;
+        /*border-style: solid;*/
+        /*border-style: dashed;*/
+        /*border-style: dotted;*/
+        border-style: double;
+      }
+      .green {
+        border: 3px solid green;
+        /* 단축속성은 공백으로 속성값을 서로 구분*/
+        /*border-radius: 10px;*/
+        border-radius: 5px 5px 8px 8px;
+        /* 좌측 상단에서 시작, 시계방향으로 적용됨*/
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h2><em>흐린 기억 속의 그대</em>- 현진영</h2>
+    </div>
+    <p class="red">안개 빛 조명은 흐트러진 내 몸을 감싸고</p>
+    <p class="yellow">술에 취해 비틀거리는 흐~~~</p>
+    <p class="green">나의 모습 이제는 싫어</p>
+    <p>뚜르르르 예~~</p>
+  </body>
+</html>

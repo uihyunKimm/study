@@ -1,0 +1,87 @@
+.footer {
+  color: #515255;
+  border: 1px solid #c3c4c7;
+}
+
+.footer_wraps {
+  background-color: #f0f0f0;
+}
+
+.footer_container {
+  max-width: 48rem;
+  margin: auto;
+}
+
+.footer_menu {
+  padding: 3rem 0;
+}
+
+.footer_apps {
+  float: right;
+}
+
+.footer_appdown {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.footer_appbtn {
+  width: 18.8rem;
+  justify-content: space-between;
+}
+
+.footer_appbtn button {
+  margin-top: 1rem;
+  background-color: #999999;
+  width: 48%;
+  height: 2.8rem;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.footer_appbtn button:hover {
+  background-color: #5e5e5e;
+}
+.footer_nav {
+  position: relative;
+}
+
+.footer_nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 33%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-size: 0.88rem;
+}
+
+.footer_nav ul:nth-child(4) {
+  margin-right: 15px;
+}
+
+.footer_nav ul li {
+  margin-bottom: 1rem;
+}
+
+.footer_info {
+  padding: 1.5rem 0 0.6rem;
+  border-top: none;
+  color: #515255;
+  line-height: 1.5;
+  font-size: 0.82rem;
+}
+@media screen and (max-width: 868px) {
+  .footer_apps {
+    float: none;
+    display: flex;
+    margin-bottom: 1.25rem;
+  }
+  .footer_appbtn button {
+    display: none;
+  }
+}

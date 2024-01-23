@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+          기호화 함께 사용하는 속성 선택자
+          * : 값의 포함 여부
+          ^ : 값의 시작 여부
+          & : 값의 끝 여부
+
+          */
+      /*
+        img[alt] {
+          border: 5px dashed red;
+        }
+        /*alt 속성이 있는 모든 이미지 요소에 red 점선 경계선 적용*/
+      /*img[width] {
+          border: 5px dashed blue;
+        }
+      */
+      /*width 속성이 있는 모든 이미지 요소에 dashed blue 경계선 적용*/
+      /*img[width*="2"] {
+          /*border: 5px dashed pink;
+        } /*width 속성 값에 '2'가 포함된 모든 이미지 요소에 dashed pink 경계선 적용
+          width값이 200px 또는 20% 중 '2'가 포함한 경우 적용*/
+
+      img[width^="1"] {
+        border: 5px solid red;
+      } /*width 속성 값에 '5'가 포함된 모든 이미지 요소에 dashed pink 경계선 적용
+          width값이 200px 또는 20% 중 '2'가 포함한 경우 적용*/
+
+      img[width$="5"] {
+        border: 5px dashed violet;
+      }
+      /*width 속성 값에 '0'로 끝나는 모든 이미지 요소에 violet dashed 경계선 적용
+          width값이 120px 등 '0'으로 끝나는 경우 적용*/
+
+      body p {
+        color: blue;
+      }
+      /*body 요소 아래 있는 모든 <p>tag에 있는 텍스트 변경*/
+      body em {
+        color: tomato;
+      }
+      /*body 요소 아래 모든<em>tag 변경*/
+      p > em {
+        color: yellowgreen;
+      }
+      /*'>': 자식 태그: 한 단계 아래 있는 요소 선택*/
+
+      #three + p {
+        color: orange;
+      }
+      /* id가 three인 요소 다음에 나오는 첫 번째 <p>tag 내부 변경 */
+
+      #four ~ h1 {
+        color: rgb(255, 0, 0);
+      }
+      /* id가 three인 요소 뒤에 나오는 모든 <p>tag 내부 변경 */
+    </style>
+  </head>
+  <body>
+    <img src="./meat.jpg" width="120" alt="ai_meat" id="three" />
+    <!--alt 이미지 표시되지 않을 때 나타나틑 대체 텍스트-->
+    <p>김의현이 미드저니로 만든 소고기예요</p>
+    <p>소고기</p>
+    <p>맛있는 소고기 <em>군침돌아</em>맛있겠다</p>
+    <hr />
+    <img src="image/dog.jpg" width="245" alt="ai_dog" id="four" />
+    <h1>강아지</h1>
+    <p>강아지</p>
+    <p>귀여운 강아지</p>
+  </body>
+</html>

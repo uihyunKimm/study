@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>undefined_null_bool</title>
+  </head>
+  <body>
+    <script>
+      let name;
+      console.log(name); //undefined 출력됨
+
+      name = "김의현";
+      console.log(name); // 김의현 >.문자 출력
+
+      name = null;
+      console.log(name); //null 반환
+
+      //console.log(prompt("김의현"));
+      //확인 버튼 >>아무 것도
+      //취소 버튼 >> null 반환
+
+      //불리언(boolean)
+      console.log(true);
+      console.log(false);
+
+      //console.log(True);
+      //console.log(False);  >>에러발생
+
+      console.log(typeof true);
+      console.log(typeof false);
+
+      //confirm() >> 확인
+      let answer = confirm("저한테 배우니 기분이 좋습니까?");
+      console.log(answer);
+
+      console.log(`현재 기분이 좋나요? ${answer}`);
+      console.log(`재밌죠?${answer}`);
+    </script>
+  </body>
+</html>

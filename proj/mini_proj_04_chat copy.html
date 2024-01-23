@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework_chat</title>
+    <script src="https://kit.fontawesome.com/3fca7089ee.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .user {
+            display: block;
+            min-width: 200px;
+            min-height: 70px;
+            background-color: aliceblue;
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+          width: 100%;
+          padding: 40px 0;
+          background-color: #a8c0d6;
+        }
+
+        .wrap .chat {
+            display: flex;
+            align-items: flex-start;
+            padding: 4px;
+        }
+
+        .wrap .chat .ch1{
+          margin-right: 10px;
+        }
+
+        .wrap .chat .icon {
+            position: relative;
+            overflow: hidden;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin-left: 1rem;
+        }
+
+        .wrap .chat .icon i{
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            font-size: 2.5rem;
+            color: #aaa;
+            transform: translateX(-49%);
+        }
+
+        .wrap .chat .textbox {
+            position: relative;
+            display: inline-block;
+            max-width: calc(100%-70px);
+            padding: 1.2rem;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            border-radius: 10px;
+            
+        }
+
+        .wrap .chat .textbox::before {
+            position: absolute;
+            display: block;
+            top: 0;
+            font-size: 1.5rem;
+        }
+
+        .wrap .ch1 .textbox {
+            margin-left: 1rem;
+            background-color: #ddd;
+        }
+
+        .wrap .ch1 .textbox::before {
+            left: -15px;
+            content: "◀";
+            color: #ddd;
+        }
+
+        .wrap .ch2 {
+            flex-direction: row-reverse;
+            margin-right: 1rem;
+        }
+
+        .wrap .ch2 .textbox {
+            margin-right: 1rem;
+            background-color: #F9EB54;
+        }
+
+        .wrap .ch2 .textbox::before {
+            right: -1rem;
+            content: "▶";
+            color:#F9EB54;
+        }
+
+        /*  content: '';
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            margin-top: -20px;
+            border-top: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid skyblue;}   */
+    </style>
+</head>
+<body>
+    <section class="user">
+        <div class="user_pic"></div>
+        <div class="user_name">코딩무사</div>
+        <div class="user_friend"><em>340</em></div>
+    </section>
+    <section class="dialogue">
+        <div class="wrap">
+            <div class="chat ch1">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <div class="textbox">안녕하세요. 반갑습니다.</div>
+            </div>
+            <div class="chat ch2">
+                <div class="icon2"></div>
+                <div class="textbox">안녕하세요. 코딩무사입니다. 하이야.</div>
+            </div>
+            <div class="chat ch1">
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <div class="textbox">어이구 반갑습니다~ 믓지시네요.</div>
+            </div>
+            <div class="chat ch2">
+                <div class="icon2"></i></div>
+                <div class="textbox">별말씀을요 과찬이십니다.</div>
+            </div>
+        </div>
+    </section>    
+
+    <main>
+    <div class="textarea">
+        <textarea name="chat"cols="64" rows="12"></textarea>
+        <button class="send">send</button>
+    </div>
+    </main>
+</body>
+</html>

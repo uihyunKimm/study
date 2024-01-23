@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM_콘텐츠 변경</title>
+  </head>
+  <body>
+    <p>토트넘의 역습입니다.</p>
+    <p class="comment">황소 황희찬이 몰고 갑니다. 크로스~</p>
+    <p class="comment" id="goal">
+      손흥민 슛, 환상적인 마무리 골~ 우리는 지금 손흥민의 시대에 살고 잇슴다
+    </p>
+
+    <script>
+      //조작하려면?
+      //입력-처리-출력
+      const p = document.querySelector("p");
+      //console.log(p.textContent);
+      //p tag 내용을 보여줌
+
+      //내용 변경
+      p.textContent = "패스 미스, 앗 공 뺏겼어요. 맨시티의 역습";
+
+      const p1 = document.querySelector("p");
+      const p2 = document.querySelector(".comment");
+      const p3 = document.querySelector("#goal");
+
+      console.log(p.textContent);
+      console.log(p1.textContent);
+      console.log(p2.textContent);
+      console.log(p3.textContent);
+
+      p1.textContent = "토트넘이 다시 패스를 이어갑니다.";
+      p2.textContent = "노룩 패스.";
+      p3.textContent = "히샬리송 슛!.";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>색 지정하기</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        font-size: 15px;
+      }
+      body {
+        font-size: 32px;
+      }
+      p#one {
+        color: rgb(100%, 0%, 0%);
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 8px;
+        text-align: center;
+      }
+      p#two {
+        color: rgb(0%, 0%, 100%, 0.8);
+        font-size: 0.7em;
+        /*body폰트 크기(32px)의 0.5배수*/
+        text-align: right;
+      }
+      p#three {
+        /*color: hsl(300, 70%, 20%);*/
+        color: hsl(300, 50%, 50%);
+        font-size: 3rem;
+        /* rem:15px의 3배수 */
+        font-weight: 300;
+        text-align: justify;
+        /*정렬 left right center justify(양끝 정렬)*/
+      }
+      /*hsl(hue, saturation, lightness) 0~360까지의 색상환 정도 나타냄
+        색조(hue)는 0은 빨간색이고 120은 초록색, 240은 파란색입니다.
+        채도(saturation)는 색의 선명도를 퍼센트 수치 - 0%는 회색 100%는 제일 선명한 원색
+        명도(lightness)) 밝기의 단계를 퍼센트 수치 - 0%는 검정 50%는 중간, 100%는 흰색
+      */
+      p#four {
+        color: #00f021;
+        font-family: "nanum-gothic", Tahoma, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="one">고소한 아몬드와 함께 여는 아침</p>
+    <p id="two">고소한 아몬드와 함께 여는 아침</p>
+    <p id="three">고소한 아몬드와 함께 여는 아침</p>
+    <p id="four">고소한 아몬드와 함께 여는 아침 노토산스</p>
+  </body>
+</html>

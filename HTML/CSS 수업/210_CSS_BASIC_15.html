@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .eyes {
+        width: 640px;
+        margin: auto;
+      }
+      .eye {
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+        border-radius: 50%;
+        position: relative;
+        /*ball 때문에 relative*/
+      }
+
+      .eye:nth-child(1) {
+        float: left;
+      }
+      .eye:nth-child(2) {
+        float: right;
+      }
+
+      .ball {
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        border-radius: 50%;
+        position:absolute;
+        left: 30px;
+        top: 80px;
+        /*absolute 사용
+        상위 요소 기준, eye가 relative가 아니라면 화면기준
+        ball 형성이 제대로 안됨
+        */
+
+        /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+        /*=animation: moving 2s 0s linear alternate;*/
+
+        animation-name: moving;
+        animation-duration: 2s;
+        animation-delay: 0s ;
+        animation-timing-function: linear;
+        /*animation-iteration-count: 3;*/
+        animation-iteration-count:infinite;
+        /*infinite : 무한 반복*/
+        /*animation-direction: normal;*/
+        /*normal : 정상>>정방향 */
+        /*animation-direction:reverse;*/
+        /*reverse : 역방향*/
+        animation-direction:alternate;
+        /*alternate : 정, 역방향 번갈아서*/
+      }
+
+      .ball:hover {
+        
+        animation-play-state: paused;
+        /*animation-play-state:running;
+        */
+      }
+
+      @keyframes moving {
+        from{
+          left: 30px;
+        }
+        to {
+          left: 120px;
+        }
+      }
+      /*left 30px에서 1eft 120px으로 이동하는 프레임*/
+
+    </style>
+  </head>
+  <body>
+    <div class="eyes">
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+
+      <div class="eye">
+        <div class="ball"></div>
+      </div>
+    </div>
+  </body>
+</html>

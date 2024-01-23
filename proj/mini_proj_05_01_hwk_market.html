@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/KUH_header.css" />
+    <link rel="stylesheet" href="css/KUH_info.css" />
+    <link rel="stylesheet" href="css/KUH_notice.css" />
+    <link rel="stylesheet" href="css/KUH_banner.css" />
+    <link rel="stylesheet" href="css/KUH_footer.css" />
+    <title>KUHpro</title>
+    <style>
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        margin: 0; /*body에 기본 설정된 margin제거*/
+      }
+
+      .flex {
+        display: flex;
+        line-height: 130%;
+      }
+
+      .main {
+        padding: 4em 0 5em;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto Sans KR"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-top flex">
+          <nav class="header-top_nav flex">
+            <ul>
+              <li>
+                <a href="https://www.naver.com/" target="_blank" class="anchor"
+                  >KUH</a
+                >
+              </li>
+              <li><a href="/mini_proj_02_login.html" target="_blank" class="anchor"
+                >로그인</a
+              ></li>
+              <li><a href="/mini_proj_02_login.html" target="_blank" class="anchor"
+                >회원가입</a
+              ></li>
+              <!--<li class="after-login">마이페이지</li>-->
+              <li><a href="/mini_proj_02_login.html" target="_blank" class="anchor"
+                >고객센터</a
+              ></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <div class="container">
+      <header class="header2">
+        <div class="header-content flex">
+          <div class="header-content_logo"></div>
+          <div class="header-content_logo_text">KUH<br />pro
+          </div>
+          <div class="header-content-line"></div>
+          <nav class="header-content_nav flex">
+            <ul>
+              <li class="active"><a href="https://www.naver.com/" target="_blank" class="anchor"
+                >온라인예약</a
+              ></li>
+              <li>시설</li>
+              <li>정보</li>
+              <li>이용안내</li>
+              <li>참여마당</li>
+            </ul>
+          </nav>
+          <div class="header-content_input flex">
+            <span class="icon menu">
+              <input type="button" value="&#9776;" />
+            </span>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!--인포-->
+    <div class="info">
+        <div class="info_background"></div>
+      <div class="info_slide">
+        <div class="info_slide_content">
+          <p>30배로 노력하는 개발자 아무개를 소개합니다<br/>
+          <strong>HPE KUH</strong></p>
+        </div>
+        <div class="info_slide_content2">
+          <form id="srch" name="srch" method="post">
+            <h3 class="txt"><strong>Contact</strong><br />"연락처를 남겨놓고 싶으신 경우 이용해주세요."</h3>
+            <div class="input">
+              <div class="input_1">
+                <div class="div">
+                  <select class="select" id="visit_purpose" title="방문목적">
+                    <option>방문 목적 선택</option>
+                    <option>응원</option>
+                    <option>제안</option>
+                    <option>친분</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <div class="input_2">
+                  <div class="div">
+                    <input type="number" class="phone_number" id="phone_number" placeholder="010-0000-0000" title="연락처">
+                  </div>
+                </div>
+              </div>
+              <div class="button">
+                <button type="submit">
+                  <span>전달하기</span>
+                </button>
+              </div>
+            </div>
+        </form>
+      </div>
+      </div>
+      
+      <div class="info_slide_btn">
+        <a href="#" class>
+          <span class="hide">1</span>
+        </a>
+        <a href="#" class>
+          <span class="hide">2</span>
+        </a>
+        <a href="#" class>
+          <span class="hide">3</span>
+        </a>
+      </div>
+    </div>
+    </div>
+    <!--본문(main)-->
+      <!--공고(notice)-->
+      <section class="notice">
+        <h2 class="notice_title flex">
+          최근 진행 프로젝트
+        </h2>
+        <div class="notice_container flex">
+          <article class="notice_item flex">
+              <div class="notice_thumb"></div>
+              <div class="notice_content">
+                <div class="notice_content_title">
+                  HPE 프로젝트_1
+                </div>
+                <div class="notice_content_name">
+                  주식회사 HPE 서비스 구현 프로젝트
+                </div>
+                <div class="notice_content_team">참여 인원 3명</div>
+              </div>
+          </article>
+          <article class="notice_item flex">
+              <div class="notice_thumb"></div>
+              <div class="notice_content">
+                <div class="notice_content_title">
+                  HPE 프로젝트_2
+                </div>
+                <div class="notice_content_name">
+                  주식회사 HPE 서비스 구현 프로젝트
+                </div>
+                <div class="notice_content_team">참여 인원 4명</div>
+              </div>
+          </article>
+          <!--배너(banner)-->
+        <div class="banner flex">
+          <div class="banner_text">
+            HPE 초특급 알바 이용방법이 궁금하다면<br />
+            지금 바로 문의주세요.
+          </div>
+          <button class="banner_button">이용방법 알아보기</button>
+        </div>
+
+        <div class="notice_container flex">
+          <article class="notice_item flex">
+              <div class="notice_thumb"></div>
+              <div class="notice_content">
+                <div class="notice_content_title">
+                  HPE 프로젝트_3
+                </div>
+                <div class="notice_content_name">
+                  주식회사 HPE 서비스 구현 프로젝트
+                </div>
+                <div class="notice_content_team">참여 인원 3명</div>
+              </div>
+          </article>
+          <article class="notice_item flex">
+              <div class="notice_thumb"></div>
+              <div class="notice_content">
+                <div class="notice_content_title">
+                  HPE 프로젝트_4
+                </div>
+                <br />
+                <div class="notice_content_name">
+                  주식회사 HPE 서비스 구현 프로젝트
+                </div>
+                <div class="notice_content_team">참여 인원 4명</div>
+              </div>
+          </article>
+
+          <div class="notice_container flex">
+            <article class="notice_item flex">
+                <div class="notice_thumb"></div>
+                <div class="notice_content">
+                  <div class="notice_content_title">
+                    HPE 프로젝트_5
+                  </div>
+                  <div class="notice_content_name">
+                    주식회사 HPE 서비스 구현 프로젝트
+                  </div>
+                  <div class="notice_content_team">참여 인원 3명</div>
+                </div>
+            </article>
+            <article class="notice_item flex">
+                <div class="notice_thumb"></div>
+                <div class="notice_content">
+                  <div class="notice_content_title">
+                    HPE 프로젝트_6
+                    <br />
+                  </div>
+                  <div class="notice_content_name">
+                    주식회사 HPE 서비스 구현 프로젝트
+                  </div>
+                  <div class="notice_content_team">참여 인원 4명</div>
+                </div>
+            </article>
+
+            <div class="notice_container flex">
+              <article class="notice_item flex">
+                  <div class="notice_thumb"></div>
+                  <div class="notice_content">
+                    <div class="notice_content_title">
+                      HPE 프로젝트_7
+                    </div>
+                    <div class="notice_content_name">
+                      주식회사 HPE 서비스 구현 프로젝트
+                    </div>
+                    <div class="notice_content_team">참여 인원 3명</div>
+                  </div>
+              </article>
+              <article class="notice_item flex">
+                  <div class="notice_thumb"></div>
+                  <div class="notice_content">
+                    <div class="notice_content_title">
+                      HPE 프로젝트_8
+                    </div>
+                    <div class="notice_content_name">
+                      주식회사 HPE 서비스 구현 프로젝트
+                    </div>
+                    <div class="notice_content_team">참여 인원 4명</div>
+                  </div>
+              </article>
+              
+              <div class="notice_container flex">
+                <article class="notice_item flex">
+                    <div class="notice_thumb"></div>
+                    <div class="notice_content">
+                      <div class="notice_content_title">
+                        HPE 프로젝트_9
+                      </div>
+                      <div class="notice_content_name">
+                        주식회사 HPE 서비스 구현 프로젝트
+                      </div>
+                      <div class="notice_content_team">참여 인원 3명</div>
+                    </div>
+                </article>
+                <article class="notice_item flex">
+                    <div class="notice_thumb"></div>
+                    <div class="notice_content">
+                      <div class="notice_content_title">
+                        HPE 프로젝트_10
+                      </div>
+                      <div class="notice_content_name">
+                        주식회사 HPE 서비스 구현 프로젝트
+                      </div>
+                      <div class="notice_content_team">참여 인원 4명</div>
+                    </div>
+                </article>
+        <!--배너(banner)-->
+        <div class="banner_special flex">
+          <div class="banner_text">
+            KPE 개발팀이 완성한 시제품을 확인하고 싶다면<br />
+            클릭하고 다운로드하세요.
+          </div>
+          <button class="banner_button_special">앱 다운로드</button>
+        </div>
+      </section>
+  </body>
+    <!--맺음말(footer)-->
+    <div class="footer_wraps">
+    <footer class="footer">
+      <div class="footer_container">
+        <section class="footer_menu">
+          <div class="footer_apps">
+            <div class="footer_appdown">HPE 앱 다운로드</div>
+            <div class="footer_appbtn flex">
+              <button>App Store</button>
+              <button>Google play</button>
+            </div>
+          </div>
+          <nav class="footer_nav flex">
+            <ul>
+              <li>중고거래</li>
+              <li>동네업체</li>
+              <li>HPE 알바</li>
+              <li>부동산 직거래</li>
+              <li>중고차 직거래</li>
+            </ul>
+            <ul>
+              <li>비즈니스</li>
+              <li>채팅하기</li>
+            </ul>
+            <ul>
+              <li>자주 묻는 질문</li>
+              <li>회사 소개</li>
+              <li>인재 채용</li>
+            </ul>
+          </nav>
+        </section>
+        <hr />
+        <section class="footer_info">
+          <div>
+            <strong>대표</strong>김의현<br />
+            <strong>사업자 번호</strong>123-456-7890
+          </div>
+          <div>
+            <strong>직업정보제공사업 신고번호</strong>2023-서울강남-1234
+          </div>
+          <div><strong>주소</strong>서울시 강남구 서초동 한국 HPE 교육센터</div>
+          <div>
+            <strong>전화</strong> 1644-8282<br />
+            <strong>고객문의</strong> cs@hpeservice.com
+          </div>
+
+          <p>
+            <strong>이용약관</strong> &nbsp; &nbsp;
+            <strong style="color: #000000">개인정보처리방침</strong> &nbsp;
+            &nbsp; <strong>위치기반서비스 이용약관</strong> &nbsp; &nbsp;
+            <strong>이용자보호 비전과 계획</strong> &nbsp; &nbsp;
+          </p>
+        </section>
+      </div>
+    </footer>
+  </div>
+</html>
+
+
+
+<!--
+      <section class="notice_container">
+        <div class="notice_layout">
+
+          <div class="notice_block_L">
+              <ul>
+                <li class="on">공지사항</li>
+                <li>행사/이벤트</li>
+              </ul>
+              <div class="notice_block_L_container">
+                <div class="notice_block_L_con_box">
+                  <div class="notice_block_L_con_box_sm">
+                    <a href="">
+                      <div class="notice_block_L_con_box_sm_icon">
+                        <span class="icon_tit">13</span>
+                        <span class="icon_date">2024.01</span>
+                      </div>
+                      <div class="notice_block_L_con_box_sm_txt"></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            <section class="notice">
+        <h2 class="notice_title">인기 상위 HPE 최애 알바</h2>
+        <div class="notice_container flex">
+          <article class="notice_item flex">
+            <div class="notice_thumb"></div>
+            <div class="notice_content">
+              <div class="notice_content_title">
+          <div class="notice_tit">
+            <h3>알림판</h3>
+          </div>
+        <div class="notice_container flex">
+          <article class="notice_item flex">
+            <div class="notice_thumb"></div>
+            <div class="notice_content">
+              <div class="notice_content_title">
+                HP 편의점 알바생 급구(6개월 이상 근무 선호)
+              </div>
+              <div class="notice_content_address">
+                주식회사 HPE 서비스 - 서울시 강남구 서초동(신논현역 부근)
+              </div>
+              <div class="notice_content_pay">월 3,000,000 원</div>
+            </div>
+          </article>
+          <article class="notice_item flex">
+            <div class="notice_thumb"></div>
+            <div class="notice_content">
+              <div class="notice_content_title">
+                HP 편의점 알바생 급구(6개월 이상 근무 선호)
+              </div>
+              <div class="notice_content_address">
+                주식회사 HPE 서비스 - 서울시 강남구 서초동(신논현역 부근)
+              </div>
+              <div class="notice_content_pay">월 3,000,000 원</div>
+            </div>
+          </article>
+    </main>
+
+  </body>
+</html>
+-->

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>의사클래스</title>
+    <style>
+      .menu {
+        padding: 10px;
+        border-bottom: 1px solid black;
+      }
+      .menu > li {
+        display: inline-block;
+        text-align: center;
+      }
+      li > a {
+        display: inline-block;
+        width: 150px;
+        padding: 10px;
+        text-decoration: none;
+        background-color: rgb(220, 220, 220);
+        border-radius: 20px;
+      }
+      a:hover {
+        color: white;
+        background-color: gray;
+      }
+      a:active {
+        color: white;
+        background-color: rgb(60, 60, 60);
+      }
+
+      /*의사 클래스*/
+      /*li:nth-child(2n + 1) {
+        font-weight: 900;
+      }*/
+      /*n(모든 수)에 대해 적용
+      li:nth-child(2n) >>짝수 번째만 적용
+      li:nth-child(2n + 1)홀수 번째만 적용*/
+      li:nth-child(n) {
+        font-size: 14px;
+      }
+
+      /*의사요소*/
+      a::first-letter {
+        color: red;
+      }
+      a::after {
+        content: "보기";
+        color: rgb(0, 0, 0);
+      }
+      /*content 뒤에 content및 스타일 추가*/
+      a::before {
+        content: "미리미리";
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">사전</a></li>
+        <li><a href="#">뉴스</a></li>
+        <li><a href="#">증권</a></li>
+        <li><a href="#">지도</a></li>
+        <!--"#"실제로 이동하지 않는 '더미링크'-->
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경설정</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        border: 4px double red;
+        padding: 20px;
+        background-color: rgb(148, 12, 37);
+        /*background-clip: padding-box;*/
+        background-clip: content-box;
+        /*배경의 적용범위: (color)는 clip으로 범위를 정해줌*/
+        background-image: url(image/dog.jpg);
+        background-size: 100px 100px;
+        /*size 줄였더니 리핏됨*/
+        background-repeat: no-repeat;
+        /*교차효과 제거*/
+        /*background-repeat: round;*/
+        /*background-origin: content-box;*/
+        /*background-origin: padding-box;*/
+        background-origin: border-box;
+        /*img는 origin 어디서부터 시작할지 알려줌*/
+        background-position: center;
+        /*center, top, left, bottom, right*/
+        /*background-position: 100px 50px;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div>배경을 설정해 볼게요.</div>
+  </body>
+</html>

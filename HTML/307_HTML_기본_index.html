@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자와 상태</title>
+    <style>
+      button {
+        background-color: coral;
+      }
+      button:hover {
+        background-color: blueviolet;
+      }
+      #btn_3 {
+        background-color: aqua;
+      }
+      #btn_3:hover {
+        background-color: rgb(80, 0, 104);
+      }
+      .btn {
+        background-color: aquamarine;
+      }
+      button:nth-child(4) {
+        background-color: brown;
+        color: white;
+        border: none;
+        outline: 1px solid red;
+        padding: 1px 2px 1px 2px;
+      }
+      button:nth-child(4):hover {
+        background-color: red;
+      }
+      main > div > button:nth-child(5) {
+        background-color: violet;
+      }
+
+      button:active {
+        background-color: rgb(0, 0, 0);
+      }
+      a:visited {
+        color: rgb(143, 0, 0);
+      }
+      input:focus {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+        <div>
+            <button class="btn" id="btn_1">1번 버튼</button>
+            <button class="btn" id="btn_2">2번 버튼</button>
+            <button class="btn" id="btn_3">3번 버튼</button>
+            <button class="btn" id="btn_4">로그인</button>
+            <button class="btn" id="btn_5">뒤로 가기</button>
+        </div>
+    </main>
+  </body>
+</html>

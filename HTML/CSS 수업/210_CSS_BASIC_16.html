@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상속과 공용키워드</title>
+    <style>
+      .list {
+        /*상속 가능: 글자와 관련*/
+        color: red;
+        font-style: italic;
+        font-weight: 900;
+
+        /*상속 불가능: 박스모델과 관련*/
+        border: 3px solid green;
+      }
+
+      ul {
+        border: inherit;
+        padding: inherit;
+      }
+
+      li:nth-child(3) {
+        color: unset;
+        font-style: initial;
+        font-weight: initial;
+      }
+
+      table {
+        outline: 1px solid;
+        color: black;
+        font-style: initial;
+        font-weight: unset;
+      }
+      /*initial: 브라우저가 제공하는 기본값(default)사용
+        unset: 상속 받을 것 있으면 받고, 아니면 안받음
+      */
+    </style>
+  </head>
+  <body>
+    <h2>마라톤 대회 참가기록</h2>
+    <div class="list">
+      <ul>
+        <li>새해 서울 국제 마라톤 대회</li>
+        <li>서울 국제 마라톤 대회</li>
+        <li>서울 한강 마라톤 대회</li>
+        <li>서울 강남 마라톤 대회</li>
+      </ul>
+    </div>
+    <h3>테이블태그</h3>
+    <table>
+      <caption>
+        yo
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">구분</th>
+          <th scope="col">제목</th>
+          <th scope="col">제목2</th>
+          <th scope="col">제목3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>data1</td>
+          <td colspan="2">data2</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>data1</td>
+          <td>data2</td>
+          <td>data3</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>data1</td>
+          <td>data2</td>
+          <td>data3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">4</th>
+          <td><input type="checkbox" /></td>
+          <td><input type="checkbox" /></td>
+          <td><input type="checkbox" /></td>
+        </tr>
+      </tfoot>
+    </table>
+    <a href="https://naver.com" target="_blank">hi</a>
+  </body>
+</html>

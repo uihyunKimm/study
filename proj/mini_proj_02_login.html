@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: "Noto Sans KR", sans-serif;
+        box-sizing: border-box;
+      }
+      .wrapper {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        background: #3f3f3f6e;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-image: linear-gradient(rgba(0, 53, 35, 0.527), rgba(0, 26, 11, 0.8)),url(/image/view1.jpg);
+        background-size: cover;
+      }
+      .container {
+        border: 0px solid black;
+        border-radius: 200px;
+        box-shadow: 5px 5px 10px #8d8d8d;
+        position: absolute;
+        width: 400px;
+        min-height: 560px;
+        z-index: 100;
+      }
+
+      form {
+        background: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 50px;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form input {
+        background-color: #ffffff;
+        padding: 16px;
+        margin: 8px 0;
+        width: 85%;
+        border: 1px solid rgb(194, 194, 194);
+        outline: none;
+        border-radius: 4px;
+      }
+
+      button {
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        font-weight: bold;
+        padding: auto;
+        margin: auto;
+      }
+
+      .sign-up-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      form h2 {
+        font-weight: bold;
+        margin: auto;
+        color: #000;
+        line-height: 2;
+        margin-bottom: 14px;
+        text-align: center;
+      }
+
+      .p1 {
+        margin: 0;
+        color: #949494;
+      }
+
+      .hp {
+        font-weight: 900;
+        font-size: 16px;
+        color: #0826EA;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin: auto;
+      }
+      a {
+        width: 180px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        border-radius: 24px;
+        color: #616161;
+        font-size: 12px;
+      }
+
+      a:hover {
+        background-color: #d3d3d3;
+      }
+
+      button {
+        border-radius: 20px;
+        font-size: 16px;
+        color: #949494;
+        font-weight: bold;
+        padding: 15px;
+        margin: 15px;
+
+        cursor: pointer;
+      }
+
+      .form_btn {
+        box-shadow: 3px 3px 8px #dddddd;
+      }
+
+      .form_btn:active {
+        box-shadow: inset 1px 1px 2px #babebc;
+      }
+
+      button:hover {
+        border: none;
+        color: #00682f;
+        background-color: #b2ffd5;
+      }
+
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto Sans KR"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="sign-up-container">
+          <form>
+            <h2>
+              로그인
+              <p class="p1">
+                <span class="hp">HP</span> 프론트엔드 개발자 아카데미
+              </p>
+              
+            </h2>
+            <br />&nbsp;
+            <label for="sign-id"></label>
+            <input type="text" id="sign-id" name="sign-id" placeholder="이름" />
+            <label for="sign-pw"></label>
+            <input
+              type="password"
+              id="sign-pw"
+              name="sign-email"
+              placeholder="비밀번호"
+            />
+            <br />
+            &nbsp;
+            <button class="form_btn">입장하기</button>
+
+            <a href="none.com">비밀번호를 잊으셨나요?</a>
+            <br />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

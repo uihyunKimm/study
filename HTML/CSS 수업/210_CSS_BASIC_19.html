@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css flex 플렉스박스 레이아웃</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+      ul {
+        display: flex;
+        padding: 0;
+        list-style-type: none;
+        /*항목표시 제거*/
+        height: 200px;
+
+        flex-direction: row;
+        /*flex-direction: row-reverse;*/
+        /*flex-direction: column;*/
+        /*flex-direction: column-reverse;*/
+
+        flex-wrap: nowrap;
+        /*flex-wrap: wrap;*/
+        /*flex 컨테이너 내 아이템들이 한 줄에 모두 배치되도록 강제
+          >> 줄바꿈 없음
+          cf)flex-wrap: flex 컨테이너 내에서 아이템들이 어떻게
+          여러 줄에 나누어 배치되는지를 제어하는 속성 */
+
+        /*justify-content: flex-start;*/
+        /*아이템들을 가로축에서 컨테이너 시작 부분에 정렬*/
+        /*justify-content: flex-end;*/
+        /*아이템들을 가로축에서 컨테이너 끝 부분에 정렬*/
+        /*justify-content: center;*/
+        /*아이템들을 가로축에서 컨테이너 가운데 정렬*/
+        justify-content: space-between;
+        /*아이템들을 가로축(주축)에서 동일한 간격으로 배치
+          양 끝에서 아이템을 정렬해줌*/
+        /*justify-content: space-around;*/
+        /*아이템들을 가로축(주축)에서 동일한 간격으로 배치
+          양 끝과 아이템 사이에서도 간격을 둠*/
+        /*justify-content: space-evenly;*/
+        /*아이템들을 가로축(주축)에서 동일한 간격으로 배치
+          양 끝과 아이템 사이에서도 간격을 동일하게(evenly)*/
+
+        /*align-items: stretch;*/
+        /*(default 기본값)
+        아이템들의 높이를 컨테이너 높이에 맞게 확장하여 정렬해 줌
+        */
+        /*align-items: flex-start;*/
+        /*아이템들을 세로 축에서 컨테이너 시작 부분에 정렬*/
+
+        /*align-items: flex-end;*/
+        /*아이템들의 세로 축에서 컨테이너 끝 부분에 정렬*/
+
+        align-items: center;
+        /*아이템들의 세로 축에서 컨테이너 가운데 부분에 정렬*/
+      }
+      /*li:nth-child(3) {
+        align-self: flex-start;}*/
+
+      /*해당요소가 속한 주축(수직축)에서 컨테이너의 시작 부분에 정렬*/
+      li {
+        background-color: tomato;
+      }
+
+      li:nth-child(2n) {
+        background-color: teal;
+      }
+      /*2n: 짝수*/
+      li:nth-child(2) {
+        flex-grow: 2;
+      }
+      /*flex-grow 
+      flex-grow는 flex item 이 얼마나 더 많은 공간을 확장할 지를 나타내는 속성 
+      숫자 값으로 되어 있음.  이 숫자는 아이템 들 사이에 공간 분배하는 비율 
+      
+      flex-grow: 1; 
+      모든 flex item이 사용 가능 한 공간을 동등하게 분배
+      */
+
+      li:nth-child(4) {
+        flex-shrink: 1;
+      }
+
+      /*flex-shrink
+      flex-shrink는 아이템이 너비(가로축) 줄이도록 허용하는 속성 
+      flex-shrink: 1; 
+      >> item은 컨테이너 크기에 맞게 축소
+      */
+
+      li:nth-child(2n-1) {
+        flex-basis: 200px;
+      }
+      /*2n-1: 홀수 번째 flex item 들의 초기 크기를 200px로 지정*/
+
+      li:nth-child(1) {
+        flex: 1 1 120px;
+      }
+      /*flex 단축 속성
+      3개의 속성인 flex-grow, flex-shrink, flex-basis 순서대로 나타냄
+      */
+    </style>
+  </head>
+  <body>
+    <h2>닥터윌 선호 반려동물</h2>
+    <ul>
+      <li>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+      </li>
+      <li>강아지</li>
+      <li>병아리</li>
+      <li>다람쥐</li>
+      <li>금붕어</li>
+    </ul>
+  </body>
+</html>

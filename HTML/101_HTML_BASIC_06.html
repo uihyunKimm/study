@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력을 받자</title>
+  </head>
+  <body>
+    <h1>로그인 해주세요.</h1>
+    <label>ID <input type="text" placeholder="아이디를 입력하세요" /> </label>
+    <br />
+    <label for="pw">pw</label>
+    <input type="password" id="pw" placeholder="비밀번호를 입력하세요" />
+    <!--id가 pw인 라벨(label)-->
+    <hr />
+    <fieldset>
+      <legend>음료 주문 메뉴</legend>
+      <h2>음료를 선택해주세요.</h2>
+      <select>
+        <option>커피</option>
+        <option>콜라</option>
+        <option>주스</option>
+        <option>생수</option>
+      </select>
+      <br />
+      <select>
+        <option value="galbitang">갈비탕</option>
+        <option value selected="kimbab">김밥</option>
+        <!--selected는 최우선 노출되는 값-->
+        <option value="ramyeon">라면</option>
+        <option value="donkatsu">돈까스</option>
+      </select>
+      <br />
+      <select multiple size="2">
+        <option value="coffee">커피</option>
+        <option value="coke">콜라</option>
+        <option value="juice">주스</option>
+        <option value="water">물</option>
+        <!--multiple 여러개 선택, size = 2 >> 기본적으로 2개를 보여준다-->
+      </select>
+      <h2>기타 음료를 원하시면 자유롭게 써주세요.</h2>
+      <textarea cols="50" rows="1"></textarea>
+      <!--cols는 열 가로방향, rows는 행 세로방향-->
+    </fieldset>
+    <h2>우리의 준비 상태는 다음과 같습니다.</h2>
+    <progress max="100" value="80"></progress>
+    <hr />
+    <h2>추가 음료가 필요하시면 호출해주세요.</h2>
+    <button>호출</button>
+    <br />
+    <input type="button" value="긴급 호출" />
+  </body>
+</html>
