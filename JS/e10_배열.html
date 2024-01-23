@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+    //배열(index)
+
+    
+    // document.write(과일[3]+"<br>")
+    // var 점수 = [10,20,30,50,100]
+    // 점수[0] = 12;
+    // document.write(점수+"<br>")
+    // let 색깔 =[]
+    // 색깔[99]="빨강"
+    // document.write(색깔[99]+"<br>")
+    // var 과일과숫자 = [3, "사과", ["딸기", "오렌지", 3498.2], [10, 30], 5300]
+    // document.write(과일과숫자[2][2]+"<br>")
+    // document.write(과일과숫자[3][1]+"<br>")
+    // document.write(과일과숫자.length+"<br>")
+    // document.write(과일과숫자[2].length+"<br>")
+
+    // var 과일 = ["딸기", "사과", "바나나", "포도"];
+    // for(let i=0; i<과일.length; i++){
+    //   document.write(과일[i]+"<br>")
+    // }
+    
+
+    // mini test #1
+    var 온도 = [15.1, 15.4, 16.1, 17.5, 19.2, 21.4]
+      var sum = 0;
+      // document.write((온도[0]+온도[1]+온도[2]+온도[3]+온도[4]+온도[5])/온도.length)
+
+      for (let i = 0; i < 온도.length; i++) {
+        sum += 온도[i];
+      }
+      document.write(sum / 온도.length)
+
+      //mini test #2
+      var money = []
+      money[0] = 5000
+      money[1] = 10000
+      money[2] = 30000
+      var sum = 0
+
+      for (i = 0; i < money.length; i++) {
+        sum += money[i]
+      }
+      document.write(sum)
+
+    </script>
+  </body>
+</html>

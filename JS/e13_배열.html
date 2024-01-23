@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      // let 색상 = ["빨", "주", "노", "초", "파", "남", "보"];
+      // console.log(색상.indexOf("남"));
+      // console.log(색상.indexOf("핑크"));
+
+      // let 주소 = ["서울시", "강서구", "화곡동", "8-5", "위더스빌"];
+      // console.log(주소.join("안에"));
+      // console.log(주소[0]+"")
+
+      // let animal = ["강아지", "고양이", "햄스터", "원숭이"];
+      // console.log(animal.join(" 를 이긴 "));
+      // console.log(animal.join(" "));
+
+      // var 건물 = [];
+      // 건물.push("우리집");
+      // 건물.push("도로");
+      // 건물.push("가로등");
+      // 건물.push("소화전");
+      // 건물.push("소방서");
+      // 건물.push("학교");
+      // 건물.push("친구집");
+
+      // 건물.pop();
+      // console.log(건물); // 스택 Last In First Out
+      // 건물.shift();
+      // console.log(건물); // 큐 First In First Out
+
+      // console.log(Math.floor(Math.random() * 4));
+
+      // var 무단 = ["폭발", "동굴", "공주", "팬"];
+      // var 무색 = Math.floor(Math.random() * 4);
+      // console.log(무단[무색]);
+
+      // var 응답 = [
+      //   "좋은 생각이에요.",
+      //   "네, 꼭 해보세요.",
+      //   "별로 좋은 생각 같지 않아요.",
+      //   "오늘은 안 해도 되지 않을까요?",
+      //   "컴퓨터는 하지 말라고 하네요.",
+      // ];
+      // 랜덤 = Math.floor(Math.random() * 5);
+      // document.write("<h2>숙제를 해야할까요?</h2> <hr><br>");
+      // document.write(응답[랜덤]);
+
+      var 색상 = ["푸른", "붉은", "검은", "하얀"];
+      var 자연 = ["늑대", "태양", "독수리", "바람"];
+      var 단어 = ["눈물", "환생", "기상", "일격", "유령"];
+      var 랜덤 = Math.floor(Math.random() * 4);
+      var 랜덤2 = Math.floor(Math.random() * 5);
+
+      document.write("<h2>인디언 이름 제조기</h2><br><hr>");
+      document.write(색상[랜덤] + 자연[랜덤] + 단어[랜덤2] + "!!");
+    </script>
+  </body>
+</html>

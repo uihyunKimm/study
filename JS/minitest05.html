@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let day = prompt("월~일 중에 입력");
+      if (day == "") {
+        alert("잘못입력");
+      } else {
+        switch (day) {
+          case "월":
+          case "화":
+          case "수":
+          case "목":
+          case "금":
+            document.write(day + "는 출근");
+            break;
+          case "토":
+          case "일":
+            document.write(day + "은 휴일");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

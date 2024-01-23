@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>  
+        //do while문
+
+  // let num = parseInt(prompt("0보다 큰 정수"));
+  // var i = 0;
+  // var sum = 0;
+  // do {
+  //   sum += i;
+  //   i++;
+  // } while (num >= i);
+  // document.write(num + "합" + sum);
+
+  // let i = 0;
+  // let sum = 0;
+
+  // while(true){
+  //   sum += i;
+  //   if(sum > 3000){
+  //     break;
+  //   }
+  //   i++;
+  // }
+  // document.write(i + "까지 더하면 3000 넘음" + sum)
+      
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   let num= 0;
+
+//   for(let i=0;i<=10;i++){
+//     if(i%3 != 1)
+//   }
+
+// let i = 0;
+// let sum = 0;
+
+// for(i = 0; i<=100; i++){
+//   if(i%3 == 0||i%4 == 0){
+//     continue;
+//   }
+//   document.write(i + " ")
+//   sum += i
+// }
+// document.write("<br>결과 : " + sum)
+
+// let pw = "you";
+// var apw = prompt("암호");
+// do{
+//   apw = prompt("암호를 대라");
+// }while(pw === aw);
+// document.write("통과!");
+
+  // let pass = "";
+  // do {
+  //   pass = prompt("암호");
+  //   if (pass == "you") {
+  //     break;
+  //   }
+  // } while (true);
+  // document.write("통과!");
+
+  let price = 300;
+  let coin
+  let cn = 10;
+
+    while (true) {
+        let coin = parseInt(prompt("돈을 넣어라(남은 커피:" + cn + " )"))
+        if (coin == 300) {
+          cn -= 1;
+          alert("커피를 줍니다(남은커피:" + cn + ")")
+        } else if (coin <= price) {
+          alert("돈이 부족합니다");
+        } else if(coin > price) {
+          cn -= 1;
+          alert("거스름 돈" + (coin - price) + "원과 커피를 줍니다(남은커피:" + cn + ")")
+        }
+        if(cn==0){
+          alert("커피가 다 떨어짐. 판매중지")
+          break;
+        }
+      }
+
+      // let coin = parseInt("")
+      // let cn = 10;
+
+      //   while (true) {
+      //       let coin = prompt("돈을 넣어라(남은 커피:" + cn + " )")
+      //       if (coin == 300) {
+      //         cn--
+      //         prompt("커피를 줍니다(남은커피:" + cn + ")")
+      //         continue;
+      //       } else if (coin <= 300) {
+      //         prompt("돈이 부족합니다")
+      //         continue;
+      //       } else if (coin > 300) {
+      //         cn--
+      //         prompt("거스름 돈" + (coin - 300) + "원과 커피를 줍니다(남은커피:" + cn + ")")
+      //         continue;
+      //       } else {
+      //         break;
+      //         prompt("커피가 다 떨어짐. 판매중지")
+      //       }
+      //     }
+
+
+    </script>
+  </body>
+</html>

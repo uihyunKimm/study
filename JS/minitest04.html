@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let 입력값 = prompt("비밀번호를 입력하세요.");
+      let 비밀번호 = 입력값.length;
+      let 안정성;
+
+      if (비밀번호 >= 9) {
+        안정성 = "good";
+      } else if (비밀번호 >= 5) {
+        안정성 = "normal";
+      } else {
+        안정성 = "bad";
+      }
+      document.write("당신의 비밀번호 : " + 입력값 + "<br>");
+      document.write("비밀번호의 안정성은" + 안정성 + "입니다");
+    </script>
+  </body>
+</html>

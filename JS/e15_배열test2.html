@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      var num = 0;
+      var nums = [];
+      // var n
+
+      // for (i = 0; i < 6; i++) {
+      //   num = Math.floor(Math.random() * 46);
+      //   if(num < 1){
+      //     continue;
+      //   }
+      //   if (num == nums[]) {
+      //     continue;
+      //   }
+      //   nums.push(num);
+      // }
+      // document.write(nums);
+
+      // let count = 0;
+      // while(count < 6){
+      //   num = Math.floor(Math.random() * 46) + 1;
+
+      //   //2.1 .includes();
+      //   .includes
+
+      //   //2.2 .indexOf()
+
+      //   count++
+      //}
+
+      // for (i = 0; i < 6; i++) {
+      //   num = Math.floor(Math.random() * 44);
+      //   if(num = nums.indexOf-1)){
+      //     continue;
+      //   }
+      //   nums.push(num);
+      // }
+      // document.write(nums);
+
+      let count = [];
+
+      while (count.length < 6) {
+        num = Math.floor(Math.random() * 45) + 1;
+        if (count.indexOf(num) == -1) {
+          count.push(num);
+        }
+      }
+      document.write("<span>" + count.join(" ") + "</span>");
+    </script>
+  </body>
+</html>

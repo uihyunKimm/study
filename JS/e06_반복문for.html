@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <span style="font-size: 10px"></span>
+    <script>
+      //아래 코드 한 줄 100번 반복(명령어)
+      //document.write("안녕");
+
+      //for문 형식: for(초,조,반){}
+
+      /*for (var i = 0; i < 10; i++) {
+              document.write(i);
+            }*/
+      /*
+            for (let size = 10; size <= 35; size += 5) {
+              document.write("<span ");
+              document.write("style='font-size:" + size + "px'>");
+              document.write(size + "px");
+              document.write("</span>");
+            }*/
+
+      /*
+            for (let number = 0; number <= 100; number++) {
+              if (number % 2 == 1) {
+                document.write(number + " ");
+              }
+            }
+            */
+      /*
+            for(let i=1; i <=100; i +=2){
+              document.write(i+" ");
+            }*/
+      /*내가쓴 값
+      let num = prompt("1 이상의 정수를 입력하세요")
+            for i = 0; i<=num; i++) {
+              if (num % num-- == 0) {
+                document.write(lownum);
+              }
+            }
+            document.write("입력한 수 : " + num + "<br>");
+            document.write(num + "의 약수 : " + lownum);
+      */
+      let num = prompt("입력");
+      document.write("입력한 수 : " + num + "<br>");
+      document.write(num + "의 약수 : ");
+      for (i = 0; i <= num; i++) {
+        if (num % i == 0) {
+          document.write(i + " ");
+        }
+      }
+
+      //마지막
+      document.write("<table border = '1'><tr><th>n</th>");
+
+      for (let i = 0; i < 10; i++) {
+        document.write("<td>" + i + "</td>");
+      }
+
+      document.write("</tr><tr><th>n<sup>2</sup></th>");
+
+      for (let j = 0; j < 10; j++) {
+        document.write("<td>" + j * j + "</td>");
+      }
+      document.write("</tr></table>");
+      //while문
+      //do while문
+    </script>
+  </body>
+</html>

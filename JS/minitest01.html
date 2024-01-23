@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //14.
+      var x = 32;
+      document.write("<p>x=");
+      document.write(x);
+      document.write("<br/>");
+      var total = 100 + (x * 2) / 4 - 3;
+      document.write("100 + x*2/4 - 3 =");
+      document.write(total);
+      document.write("<br/>");
+      var div = x / 10;
+      document.write("x/10 =");
+      document.write(div);
+      document.write("<br/>");
+      var mod = x % 2;
+      document.write("x%2 =");
+      document.write(mod);
+      document.write("</p>");
+    </script>
+
+    <script>
+      //15.
+      var x = 3;
+      var x1 = (x += 3);
+      document.write("<p>x=3, y=3, z=3 <br />");
+      document.write("<br/>x += 3 실행 후, x=");
+      document.write(x1);
+      var y = 3;
+      var y1 = (x *= 3);
+      document.write("<br/>y *= 3 실행 후, y=");
+      document.write(y1);
+      var z = 3;
+      var z1 = (z %= 2);
+      document.write("<br/>z %= 2 실행 후, z=");
+      document.write(x1);
+      document.write("</p>");
+    </script>
+
+    <script>
+      //16.
+      var x = 13;
+      var y = 7;
+      document.write("<p>x=13, y=7<br />");
+      var x1 = x == y;
+      document.write("<br/>x == y : ");
+      document.write(x1);
+      var x1 = x != y;
+      document.write("<br/>x != y : ");
+      document.write(x1);
+      var x1 = x >= y;
+      document.write("<br/>x >= y : ");
+      document.write(x1);
+      var x1 = x > y;
+      document.write("<br/>x > y : ");
+      document.write(x1);
+      var x1 = x <= y;
+      document.write("<br/>x <= y : ");
+      document.write(x1);
+      var x1 = x < y;
+      document.write("<br/>x < y : ");
+      document.write(x1);
+      document.write("</p>");
+    </script>
+
+    <script>
+      //17.
+      var x = true;
+      var y = false;
+
+      document.write("<p>x=true, y=false<br />");
+      var x1 = x && y;
+      document.write("<br/>x && y : ");
+      document.write(x1);
+      var x1 = x || y;
+      document.write("<br/>x || y : ");
+      document.write(x1);
+      var x1 = !x;
+      document.write("<br/>!x : ");
+      document.write(x1);
+      var x1 = 3 > 2 && 3 < 4;
+      document.write("<br/>(3>2)&&(3<4) : ");
+      document.write(x1);
+      var x1 = 3 == -2 || -1 < 0;
+      document.write("<br/>(3==-2)||(-1<0) : ");
+      document.write(x1);
+      document.write("</p>");
+    </script>
+
+    <script>
+      //18.
+      var a = 3;
+      var b = 5;
+      var dif = a == b ? 0 : (a - b) * -1;
+      //(a>b?a-b:b-a)
+
+      document.write("<p>a=3, b=5<br />");
+      document.write("<br />두 수의 차이 : ");
+      document.write(dif);
+      document.write("</p>");
+    </script>
+
+    <script>
+      //19.
+      var a = "abc" + 23;
+      var b = 23 + "abc";
+      var c = 23 + "35";
+      var d = 23 + 35;
+      var e = 23 + 35 + "abc";
+      var f = "abc" + 23 + 35;
+
+      document.write("<p>");
+      document.write(a + "<br>");
+      document.write(b + "<br>");
+      document.write(c + "<br>");
+      document.write(d + "<br>");
+      document.write(e + "<br>");
+      document.write(f + "<br>");
+      document.write("</p>");
+    </script>
+
+    <script>
+      //20.
+      var a = "Boys and Girls";
+      var b = "!!";
+
+      document.write(a.charAt(9) + "<br>");
+      document.write(a.concat(b, "입니다") + "<br>");
+      document.write(a.slice(5, 8) + "<br>");
+      document.write(a.toUpperCase() + "<br>");
+      document.write(a.replace("and", "or") + "<br>");
+
+      var c = a[9];
+      var d = a + b;
+      var ed = a.split(" ");
+      var e = ed[1];
+      var f = a.toUpperCase();
+      var g = a.replace("and", "or");
+
+      document.write("<p> a : Boys and Girls<br/>b : !!<br/><br/>");
+      document.write(c + "<br>");
+      document.write(d + "입니다!<br>");
+      document.write(e + "<br>");
+      document.write(f + "<br>");
+      document.write(g + "<br>");
+    </script>
+  </body>
+</html>

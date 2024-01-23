@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+    var 동물 =[];
+    //2.함수, 메서드 > 데이터 추가
+    ////배열이름.함수() > 함수호출
+
+    동물.push("고양이");
+    동물.push("강아지");
+    동물.push("라마");
+
+    document.write(동물[2]+"<br>");
+    
+    //2-1. push()
+    동물.push("고양");
+    동물.push("강아");
+    // [고양이, 강아지, 라마, 고양, 강아]
+
+    //2-2. unshift(추가하고 싶은 데이터)
+    //[북극곰, 원숭이, 고양이, 강아지, 라마, 고양, 강아]
+    //맨 뒤에 추가
+    동물.unshift("원숭이");
+    동물.unshift("북극곰");//맨 앞에 데이터 추가
+    
+    document.write(동물+"<br>");
+    var 마지막동물 = 동물.pop();
+    document.write(마지막동물+"<br>");
+    document.write(동물+"<br>");
+
+    </script>
+  </body>
+</html>

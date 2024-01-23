@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 #객체</title>
+  </head>
+  <body>
+    <script>
+      // //1.
+      // let car = {};
+      // car["자동차 색상"] = "red";
+      // car["자동차 가격"] = 10000;
+      // car["자동차 번호"] = 12345;
+
+      // document.write("<h2>1.자동차 객체 표현</h2><hr>");
+      // document.write("자동차 색상 : " + car["자동차 색상"] + "<br>");
+      // document.write("자동차 가격 : " + car["자동차 가격"] + "<br>");
+      // document.write("자동차 번호 : " + car["자동차 번호"] + "<br>");
+
+      // //2.
+      // let account = {};
+      // account.계좌주인 = "김의현";
+      // account.계좌번호 = 12345;
+      // account.계좌잔액 = 100000;
+
+      // document.write("<h2>2.계좌 객체 표현</h2><hr>");
+      // document.write("계좌주인 : " + account.계좌주인 + "<br>");
+      // document.write("계좌번호 : " + account.계좌번호 + "<br>");
+      // document.write("계좌잔액 : " + account.계좌잔액 + "<br>");
+
+      // //3.
+      // let num = 3.6432;
+      // document.write("<h2>3.Math 객체 표현</h2><hr>");
+      // document.write("최대값 : " + Math.max(10, 5, 8, 30) + "<br>");
+      // document.write("최소값 : " + Math.min(10, 5, 8, 30) + "<br>");
+      // document.write("소수 첫째자리 반올림 : " + Math.round(num) + "<br>");
+      // document.write("소수 첫째자리 내림 : " + Math.floor(num) + "<br>");
+      // document.write("소수 첫째자리 올림 : " + Math.ceil(num) + "<br>");
+      // document.write("원주율 : " + Math.PI);
+
+      //4.
+      document.write("<h2>4.Math 객체 표현</h2><hr>");
+      let person = {
+        firstName: "UiHyun",
+        lastName: "Kim",
+        sayHello: function () {
+          return "sayHello!" + this.firstName + " " + this.lastName;
+        },
+      };
+      document.write(person.sayHello());
+
+      //5.
+
+      function Fruit(name, color, price) {
+        this.name = name;
+        this.color = color;
+        this.price = price;
+        this.display = function () {
+          return `이름 : ${this.name}<br>색깔 : ${this.color}<br>가격 : ${this.price}<hr>`;
+        };
+      }
+
+      let apple = new Fruit("apple", "red", 5000);
+      let banana = new Fruit("banana", "yellow", 3000);
+      let coconut = new Fruit("coconut", "brown + white", 10000);
+
+      document.write("<h2>5.생성자 함수 표현</h2><hr>");
+      document.write(apple.display());
+      document.write(banana.display());
+      document.write(coconut.display());
+
+      // document.write("이름 : " + apple.name + "<br>");
+      // document.write("색깔 : " + apple.color + "<br>");
+      // document.write("가격 : " + apple.price + "<hr>");
+      // document.write("이름 : " + banana.name + "<br>");
+      // document.write("색깔 : " + banana.color + "<br>");
+      // document.write("가격 : " + banana.price + "<hr>");
+      // document.write("이름 : " + coconut.name + "<br>");
+      // document.write("색깔 : " + coconut.color + "<br>");
+      // document.write("가격 : " + coconut.price + "<hr>");
+
+      // document.write("<h2>6.가위바위보</h2><hr>");
+
+      // let rcp = parseInt(prompt("하나선택 가위0,바위1,보2"));
+      // let cpu = Math.floor(Math.random() * 3);
+      // document.write("니가 낸것 : " + rcp + "<br>");
+
+      // // while(true){
+      // //   if(rcp == cpu){
+      // //     document.write("비겼습니다. 다시")
+      // //   }
+      // // }
+      // if (cpu == 0) {
+      //   document.write("컴퓨터는 가위를 냈습니다.<br>");
+      // } else if (cpu == 1) {
+      //   document.write("컴퓨터는 바위를 냈습니다. <br>");
+      // } else {
+      //   document.write("컴퓨터는 보를 냈습니다.<br>");
+      // }
+
+      // if (cpu == rcp + 1) {
+      //   document.write("컴퓨터가 이겼습니다.");
+      // } else if (rcp == cpu + 1) {
+      //   document.write("당신이 이겼습니다.");
+      // }
+
+      // if (cpu == rcp + 2) {
+      //   document.write("당신이 이겼습니다.");
+      // } else if (rcp == cpu + 2) {
+      //   document.write("컴퓨터가 이겼습니다.");
+      // }
+
+      // if (rcp === cpu) {
+      //   alert("비겼습니다");
+      // }
+    </script>
+  </body>
+</html>

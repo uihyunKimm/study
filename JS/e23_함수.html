@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      // //함수
+      // function adder(a, b) {
+      //   let sum = a + b;
+      //   return sum;
+      // }
+      // //함수(애더) 호출
+      // console.log(adder(1, 2));
+
+      // //함수 특징
+      // //코드 재사용 가능 > 원할 때마다 호출 가능
+      // //중복 줄임
+
+      // function adder2(a, b) {
+      //   let sum = a * b;
+      //   return sum;
+      // }
+      // let a = adder(231354, 89384);
+      // document.write("231354 + 89384 = " + a + "<br>");
+      // let m = adder2(231354, 89384);
+      // document.write("231354 x 89384 = " + m + "<br>");
+
+      // //eval()
+      // //parseInt()
+      // //isNaN() > Not A Number
+      // // isNaN("32") =false
+      // // isNaN("hello") =true
+
+      // n = parseInt("Hello");
+      // if (isNaN(n)) {
+      //   document.write("수가 아닙니다.");
+      // }
+
+      function gugudan(a) {
+        let i = parseInt(a);
+        if (isNaN(i) || i < 1 || i > 9) {
+          alert("숫자를 입력하세요.");
+          return; //리턴 뒤에 뭐 없으면 종료임
+        }
+        for (let j = 1; j <= 9; j++) {
+          document.write(i + " x " + j + " = " + i * j + "<br>");
+        }
+      }
+
+      document.write("<h2>구구단 출력 함수 만들기</h2><hr>");
+      let k = prompt("구구단 몇 단?");
+      gugudan(k);
+    </script>
+  </body>
+</html>

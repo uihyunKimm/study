@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      //4.배열 -3번
+      var number = [20, 5, 8, 15, 20]
+      for(let i=0;i<number.length;i++){
+        for(let j=0;j<=number[i];j++){
+        document.write("*")*j;
+        if(j==number[i]){
+          document.write(number[i]);
+          break;
+        }
+      }
+      document.write("<br>")
+    }
+
+    //4.배열 -4번
+    let score = [];
+    score[0] = 78;
+    score[1] = 82;
+    score[2] = 48;
+    score[3] = 32;
+    score[4] = 79;
+    
+    document.write("<hr>배열score출력<br>" + score +"<hr><br>")
+    
+    let sum = 0;
+    for(let i=0;i<score.length;i++){
+      sum += score[i];
+    }
+    document.write("score합계 출력<br>" + sum +"<hr><br>")
+    let ave = sum/score.length
+    document.write("score평균출력<br>" + ave +"<hr><br>")
+
+    //4.배열 -5번
+    var itemlist = ["라면", "계란", "물", "파"]
+    document.write("<h2>라면을 만드는데 필요한 재료</h2><br><hr>")
+    document.write("<ul><li>" + itemlist[0] + "</li>")
+    document.write("<li>" + itemlist[1] + "</li>")
+    document.write("<li>" + itemlist[2] + "</li>")
+    document.write("<li>" + itemlist[3] + "</li></ul>")
+    </script>
+  </body>
+</html>

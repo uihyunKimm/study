@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>if-else를 이용한 학점 계산</h3>
+    <hr />
+    <script>
+      /*switch(조건) {
+        case 1:
+          code1
+          code2
+          break;
+      }*/
+
+      /*var fruits = "바나나";
+      var price = 0;
+
+      switch (fruits) {
+        case "바나나":
+          price = 200;
+          break;
+        case "사과":
+          price = 300;
+          break;
+        case "체리":
+          price = 400;
+          break;
+        default:
+          document.write("팔지 않음");
+          price = 0;
+      }
+      document.write(fruits + "는" + price + "원 입니다.");*/
+      //case '변수'나 '식' 못 넣음
+      /*
+      var day = "월";
+
+      switch (day) {
+        case "월":
+          document.write("월요일");
+        case "화":
+          document.write("화요일");
+        case "수":
+          document.write("수요일");
+          break;
+        case "목":
+          document.write("목요일");
+        case "금":
+          document.write("금요일");
+        case "토":
+          document.write("정기휴무");
+          break;
+      }*/
+
+      var price = 0;
+      var cof = prompt("뭔 커피드실");
+
+      switch (cof) {
+        case "espresso":
+        case "에스프레소":
+          price = 2000;
+          break;
+        case "아메":
+          price = 3000;
+          break;
+        case "라떼":
+          price = 4000;
+          break;
+        default:
+          document.write(cof + "는 없다");
+      }
+      if (price != 0) {
+        //0원이 아니다
+        document.write(cof + "은" + price + "입니다.");
+      }
+      //document.write(cof + "은" + price + "입니다."
+      //ㄴ> ~~는 0원 입니다.
+
+      var 요일 = prompt("요일을 입력하세요");
+      var en = " ";
+
+      /*switch(요일){
+        case "월":
+          en = "mon";
+        break;
+        case "화":
+          en = "tue";
+        break;
+        case "수":
+          en = "wed";
+        break;
+        case "목":
+          en = "thu";
+        break;
+        case "금":
+          en = "fri";
+        break;
+        default:
+          document.write(요일"은 요일이 아닙니다." )
+
+        if (요일 = )
+      }*/
+    </script>
+  </body>
+</html>

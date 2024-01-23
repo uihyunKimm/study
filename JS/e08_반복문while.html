@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      //while문
+      //예시
+      /*
+      var i=1;
+      while(i < 10){
+        document.write(i+"<br>");
+        ++i
+      }*/
+      /*let i = 10;
+
+      while(i>0){
+        document.write("i:"+i+"<br>");
+        i--;
+      }*/
+
+      /*
+      let num = prompt("0보다 큰 정수를 입력",0);
+      num = parseInt(num);
+
+      var i=0, sum=0;
+      while(i<=num){
+        //i가 0에서 n까지 반복
+        sum += i;
+        i++;
+      }
+      document.write("0에서 "+num+"까지 합은"+sum)
+
+    if(num>answer){
+      alert("다운")
+    }else(num<answer){
+      alert("업")}
+      document.write("맟췄습니다. 정답은 "+answer +"입니다!")
+      */
+
+      
+      //  내가쓴 값
+      // let answer = Math.floor(Math.random() * 101);
+      // let num = parseInt(prompt("정답을 추측해보세요."));
+
+      // while (true) {
+      //   if (num > answer) {
+      //     alert("다운");
+      //     num = prompt("정답을 추측해보세요");
+      //   } else if (num < answer) {
+      //     alert("업");
+      //     num = prompt("정답을 추측해보세요");
+      //   } else {
+      //     document.write("정답입니다. 정답은" + answer + "입니다");
+      //     break;
+      //   }
+      // }
+
+      let answer = Math.floor(Math.random() * 101);
+        let guess = 0;
+        let count = 0;
+
+        while (true) {
+          guess = parseInt(prompt("정답을 추측"));
+
+          if (guess > answer) {
+            alert("다운");
+          } else if (guess < answer) {
+            alert("업");
+          }
+          else {
+            break;
+          }
+          count++
+        }
+
+        document.write(count+"번만에 성공!<br>정답입니다. 정답은" + answer + "입니다");
+
+      //do while문
+    </script>
+  </body>
+</html>

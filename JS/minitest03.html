@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let 첫번 = prompt("첫 번째 숫자를 입력하세요");
+      let 두번 = prompt("두 번째 숫자를 입력하세요");
+
+      let 큰수 = "";
+      let 여부 = "";
+
+      if (첫번 > 두번) {
+        document.write(첫번 + "이 큰 수이고,");
+      } else {
+        document.write(두번 + "이 큰 수이고,");
+      }
+
+      if (큰수 % 2 == 0) {
+        여부 = 짝수;
+      } else {
+        여부 = 홀수;
+      }
+      document.write(큰수 + "이 큰 수이고," + 여부 + "이다");
+    </script>
+  </body>
+</html>

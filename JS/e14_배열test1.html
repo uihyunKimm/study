@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      // var skills = ["HTML", "CSS", "Javascript", "React"];
+      // var sk2 = ["HTML", "CSS", "Javascript"];
+      // var skills3 = ["HTML", "CSS"];
+
+      // if (sk2.includes("Javascript") && sk2.includes("React")) {
+      //   document.write("합격");
+      // } else if (sk2.includes("React") || sk2.includes("Javascript")) {
+      //   document.write("예비");
+      // } else {
+      //   document.write("탈락");
+      // }
+
+      // var score = [
+      //   prompt("1번 학생의 점수를 입력하세요."),
+      //   prompt("2번 학생의 점수를 입력하세요."),
+      //   prompt("3번 학생의 점수를 입력하세요."),
+      //   prompt("4번 학생의 점수를 입력하세요."),
+      //   prompt("5번 학생의 점수를 입력하세요."),
+      // ];
+
+      // for (var i = 0; i < score.length; i++) {
+      //   if (score[i] >= 60) {
+      //     document.write(
+      //       i + 1 + "번 학생 : " + score[i] + "점, 합격입니다.<br>"
+      //     );
+      //   } else {
+      //     document.write(
+      //       i + 1 + "번 학생 : " + score[i] + "점, 불합격입니다.<br>"
+      //     );
+      //   }
+      // }
+
+      var score = 0;
+      var scores = [];
+
+      for (let i = 0; i < 6; i++) {
+        score = parseInt(prompt(i + 1 + "번 학생의 점수 입력"));
+        scores.push(score);
+      }
+
+      for (let j = 0; j < scores.length; j++) {
+        if (scores[j] >= 70) {
+          document.write(
+            j + 1 + "번 학생은" + scores[j] + "점으로 합격입니다.<br>"
+          );
+        } else if (scores[j] < 50) {
+          document.write(
+            j + 1 + "번 학생은" + scores[j] + "점으로 탈락입니다.<br>"
+          );
+        } else {
+          document.write(
+            j + 1 + "번 학생은" + scores[j] + "점으로 예비입니다.<br>"
+          );
+        }
+      }
+
+      //정답
+
+      //let scores =[];
+      //let score = 0;
+      //let stuNum = 0;
+
+      // for (let i = 0; i < 5; i++) {
+      // score = parseInt(prompt("5번 학생의 점수를 입력하세요."));
+      // scores.push(score);
+      // }
+
+      // for (let j = 0; j < score.length; j++) {
+      //   stuNum = stuNum + 1;
+      //   if (scores[j] >= 60) {
+      //     document.write(
+      //       stuNum + "번 학생 : " + score[j] + "점, 합격입니다.<br>"
+      //     );
+      //   } else {
+      //     document.write(
+      //       stuNum + "번 학생 : " + score[j] + "점, 불합격입니다.<br>"
+      //     );
+      //   }
+      // }
+
+      // var singer = ["김", "나", "박", "이"];
+      // singer.splice(2, 1);
+
+      // let scores = [];
+      // let score = 0;
+
+      // for (let i = 0; i < 5; i++) {
+      //   score = parseInt(prompt("점수 입력"));
+      //   scores.push(score);
+      // }
+      // document.write("입력한 점수 : " + scores + "<br><hr>");
+
+      // for (let j = 0; j < scores.length; j) {
+      //   if (score[j] > score[j + 1]) {
+      //     scores.splice([j + 1], 1);
+      //   } else {
+      //     scores.splice([j], 1);
+      //   }
+      //   document.write("최고 점수 : " + scores[j]);
+      // }
+
+      // for (let k = 0; k < scores.length; k) {
+      //   if (score[k] < score[k + 1]) {
+      //     scores.splice([k + 1], 1);
+      //   } else {
+      //     scores.splice([k], 1);
+      //   }
+      //   document.write("최저 점수 : " + scores[k]);
+      // }
+      // document.write("<br><hr>합 : " + scores - (scores[j] + scores[k]));//에바
+
+      // let score = 0;
+      // let scores = [];
+      // let count = 0;
+      // let max_score = 0;
+      // let min_score = 100;
+      // let total = 0;
+
+      // while (count < 5) {
+      //   score = parseInt(prompt("점수 입력"));
+      //   scores.push(score); //[10,5,20]
+
+      //   //최대값 저장
+      //   //max_score : 0
+      //   if (max_score < score) {
+      //     max_score = score;
+      //   }
+      //   //최소값 저장
+      //   //min_score : 100
+      //   if (min_score > score) {
+      //     min_score = score;
+      //   }
+      //   count += 1;
+      // }
+
+      // document.write("입력 점수 : " + scores);
+      // document.write("<hr>");
+      // document.write("최고 점수 : " + max_score);
+      // document.write("<hr>");
+      // document.write("최저 점수 : " + min_score);
+      // document.write("<hr>");
+
+      // let maxIndex = scores.indexOf(max_score);
+      // let minIndex = scores.indexOf(min_score);
+
+      // //최고, 최저 점수 제거
+      // scores.splice(maxIndex, 1);
+      // scores.splice(minIndex, 1);
+
+      // let sum = 0;
+      // for (let j = 0; j < scores.length; j++) {
+      //   sum += score[j];
+      // }
+      // document.write("합계 : " + sum);
+      // document.write("평균 : " + sum / scores.length);
+    </script>
+  </body>
+</html>

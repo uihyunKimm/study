@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      // 여러개의 프로퍼티(property),메소드(method)로 구성
+      // let account = 123 //일반 변수
+      // let account = [값, 값, 값] //배열
+      // let account = { 키 : 값, 키 : 값} //객체
+
+      // 프로퍼티(property) 구성 예시
+      // { owner: 홍길동
+      // code: "111"
+      // balance: 35000 }
+
+      // 메소드(method) 구성 예시
+      // deposit : function () ...
+      // withdraw : function () ...
+
+      // var 고양이 = {
+      //   이름: "야옹이",
+      //   키: 150,
+      //   다리: 4,
+      //   "다리 길이": "20cm",
+      //   "다리 모양": "이쁨",
+      //   색깔: "얼룩",
+      // };
+
+      // document.write(고양이["다리 길이"] + "<br>");
+      // document.write(고양이.다리);
+      // let 고양이속성 = Object.keys(고양이);
+      // document.write(고양이속성);
+
+      // var 강아지 = {};
+      // 강아지["다리"] = 2;
+      // 강아지["이름"] = "멍멍이";
+      // 강아지["색깔"] = "갈색";
+
+      // console.log(강아지);
+
+      let 아이폰 = {};
+      아이폰.크기 = 14.4;
+      아이폰.버전 = "X10";
+      아이폰.버튼유무 = "x";
+
+      //document.write(아이폰);
+      document.write(JSON.stringify(아이폰));
+    </script>
+  </body>
+</html>

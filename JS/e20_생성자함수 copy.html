@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      //var, let, const 변수이름
+      //function 함수이름 > 기능, 함수, 메서드
+      //생성자 함수 function(){} = 함수 생략 가능
+      function Animals(name, age, address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+      }
+
+      // 코드 한줄로 객체 생성 > new연산자 사용
+      let lion = new Animals("어흥이", 10, "서울");
+      let dog = new Animals("하늘이", 18, "경기");
+      let tiger = new Animals("호랑", 13, "부산");
+
+      console.log(dog.address);
+      console.log(Object.keys(tiger));
+
+      // //만들어진 함수
+      // function concat() {}
+      // function push() {}
+      // function pop() {}
+      //   //사용자가 pop을 생성
+      //   //배열에서 데이터를 마직부터 제거
+      //      배열이름.pop()
+    </script>
+  </body>
+</html>

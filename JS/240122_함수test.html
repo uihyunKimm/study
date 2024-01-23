@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 #객체</title>
+  </head>
+  <body>
+    <script>
+      // 1;
+      // /* function big(a, b) {
+      //   let i = parseInt(a);
+      //   let j = parseInt(b);
+      //   let bg;
+      //   if (i > j) {
+      //     bg = i;
+      //   } else {
+      //     bg = j;
+      //   }
+      //   return bg;
+      // } */
+      // function big(a, b) {
+      //   if (a > b) return a;
+      //   else return b;
+      // }
+
+      // let n = big("625", "555");
+      // document.write("큰 수 = " + n);
+
+      // //2.
+      // /* function pr(a, b) {
+      //   let sum = a * b;
+      //   if (isNaN(a)) {
+      //     sum = document.write(a) * b;
+      //   } else if (isNaN(b)) {
+      //     sum = document.write(b) * a;
+      //     return sum;
+      //   }
+      // }
+      // let n = pr("%", 5);
+      // document.write(n); */
+
+      // function pr(a, b) {
+      //   for (let i = 0; i < b; i++) {
+      //     document.write(a);
+      //   }
+      // }
+      // let m = pr("%", 5);
+      // n;
+
+      // //3.
+      // let num = prompt("정수 입력");
+      // /*
+      // function hj(a) {
+      //   let cal = parseInt(a);
+      //   let ans;
+      //   if (cal % 2 != 0) {
+      //     ans = "홀수";
+      //   } else {
+      //     ans = "짝수";
+      //   }
+      //   return ans;
+      // } */
+      // function hj(a) {
+      //   let jjak = "짝수";
+      //   let hol = "홀수";
+      // }
+
+      // const result = number % 2 == 1 ? "홀수" : "짝수";
+      // // const result = number % 2 ? "홀수" : "짝수";
+
+      // document.write("입력한 값 : " + num + "<br>");
+      // document.write(hj(num));
+
+      //4.
+
+      // function math(a, b) {
+      //   let sum = a * b;
+      //   return sum;
+      // }
+
+      // let a = Math.floor(Math.random() * 10);
+      // let b = Math.floor(Math.random() * 10);
+      // let n = parseInt(prompt(a + "*" + b + "의 값은 얼마입니까?"));
+      // if (math(n) == n) {
+      //   document.write(
+      //     "정답입니다." + a + " * " + b + " = " + a * b + "입니다"
+      //   );
+      // } else {
+      //   document.write(
+      //     "오답입니다." + a + " * " + b + " = " + a * b + "입니다"
+      //   );
+      // }
+
+      /*  function randomInt() {
+        return Math.floor(Math.random() * 9) + 1;
+      }
+
+      const ques = randomInt() + "*" + randomInt();
+
+      const user = prompt(ques + "값은 얼마입니까?", 0);
+      if (user == null) {
+        document.write("종료");
+      } else {
+        const ans = eval(ques);
+      }
+
+      if (ans == user) document.write("정답!");
+      else document.write("아니오");
+
+      //document */
+
+      let adder = (a, b) => {
+        let sum = a + b;
+        return sum;
+      };
+      console.log(adder(1, 2));
+
+      let sum = () => {
+        console.log("안녕하세요");
+      };
+      let sum2 = () => console.log("안녕하세요"); //줄 줄이기
+    </script>
+  </body>
+</html>

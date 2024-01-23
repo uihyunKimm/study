@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //let susic = prompt("수식 입력");
+
+      /*
+      //입력된 문자열이 없는 경우
+      if(susic == " ") {
+        document.write("입력된 식이 없습니다.");
+      }
+      // 있는 경우
+      else{
+        let res = eval(susic);
+        document.write(susic + " = " + res)
+      }
+      */
+      //내가 쓴 답
+      /*
+      if ((susic != "")) {
+        document.write(susic + " = " + eval(susic));
+      } else {
+        document.write("입력된 식이 없습니다.");
+      }
+      */
+
+      let 티셔츠 = 10000;
+      let 스웨터 = 30000;
+      let 합계 = 0;
+
+      티셔츠개수 = parseInt();
+      prompt("티셔츠개수를 입력하세요.");
+      스웨터개수 = parseInt();
+      prompt("스웨터개수를 입력하세요.");
+      합계 = 티셔츠 * 티셔츠개수 + 스웨터 * 스웨터개수;
+      if (합계 <= 100000) {
+        합계 = 합계 * 0.95;
+      } else {
+        합계 = 합계 * 0.85;
+      }
+      document.write("티셔츠개수 : ", 티셔츠개수, "<br>");
+
+      //내가쓴 것
+      /*
+      let 티셔츠 = prompt("티셔츠 개수 입력")
+      let 스웨터 = prompt("스웨터 개수 입력")
+      let 합계 = prompt( 티셔츠 + 스웨터)
+      if((티셔츠+스웨터)=<100000 ) {
+        합계 == (티셔츠*=10000 + 스웨터*=30000) *= 0.95
+      }else{
+        합계 == (티셔츠 + 스웨터) *= 0.85
+      }
+      document.write("티셔츠 개수:"+티셔츠);
+      document.write("스웨터 개수:"+스웨터);
+      document.write("합계:"+합계+" 원");*/
+    </script>
+  </body>
+</html>

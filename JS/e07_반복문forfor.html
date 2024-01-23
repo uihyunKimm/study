@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+      </tr>
+    </table>
+    <script>
+      //중첩 for문
+      //예시
+      /*
+      let k = 1;
+      for(let i= 0; i<5; i++)
+      {
+        for(let j = 0; j<10; j++)
+        {
+          document.write("아싸"+(k++)+"<br>");
+        }
+      }*/
+/*
+      for(let i=1;i<=20; i++)
+      {
+        for(let j=0;j<i;j++){
+          document.write("                     *")
+        }
+      document.write("<br>");
+    }*/
+
+    let dan = prompt("원하는 단을 입력")
+    dan = parseInt(dan);
+/*내가쓴것
+    for(let i=0;i<=9;i++){
+        document.write(dan+" x "+(i+1)+"= "+(dan*(i+1))+"<br>")
+      }
+    */
+
+    for(let i=1;i<=9;i++){
+      for(let j = 1; j<=9; j++){
+        document.write(i+" x "+j+"= "+i*j+"<br>")
+      }
+      document.write("<br>")
+    }
+    
+      //while문
+      //do while문
+    </script>
+    <p></p>
+  </body>
+</html>
