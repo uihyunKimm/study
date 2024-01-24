@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <h3>DOM객체 p의 프로퍼티, 스타일, 이벤트 리스너</h3>
+    <hr />
+    <!-- <p
+      id="firstP"
+      style="color: blue; background: yellow"
+      onclick="this.style.color='blue'"
+    >
+      이것은 <span style="color: red">문장입니다.</span><br />
+
+      <span id="mySpan" style="color: red">문장입니다.2</span>
+    </p> -->
+    <br />
+    <h3>CSS 스타일 동적 변경</h3>
+    <hr />
+    <p style="color: blue">
+      이것은
+      <span id="mySpan" style="color: red">문장입니다.</span>
+    </p>
+    <input type="button" value="스타일변경" onclick="change()" />
+    <!-- <p id="firstP" style="color: blue">
+      여기를<span style="color: red">클릭하세요.</span>
+    </p> -->
+    <!-- <h3>innerHTML 활용 : 글자를 클릭하면 강아지가 보입니다.</h3>
+    <hr />
+    <p id="firstP" style="color: blue" onclick="change1()">
+      여기를 <span style="color: red">클릭하세요</span>
+    </p>
+
+    <!-- <h3>this활용</h3>
+    <hr />
+    <button onclick="change(this, '30px','red')">버튼</button>
+    <button onclick="change(this, '30px','blue')" style="cursor: pointer">
+      버튼
+    </button>
+    <div onclick="change(this, '25px', 'tomato')" style="cursor: pointer">
+      여기를 클릭하면 변경
+    </div> -->
+
+    <h3>내가 좋아하는 과일? <button onclick="change2()">찾기</button></h3>
+    <hr />
+    <p>
+      저는 빨간 <span>사과</span>를 좋아해서 아침마다 한 개씩 먹고 있어요.
+      운동할 때는 중간 중간에 <span>바나나</span>를 먹지요. 또한 달콤한 향기를
+      품은 <span>체리</span>와 <span>자두</span>를 좋아합니다.
+    </p>
+    <script>
+      /* let p = document.getElementById("firstP");
+      let text = "p.id =" + p.id + "\n";
+      text += "p.tagName = " + p.tagName + "\n";
+      text += "p.innerHTML = " + p.innerHTML + "\n";
+      text += "p.style.color = " + p.style.color + "\n";
+      text += "p.onclick = " + p.onclick + "\n";
+      text += "p.childElementCount = " + p.childElementCount + "\n";
+      text += "너비 = " + p.offsetWidth + "\n";
+      text += "높이 = " + p.offsetHeight + "\n";
+      alert(text); */
+      /* let p1 = document.getElementById("firstP");
+      p1.style.color = "red";
+      let span = document.getElementById("mySpan");
+      span.style.color = "green";
+      span.style.fontSize = "30px"; */
+      /* function change() {
+        let span = document.getElementById("mySpan");
+
+        span.style.color = "green";
+        span.style.fontSize = "30px";
+        span.style.display = "block";
+        span.style.width = "6em";
+        span.style.border = "3px dotted magenta";
+        span.style.margin = "20px";
+      } */
+      /* let p = document.getElementById("firstP");
+      let text = p.innerHTML; */
+      /*  function change1() {
+        let p = document.getElementById("firstP");
+        p.innerHTML = "나의<img src='pic.jpg'>강아지";
+      }
+      function change(obj, size, color) {
+        obj.style.color = color;
+        obj.style.fontSize = size;
+      } */
+      function change2() {
+        let spanArray = document.getElementsByTagName("span");
+        // for (i = 0; i < spanArray.length; i++) {
+        //   let span = spanArray[i];
+        //   span.style.color = "orange";
+        //   span.style.fontSize = "20px";
+        // }
+        spanArray = Array.from(spanArray);
+        spanArray.forEach(function (span) {
+          span.style.color = "orange";
+          span.style.fontSize = "20px";
+        });
+
+        // for (let span of spanArray) {
+        //   span.style.color = "orange";
+        //   span.style.fontSize = "20px";
+        // }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      //Map객체 -
+      //
+      //일반 객체 데이터 추가
+      //- map["키이름"] = 값
+      //- map.키이름 = 값
+
+      const map = new Map();
+      console.log(map);
+      map.set("name", "hyun");
+      map.set("1", "number");
+      map.set("true", "trueValue");
+      console.log(map);
+
+      const map1 = new Map();
+
+      //set() : key, value설정
+      map1.set("name", "hyun");
+      map1.set("age", "20");
+      map1.set("addr", "seoul");
+      console.log(map1);
+
+      //name 키 값 출력
+      console.log(map.get("name")); //'hyun'
+
+      //score 값 추가
+      map1.set("score", 100);
+
+      //size 확인
+      console.log(map.size);
+
+      //값 삭제
+      map1.delete("age");
+
+      //map 확인
+      console.log(map1);
+    </script>
+  </body>
+</html>

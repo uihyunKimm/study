@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <script>
+      //스프레드 연산자 > 객체, 배열 값 복사
+      //...배열이름 -> [1,2,3] ...객체이름 -> {key1:value1,key2:value2}
+      function add(a, b, c) {
+        return a + b + c;
+      }
+      const nums = [10, 20, 30];
+      const result = add(...nums);
+      console.log(result);
+
+      function rest(num1, num2, ...nums) {
+        console.log(num1);
+        console.log(num2);
+        console.log(nums);
+      }
+      rest(10, 20, 30, 40, 50);
+
+      const num1 = [1, 2, 3];
+      const num2 = [4, 5, 6];
+
+      const newArr = [...num1, ...num2];
+      console.log(newArr);
+
+      const dog = { name: "바둑이", age: 5, color: "brown" };
+      const newDog = { ...dog, owner: "hyun" };
+
+      console.log(dog);
+      console.log(newDog);
+    </script>
+  </body>
+</html>
