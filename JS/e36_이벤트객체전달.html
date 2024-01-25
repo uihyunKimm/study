@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <p id="p">마우스를 올려보세요</p>
+    <button onclick="eventFunction(event)">클릭하세요</button>
+    <script>
+      // 이벤트 리스너 : on이벤트 이름(구성)
+
+      // 1. HTML 태그에 직접 작성 >
+      // 1-1: <p onclick="스타일.글자색=red">
+      // 1-2: <p onclick="changeColor()">
+
+      // 2.이벤트 리스너 프로퍼티에 값으로 작성
+      // 2-1: p.onclick = changerColor -> ()는 생략
+      // 2-2: p.onclick = function() {} -> 익명함수 작성
+
+      // 3.addEventListerner("이벤트이름",함수) 함수를 작성
+      // 3-1: p.addEventListener("click", changecolor)
+
+      function eventFunction(e) {
+        alert(e.type);
+      }
+      document.getElementById("p").onmouseover = eventFunction;
+    </script>
+  </body>
+</html>

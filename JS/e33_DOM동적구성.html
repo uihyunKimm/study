@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <p id="p">1
+      <p>2</p> 
+      <p>3</p>
+    </p>
+    <script>
+      //Element 생성
+      let newDIV = document.createElement("div");
+      newDIV.innerHTML = "새로 생성된 DIV입니다.";
+      newDIV.setAttribute("id", "myDiv");
+      newDIV.style.backgroundColor = "yellow";
+
+      //DOM 트리에 삽입
+      let p = document.getElementById("p");
+      p.appendChild(newDIV);
+
+      //DOM 삭제
+      let myDiv = document.getElementById("myDiv");
+      let parent = myDiv.parentElement;
+    </script>
+  </body>
+</html>

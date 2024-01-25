@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <p>안녕하세용</p>
+    <div>안녕하세용</div>
+    <script>
+      let p = document.querySelector("p");
+      //1. 이름을 가진 이벤트 리스너
+      p.onclick = clickFunction;
+
+      //첫 번째 매개변수 : 클릭 이벤트에 대한 정보가 객체로 저장
+      function clickFunction(e) {
+        alert(e.type); //이벤트 종류
+        alert(e.target); // 이벤트가 발생한 객체 -> p태그 객체
+        alert(e.target.tagname); // 이벤트가 발생한 태그의 이름 > p(대문자)
+      }
+
+      // 2. 이름이 없는 이벤트 리스너 = 익명함수
+      p.onclick = function (e) {
+        alert(e.type);
+      };
+
+      p.onclick = (e) => {
+        alert(e.type);
+      };
+
+      // 3. add 이벤트 리스너 = 익명함수
+      p.addEventListener("click", e);
+    </script>
+  </body>
+</html>

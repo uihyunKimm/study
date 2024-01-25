@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <p class="soo">안녕하세요</p>
+    <div>
+      <p class="soo">안녕하세요</p>
+      <p class="soo">안녕하세요</p>
+    </div>
+    <p class="soo">안녕하세요</p>
+    <p class="css">안녕하세요</p>
+    <p id="javascript">안녕하세요</p>
+    <script>
+      // document.querySelector(".soo").style.color = "red";
+
+      let sool = document.getElementsByClassName("soo");
+      sool.style.color = "red"; //컬렉션이기 때문에 안됨 이거 for문 이용해야함
+
+      // document.querySelector("div .soo").style.color = "red"
+      // let pList = document.querySelectorAll(".soo")
+      // // pList[0].style.color = "red";
+      // // pList[1].style.color = "tomato";
+      // // pList[2].style.color = "cyan";
+      // for (let i = 0; i < pList.length; i++) {
+      //   let item = pList[i];
+      //   item.style.color = "pink";
+      //   item.style.fontSize = "20px";
+      // }
+
+      // let pList = document.querySelectorAll(".soo, #javascript");
+      // for (let i = 0; i < pList.length; i++) {
+      //   let item = pList[i];
+      //   item.style.color = "blue";
+      //   item.style.fontSize = "25px";
+      // }
+    </script>
+  </body>
+</html>

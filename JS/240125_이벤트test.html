@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습 #객체</title>
+  </head>
+  <body onload="init()">
+    <div id="bodyC">
+      <h2>계산해봅시다</h2>
+      <!-- 
+    <p>
+      <span id="q1">2 + 4</span> =<span id="a1"> </p>
+    <p>4 * 20 + 64 = <span class="sp1">답</span></p>
+    <p>20/5 - 8*2 = <span class="sp1">답</span></p> -->
+      <hr />
+      <p>2 + 4 = <span class="sp1">답</span></p>
+      <p>4 * 20 + 64 = <span class="sp1">답</span></p>
+      <p>20/5 - 8*2 = <span class="sp1">답</span></p>
+      <br />
+      <hr />
+      <h3>2. span 태그에만 onmouseover/onmouseout</h3>
+      <br />
+      <p>
+        span 태그에 대해서만 <span class="sp2">마우스</span>가 올라올 때 밑줄이
+        그어지고 <span class="sp2">마우스</span>가 내려갈 때 밑줄이 사라지도록
+        <span class="sp2">자바스크립트 코드</span>를 작성한다.
+      </p>
+    </div>
+    <script>
+      //1.
+      let nwspan = document.getElementsByClassName("sp1");
+      let parent = nwspan.parentElement;
+
+      //2.
+
+      /* let sp = document.getElementsByClassName(".sp2");
+      function init() {
+        for (i = 0; i < sp.length; i++) {
+          sp[i].addEventListener("mouseover", over);
+          sp[i].addEventListener("mouseout", out);
+        }
+      } */
+      let sp = document.querySelectorAll(".sp2");
+      for (let i = 0; i < sp.length; i++) {
+        let item = sp[i];
+        item.addEventListener("mouseover", over);
+        item.addEventListener("mouseout", out);
+      }
+
+      function over() {
+        this.style.textDecoration = "underline";
+      }
+      function out() {
+        this.style.textDecoration = "none";
+      }
+
+      //3.
+      let bodyC = document.querySelector("bodyC");
+      function init() {
+        bodyC.addEventListener("mouseover", whit);
+        bodyC.addEventListener("mouseout", lightgra);
+      }
+
+      function whit() {
+        this.style.backgroundColor = "white";
+      }
+
+      function lightgra() {
+        this.style.backgroundColor = "lightgray";
+      }
+    </script>
+  </body>
+</html>
