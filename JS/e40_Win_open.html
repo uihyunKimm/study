@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+  <body>
+    <h2>셀렉트로 사이트 접속</h2>
+
+    <br />
+    <p>접속할 사이트</p>
+<form>
+  <select id="web" onchange="open(value)">
+  <option value="https://www.naver.com/">네이버
+  <option value="https://www.google.com" selected>구글
+  <option value="https://www.daum.com/">다음
+  </select>
+  <img id="fruitimage" src="images/banana.png" alt="">
+  </form>
+      <script>
+        function open() {
+        let win = document.getElementById("web");
+        let index = win.selected.index.value;
+        }
+
+        function test(){
+        console.log("test")
+      }
+      let kcity = document.getElementsByName("city")
+
+      function findChecked() {
+      let found = null;
+      let kcity = document.getElementsByName("city");
+
+      for(let i=0; i<kcity.length; i++) {
+      if(kcity[i].checked == true)
+      found = kcity[i];
+      }
+      if(found != null)
+      alert(found.value + "이 선택되었음");}
+
+      //
+      let sum =0;
+      function calc(cBox){
+        if(cBox.checked)
+        sum +=parseInt(cBox.value);
+      else
+        sum -=parseInt(cBox.value);
+
+        document.getElementById("result").value = sum;
+      }
+
+      </script>
+  </body>
+</html>

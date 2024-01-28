@@ -23,8 +23,8 @@
       const numbers = [10, 20, 30, 40, 50];
       //case 1. for문 이용
       //case 2. forEach문 이용
-      numbers.forEach(function (number) {
-        console.log(number);
+      numbers.forEach(function (a,b) {
+        console.log(a,b);
       });
 
       numbers.forEach((number) => console.log(number));
@@ -52,6 +52,7 @@
       // document.write(numberss);
 
       const fruits = ["apple", "banana", "melon", "orange", "melon"];
+      console.log(fruits.callee)
       // //find(item을 찾아줌)
       // const favorite1 = fruits.find(function (name) {
       //   return name === "melon";
@@ -104,6 +105,14 @@
       console.log(map1);
       const map2 = array.map((item) => item * 2);
       console.log(map1);
+
+      const obj = ["aa","bb"];
+      const obj3 = [1,2];
+      const obj2 = {aa:"bb"};
+      console.log(typeof obj)
+      console.log(typeof obj2)
+      console.log(typeof obj3)
+      
     </script>
   </body>
 </html>

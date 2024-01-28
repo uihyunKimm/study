@@ -7,8 +7,7 @@
   </head>
   <body>
     <h3>
-      자바스크립트란?
-      <button onclick="border()">border</button>
+      자바스크립트란? <button onclick="border()">border</button>
       <button onclick="ptag()">p</button>
     </h3>
     <hr />
@@ -22,8 +21,7 @@
       이벤트 등 GUI 프로그래밍에 필요한 요소들이 있어 학습에 약간의 어려움이
       있다.
     </p>
-    <p id="Sp" onclick="spOn2(this)" style="cursor: pointer">
-      <!-- <p id="Sp" onclick="spOn()" style="cursor: pointer"> -->
+    <p id="Sp" onclick="spOn()" style="cursor: pointer">
       이번 여름에는 어디로 여행을 갈까요?
     </p>
     <script>
@@ -36,19 +34,9 @@
         alert("<p>태그의 개수는" + p.length);
       }
 
-      function ptag2() {
-        let pArray = document.querySelectorAll("p");
-        alert("<p>태그의 개수는" + pArray.length);
-      }
-
       function spOn() {
         let spOn = document.getElementById("Sp");
         spOn.innerHTML = prompt("텍스트를 입력하세요");
-      }
-
-      function spOn2(obj) {
-        let text = prompt("텍스트를 입력하세요", "");
-        obj.innerHTML = text;
       }
     </script>
   </body>

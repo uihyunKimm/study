@@ -167,7 +167,53 @@
 //     document.write(dan + " x " + cpx + " = " + (dan*cpx))
 // }
 
-//     </script>
+function changename(obj){
+    obj.name = 'coder';
+}
+
+const uk = { name: 'uihkk'};
+changename(uk);
+console.log(uk)
+
+(function showMessage(message, from = 'unknown'){
+    console.log(`${message} by ${from}`);
+})();
+console.log(showMessage('hi','uk'))
+console.log(showMessage('hi'))
+
+function printAll(...args){
+    // for(const arg of args){
+    //     console.log(arg);
+    // }
+    args.forEach((arg) => console.log(arg));
+}
+
+function randomQuiz(answer, printYes, printNo) {
+        if(answer === 'love you'){
+            printYes();
+        }else {
+            printNo();
+        }
+    };
+
+    const printYes = function () {
+        console.log('yes!');
+    };
+    const printNo = function print() {
+        console.log('no!');
+    };
+    const printNoo = () => console.log('no!');
+    const kuh = (a,b,c) => {
+        let sum = a + b * c;
+        return sum;
+    }
+    console.log(kuh(10, 20, 50))
+
+randomQuiz('love toy', printYes, printNo);
+randomQuiz('love you', printYes, printNo);
+
+
+</script>
 
 
 </body>

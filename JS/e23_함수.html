@@ -39,20 +39,60 @@
       //   document.write("수가 아닙니다.");
       // }
 
-      function gugudan(a) {
-        let i = parseInt(a);
-        if (isNaN(i) || i < 1 || i > 9) {
-          alert("숫자를 입력하세요.");
-          return; //리턴 뒤에 뭐 없으면 종료임
-        }
-        for (let j = 1; j <= 9; j++) {
-          document.write(i + " x " + j + " = " + i * j + "<br>");
-        }
+      // function gugudan(a) {
+      //   let i = parseInt(a);
+      //   if (isNaN(i) || i < 1 || i > 9) {
+      //     alert("숫자를 입력하세요.");
+      //     return; //리턴 뒤에 뭐 없으면 종료임
+      //   }
+      //   for (let j = 1; j <= 9; j++) {
+      //     document.write(i + " x " + j + " = " + i * j + "<br>");
+      //   }
+      // }
+
+      let hamsu = function(a,b){
+        hamsu = a + b;
+        return hamsu;
+      }
+      
+      let j = 200;
+      console.log(hamsu(j,20))
+      
+      // document.write("<h2>구구단 출력 함수 만들기</h2><hr>");
+      // let k = prompt("구구단 몇 단?");
+      // gugudan(k);
+
+      function calculator(command, a, b){
+        let result = command(a, b);
+        return console.log(result);
       }
 
-      document.write("<h2>구구단 출력 함수 만들기</h2><hr>");
-      let k = prompt("구구단 몇 단?");
-      gugudan(k);
+      function adder(num1, num2){
+        let sum = num1 + num2;
+        return sum;
+      }
+      function substractor(num1, num2){
+        let sum = num1 - num2;
+        return sum;
+      }
+      function divider(num1, num2){
+        let sum = num1 / num2;
+        return sum;
+      }
+      function multiplyer(num1, num2){
+        let sum = num1 * num2;
+        return sum;
+      }
+      function remainder(num1, num2){
+        let sum = num1 % num2;
+        return sum;
+      }
+
+      calculator(adder, 1, 2);
+      calculator(substractor, 1, 2);
+      calculator(multiplyer, 1, 2);
+      calculator(divider, 1, 2);
+      calculator(remainder, 1, 2);
     </script>
   </body>
 </html>
