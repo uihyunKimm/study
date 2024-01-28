@@ -30,6 +30,29 @@
     </form>
 
       <script>
+        const buttons = document.querySelectorAll("button");
+        const operators = document.querySelectorAll("operator");
+        const display = document.querySelector("input");
+        const numBtn = document.querySelectorAll(".numBtn");
+
+        function calculator (command, a, b){
+        switch(command) {
+            case 'add':
+                return a + b;
+            case 'substract':
+                return a - b;
+            case 'multiply':
+                return a * b;
+            case 'divide':
+                return a / b;
+            case 'remainder':
+                return a % b;
+            default:
+                throw Error('unknown command');
+        }
+      }
+      console.log(calculator2('multiply', 3, 10))
+      
       </script>
   </body>
 </html>

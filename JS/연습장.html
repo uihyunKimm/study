@@ -167,7 +167,7 @@
 //     document.write(dan + " x " + cpx + " = " + (dan*cpx))
 // }
 
-function changename(obj){
+/* function changename(obj){
     obj.name = 'coder';
 }
 
@@ -175,9 +175,9 @@ const uk = { name: 'uihkk'};
 changename(uk);
 console.log(uk)
 
-(function showMessage(message, from = 'unknown'){
-    console.log(`${message} by ${from}`);
-})();
+function showMessage(message, from = 'unknown'){
+    console.log(`${message} by ${from}`)
+}
 console.log(showMessage('hi','uk'))
 console.log(showMessage('hi'))
 
@@ -210,7 +210,57 @@ function randomQuiz(answer, printYes, printNo) {
     console.log(kuh(10, 20, 50))
 
 randomQuiz('love toy', printYes, printNo);
-randomQuiz('love you', printYes, printNo);
+randomQuiz('love you', printYes, printNo); */
+
+function calculator(command, a, b){
+        let result = command(a, b);
+        return console.log(result);
+      }
+
+      function adder(num1, num2){
+        let sum = num1 + num2;
+        return sum;
+      }
+      function substractor(num1, num2){
+        let sum = num1 - num2;
+        return sum;
+      }
+      function divider(num1, num2){
+        let sum = num1 / num2;
+        return sum;
+      }
+      function multiplyer(num1, num2){
+        let sum = num1 * num2;
+        return sum;
+      }
+      function remainder(num1, num2){
+        let sum = num1 % num2;
+        return sum;
+      }
+
+      calculator(adder, 1, 2);
+      calculator(substractor, 1, 2);
+      calculator(multiplyer, 1, 2);
+      calculator(divider, 1, 2);
+      calculator(remainder, 1, 2);
+
+      function calculator2 (command, a, b){
+        switch(command) {
+            case 'add':
+                return a + b;
+            case 'substract':
+                return a - b;
+            case 'multiply':
+                return a * b;
+            case 'divide':
+                return a / b;
+            case 'remainder':
+                return a % b;
+            default:
+                throw Error('unknown command');
+        }
+      }
+      console.log(calculator2('multiply', 3, 10))
 
 
 </script>
