@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON</title>
+</head>
+<body onload="showBoard()">
+  <table class="boardTable">
+    <thead class="boardThead">
+      <tr class="boardThTr">
+        <th>순위</th>
+        <th colspan="2">제목</th>
+        <th>출판사</th>
+        <th>가격</th>
+      </tr>
+    </thead>
+    <tbody class="boardTbody">
+    </tbody>
+  </table>
+
+  <h3>도서추가</h3>
+  <form id="save" method="post">
+  제목 : <input type="text" name="title" /><br>
+  저자 : <input type="text" name="publiser" /><br>
+  가격 : <input type="text" name="price" />
+  <button type="submit">저장</button>
+</form>
+
+  <script src=".\board.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트</title>
+  </head>
+  <body>
+    <h3>옵션 선택으로 사이트 접속</h3>
+    <p>옵션 선택마다 새 윈도우에 접속합니다.</p>
+    <hr />
+    <form>
+      <p>접속할 사이트</p>
+      <select onchange="loadSite(this)">
+        <option value="http://www.naver.com">네이버</option>
+        <option value="http://www.google.com">구글</option>
+      </select>
+    </form>
+
+    <script>
+      function loadSite(select) {
+        let index = select.selectedIndex;
+        let site = select.options[index].value;
+
+        // 윈도우 이름 생략. 새 탭으로 열기
+        window.open(site, "sss", "left=500,top=400,width=500,height=400");
+      }
+    </script>
+  </body>
+</html>

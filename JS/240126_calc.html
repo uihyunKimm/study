@@ -35,24 +35,55 @@
         const display = document.querySelector("input");
         const numBtn = document.querySelectorAll(".numBtn");
 
-        function calculator (command, a, b){
+        let operatorOn = ''; // 연산자 입력
+        let previousNum = ''; //이전 값
+        let resentNum = ''; // 최근값
+
+        let calc = (a, command, b) =>{
+          let result = 0;
         switch(command) {
-            case 'add':
-                return a + b;
-            case 'substract':
-                return a - b;
-            case 'multiply':
-                return a * b;
-            case 'divide':
-                return a / b;
-            case 'remainder':
-                return a % b;
+            case '+':
+                result = Number(a) + Number(b);
+                break;
+            case '-':
+                result = Number(a) - Number(b);
+                break;
+            case 'x':
+                result = Number(a) * Number(b);
+                break;
+            case '/':
+                result = Number(a) / Number(b);
+                break;
+            case '%':
+                result = Number(a) % Number(b);
+                break;
             default:
                 throw Error('unknown command');
+                break;
         }
+        return String(result);
+      };
+
+      let calculator = () =>{
+        let isFirstDigit = true; //첫 번째 숫자 여부 판별하는 변수
+
+        buttons.forEach((item) =>{
+          item.addEventListener('click', (e) => {
+            let action = e.target.classList[0];
+            let click = e.target.innerHTML;
+
+            if (action === 'operator'){//연산자를 눌렀을 때
+              operatorOn = click;
+              previousNum = displayElement.textContent;
+              displayElement.textContent = '';
+              isFirstDigit = true;
+            }
+          })
+        })
       }
+
       console.log(calculator2('multiply', 3, 10))
-      
+
       </script>
   </body>
 </html>

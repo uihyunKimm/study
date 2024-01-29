@@ -1,0 +1,24 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: pink;
+    z-index: 999;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 30px;
+    list-style: none;
+}
