@@ -18,7 +18,7 @@ function showBoard() {
     <td>${book.publisher}</td>
     <td>${book.price}</td>
     </tr>`;
-    
+
     boardTbody.innerHTML += tr;
     });
     }
@@ -35,6 +35,7 @@ function showBoard() {
   const bookInfo = new URLSearchParams(formData);
   });
 
+  
   // 서버에 데이터 전송
 fetch("http://localhost:4000/books", {
   method: "POST",
