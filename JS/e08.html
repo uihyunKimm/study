@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <link href="./e08.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body onload="showBoard()">
+    <table class="boardTable">
+      <thead class="boardThead">
+        <tr class="boardThTr">
+          <th>순위</th>
+          <th colspan="2">제목</th>
+          <th>저자</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <tbody class="boardTbody"></tbody>
+    </table>
+
+    <h3>도서 추가</h3>
+    <form id="save" method="POST">
+      제목 : <input type="text" name="title" id="title"/><br>
+      저자 : <input type="text" name="publisher" id="publisher"/><br>
+      가격 : <input type="text" name="price" id="price"/>
+      <button type="submit">저장</button>
+    </from>
+
+    <script src="e08.js"></script>
+  </body>
+</html>
