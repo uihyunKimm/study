@@ -10,31 +10,89 @@
 n.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
   <link rel="stylesheet" href="./cultureweb.css" />
+  <link 
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Noto Sans KR"
+    />
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="header-top flex">
       <ul>
-        <li data -menuanchor="menu1">
-          <a href="#menu1">Slide1</a>
+        <li>Contact &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
+        </li>
+        <li><a href="#"
+          ><img src="https://i.ibb.co/6wNnt4P/insta.png" class="favicon" alt=""> insta</a></li>
+        <li><a href="https://github.com/uihyunKimm" target="_blank"><img src="https://i.ibb.co/G2X37C9/pngegg.png" class="favicon" alt=""> Git</a></li>
+        <li><a href="https://uihkk.tistory.com/" target="_blank"><img src="https://t1.daumcdn.net/cfile/tistory/9952393A5C3448C507" class="favicon" alt=""> tstoty</a></li>
+      </ul>
+    </nav>
+    <nav id ="header-top2">
+      <div class="mNav">
+        <div class="icon_wrap">
+          <div class="icon"><img src="https://ifh.cc/g/oh6KRf.png"></img></div>
+        </div>
+      </div>
+      <ul class="menu">
+        <li class="active" data -menuanchor="menu1">
+          <a href="#menu1">Home</a>
         </li>
         <li data -menuanchor="menu2">
-          <a href="#menu2">Slide2</a>
+          <a href="#menu2">행사정보</a>
         </li>
         <li data -menuanchor="menu3">
-          <a href="#menu3">Slide3</a>
+          <a href="#menu3">공간정보</a>
         </li>
         <li data -menuanchor="menu4">
-          <a href="#menu4">Slide4</a>
+          <a href="#menu4">공연정보</a>
+        </li>
+        <li data -menuanchor="menu5">
+          <a href="#menu5">예약현황</a>
+        </li>
+        <li data -menuanchor="menu6">
+          <a href="#menu6">데이터</a>
         </li>
       </ul>
     </nav>
   </header>
   <div id="fullpage">
-    <div class="section">
-      <h1>Slide1</h1>
+    <div class="section" id="section1">
+      <div class="fp-bg">
+        <div class="wrapper flex">
+          <div class="main_text">
+            <div>
+              <img src="https://ifh.cc/g/372T90.png" alt="동행매력서울시" class="img-logo">
+            </div>
+            <div>
+              <img src="https://ifh.cc/g/MAz6a0.png" alt="서울문화행사이모저모" class="img-styles">
+            </div>
+            <button>more</button>
+            <div class="low_notice flex">&nbsp; Event
+              <a href="#menu4">one two one two </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="section">
+    <div class="section" id="section2">
+      <div class="fp-bg">
+        <div class="wrapper flex">
+          <div class="main_text flex">
+            <ul class="tab" id="tab">
+              <li class="on">공지사항</li>
+              <li>행사/이벤트</li>
+            </ul>
+            <div id="map_wrap">
+              <div class="map_1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section3">
+      <div class="slide" id="slide3-1">
+        <div class="fp-bg"></div>
+      </div>
       <h1>Slide2</h1>
     </div>
     <div class="section">
@@ -42,6 +100,9 @@ n.js"></script>
     </div>
     <div class="section">
       <h1>Slide4</h1>
+    </div>
+    <div class="section">
+      <h1>Slide5</h1>
     </div>
     <footer class="section fp-auto-height"><h1>footer</h1></footer>
   </div>

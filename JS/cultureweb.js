@@ -11,9 +11,9 @@ $(document).ready(function() {
     navigation : true,
     navigationPosition : 'right',
     // 링크
-    anchors:['menu1', 'menu2', 'menu3', 'menu4'],
+    anchors:['menu1', 'menu2', 'menu3', 'menu4', 'menu5', 'menu6'],
     // 배경색
-    sectionsColor: ["yellow", "orange", "green", "blue"]
+    sectionsColor: ["", "", "green", "blue", "red", "purple"],
     }
     );
     });

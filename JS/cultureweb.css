@@ -1,24 +1,244 @@
-html,
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+
+}
 body {
     width: 100%;
     height: 100%;
+    margin: 0;
 }
 
-header {
+.flex{
+    display: flex;
+}
+
+.header-top {
+    width: 100%;
+    height: 32px;
     position: fixed;
+    justify-content: right;
+    align-items: center;
     left: 0;
     right: 0;
     top: 0;
-    background: pink;
     z-index: 999;
+    background-color: rgb(71, 71, 71);
+}
+.header-top ul {
+    display: flex;
+    margin: 5px 20px 5px 0px;
+}
+.header-top ul li {
+    margin: 0 20px;
+    list-style: none;
+    font-size: 10px;
+    color: #aaaaaa;
 }
 
-header nav ul {
+.header-top ul li a {
+    text-decoration: none;
+    color: #aaaaaa;
+}
+
+.header-top ul li a .favicon{
+    color: #aaaaaa;
+    width: 10px;
+    height: 10px;
+}
+
+.header-top ul li a:visited{
+    color: #aaaaaa;
+}
+
+#header-top2 {
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-top: 32px;
+    font-size: large;
+    z-index: 999;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+}
+
+#header-top2 .menu {
+    padding: 0;
     display: flex;
     justify-content: center;
 }
 
-header nav ul li {
+#header-top2 .menu li {
+    display: inline;
     margin: 0 30px;
     list-style: none;
+}
+
+#header-top2 .menu li a{
+    display: inline-block;
+    padding: 15px 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#header-top2 .menu li a:visited{
+    color: #ffffff;
+}
+
+#header-top2 .menu li.active a{
+    color: #ff6e9a;
+    font-weight: 800;
+}
+
+#header-top2 .mNav{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    top: 2.2rem;
+    right: 2rem;
+    display: none;
+    background-color: hsla(0, 0%, 100%, 0.2);
+}
+
+@media screen and (max-width: 810px){
+    #header-top2 .menu {
+        display : none;
+    }
+    #header-top2 .mNav {
+        display: block;
+    }
+    .wrapper .img-logo {
+        width: 80%;
+    }
+    .wrapper .img-styles{
+        width: 80%;}
+}
+#header-top2 .mNav .icon{
+    justify-content: center;
+}
+#header-top2 .mNav .icon img{
+    position: relative;
+    left: 0.3rem;
+    width: 70%;
+    height: 40%;
+}
+#section1{
+    width: 100%;
+    height: 100%;
+}
+
+#section1 .fp-bg {
+    height: 100%;
+    background: linear-gradient(rgba(255, 166, 0, 0.884), rgba(255, 166, 0, 0.829) ),url("https://i.ibb.co/2jjkysJ/SSI-20220929143941-O2.jpg");
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+.wrapper {
+    width: 60%;
+    max-width: 64rem;
+    min-width: 24rem;
+    height:100%;
+    position: relative;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .img-logo {
+    margin-top: 200px;
+    position: relative;
+    z-index: 3;
+    width: 35%;
+}
+.wrapper .img-styles {
+    position: relative;
+    z-index: 3;
+    width: 40%;
+}
+
+/* /* @media screen and (min-width: 1025px){
+.wrapper .img-logo {
+    width: 100%;}
+.wrapper .img-styles {
+    width: 50%;}
+} */
+
+
+.wrapper button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius : 30px;
+    width: 8rem;
+    height: 3rem;
+    margin-left: 0;
+    margin-top: 2rem;
+    justify-content: center;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.wrapper button:hover {
+    background-color: rgb(211, 211, 211);
+}
+.wrapper button:active{
+    background-color: rgb(129, 129, 129);
+    color: #ffffff;
+}
+
+.wrapper .low_notice {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    border: none;
+    border-radius: 12px;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+.wrapper .low_notice a {
+    display: inline-block;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+}
+.wrapper .top_notice a.visited {
+    color: black
+}
+
+#fp-nav ul li a span{
+    background: #ffffff;
+}
+
+#section2 .fp-bg {
+    height: 100vh;
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(0, 0, 0, 0.9) ),url("https://img.etnews.com/news/article/2024/01/11/news-p.v1.20240111.72d99884c7f84ee5b5400244fc9d56c9_P1.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#section2 .tab 
+
+#section2 .tab {
+
+}
+
+#section2 .tab li{
+    list-style-type: none;
+    display: inline;
 }
