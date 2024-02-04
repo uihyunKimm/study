@@ -170,6 +170,11 @@ body {
     position: relative;
     z-index: 3;
     width: 35%;
+    transition: all .3s .5s;
+}
+
+#section1 .wrapper .img-logo.active {
+    transform: translateY(-10rem);
 }
 #section1 .wrapper .img-styles {
     position: relative;
@@ -271,10 +276,10 @@ body {
 
 #section2 .wrapper .map_wrap {
     position: relative;
-    border: none;
-    border-radius: 0.6rem;
     background-color: #ffffff;
     width: 100%;
+    border: none;
+    border-radius: 0.6rem;
     top: 1rem;
     max-width: 64rem;
     max-height: 40rem;
@@ -284,9 +289,13 @@ body {
     margin-bottom: 1rem;
 }
 
-/* #section2 .map_wrap .map1{
-    /* map 들어갈 자리 
-}*/
+#map{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.6rem;
+    
+}
 
 .map_search {
     width: 100%;
@@ -572,7 +581,7 @@ body {
 
 #section5 .fp-bg {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url("http://blog.cloudflare.com/content/images/seoul_korea_cloudflare.png.scaled500.png");
+    background: linear-gradient(rgba(130, 177, 0, 0.9), rgba(151, 134, 0, 0.7)),url("https://www.jrbeetle.com/ko/wp/wp-content/themes/jrbeetle/img/reserve1.jpg");
     background-size: cover;
     overflow: hidden;
 }
@@ -584,4 +593,221 @@ body {
     position: relative;
     margin: auto;
     flex-direction: column;
+}
+
+.reserv {
+    max-width: 48rem;
+    margin: auto;
+}
+
+.reserv_title {
+    font-size: 1.3rem;
+    margin: 8rem 0.5rem 1.8rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.reserv_search {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    max-width: 64rem;
+    border: none;
+    border-radius: 0.6rem;
+    overflow: auto;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+.reserv_search .reserv_sm_box {
+    background-color: #ffffff;
+    width: 100%;
+    height: 12rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    padding: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px -5px;
+}
+
+.reserv_search .reserv_sm_box .cal_box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow:hidden;
+    flex-wrap: nowrap;
+}
+
+.reserv_search .reserv_sm_box .cal_box .pic{
+    width: 50%;
+    height: 100%;
+    margin-right: 2rem;
+    max-width: 25%;
+    min-width: 20%;
+    background-color: rgb(236, 236, 236);
+    border: 0.5px solid #cfcfcf;
+    border-radius: 0.4rem;
+}
+
+.reserv_search .reserv_sm_box .cal_box a{
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    min-width: 12rem;
+    margin-right: 1rem;
+}
+
+.reserv_search .reserv_sm_box .cal_box a:visited{
+    color: black;
+}
+
+.reserv_search .reserv_sm_box .cal_box h2{
+    margin: 0.7rem 0 1.2rem 0;
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+.reserv_search .reserv_sm_box .icon{
+    width: 12rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.reserv_search .reserv_sm_box .icon span{
+    margin: 0.7rem 0 0 0;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+}
+
+.reserv_search .reserv_sm_box .txt_box{
+    text-overflow: ellipsis;
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    margin-right: 1rem;
+}
+
+
+#section6 .fp-bg {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 65, 106, 0.9), rgba(156, 190, 224, 0.6) ),url("https://data.seoul.go.kr/resources/img/guide/pic_openapi.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#section6 .wrapper {
+    max-width: 64rem;
+    min-width: 24rem;
+    height:100%;
+    position: relative;
+    margin: auto;
+    flex-direction: column;
+}
+
+.data {
+    max-width: 48rem;
+    margin: auto;
+}
+
+.data_title {
+    font-size: 1.3rem;
+    margin: 8rem 0.5rem 1.8rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+
+
+footer {
+    align-items: center;
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+}
+
+.footer_nav {
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    height: 8rem;
+    padding: 2rem;
+}
+
+.footer_nav ul {
+    padding: 0 0 0 1rem;
+    margin: 0;
+    list-style-type: none;
+    color: #999999;
+}
+
+.footer_nav ul li {
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.footer_nav ul li a{
+    text-decoration: none;
+}
+.footer_nav ul .footer_imp{
+    text-decoration: none;
+    color: #1b1b1b;
+    font-weight: 900;
+}
+
+.footer_nav ul .footer_imp:hover{
+    color: #000000;
+}
+
+.footer_nav ul li a:visited{
+    color: #666666;
+}
+.footer_nav ul li a:hover{
+    font-weight: 700;
+}
+.footer_nav ul li a:active{
+    color: #383838;
+    font-weight: 700;
+}
+
+.footer_bar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: #666666 solid 0.1rem;
+    border-radius: 1.5rem;
+    width: 8rem;
+    height: 3rem;
+    right: 0;
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.footer_bar:hover{
+    background-color: #7e7e7e;
+    color: #000000;
+}
+.footer_bar:active{
+    background-color: #888888;
+}
+
+.footer_bar a{
+    text-decoration: none;
+}
+
+.footer_bar a:visited{
+    color: #666666;
 }

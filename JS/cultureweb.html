@@ -8,6 +8,8 @@
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.mi
 n.js"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=988c813400454111de9062e5b467eca7"></script>
+  <script type="text/javascript" src="./cultureweb.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
   <link rel="stylesheet" href="./cultureweb.css" />
   <link 
@@ -83,7 +85,7 @@ n.js"></script>
               <li>행사/이벤트</li>
             </ul>
             <div class="map_wrap flex">
-              <div class="map_1 flex"></div>
+              <div id ="map"></div>
             </div>
             <div class="map_search flex">
               <div class="map_sm_box flex">
@@ -289,19 +291,153 @@ n.js"></script>
         </div>
       </div>
     </div>
-    <div class="section" id="section4">
-      <h1>Slide4</h1>
-    </div>
     <div class="section" id="section5">
       <div class="fp-bg">
         <div class="wrapper flex">
-          <h2 class="concert_title flex">
+          <h2 class="reserv_title flex">
+            공공서비스예약 현황
+          </h2>
+          <div class="reserv_search flex">
+            <div class="reserv_sm_box flex">
+              <div class="cal_box flex">
+                <div class="pic flex"></div>
+                <a href="#">
+                  <h2>#행사 이름</h2>
+                  <div class="icon flex">
+                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
+                  </div>
+                </a>
+                <div class="txt_box">
+                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+                </div>
+              </div>
+            </div>
+            <div class="reserv_sm_box flex">
+              <div class="cal_box flex">
+                <div class="pic flex"></div>
+                <a href="#">
+                  <h2>#행사 이름</h2>
+                  <div class="icon flex">
+                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
+                  </div>
+                </a>
+                <div class="txt_box">
+                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+                </div>
+              </div>
+            </div>
+            <div class="reserv_sm_box flex">
+              <div class="cal_box flex">
+                <div class="pic flex"></div>
+                <a href="#">
+                  <h2>#행사 이름</h2>
+                  <div class="icon flex">
+                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
+                  </div>
+                </a>
+                <div class="txt_box">
+                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+                </div>
+              </div>
+            </div>
+            <div class="reserv_sm_box flex">
+              <div class="cal_box flex">
+                <div class="pic flex"></div>
+                <a href="#">
+                  <h2>#행사 이름</h2>
+                  <div class="icon flex">
+                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
+                  </div>
+                </a>
+                <div class="txt_box">
+                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+                </div>
+              </div>
+            </div>
+            <div class="reserv_sm_box flex">
+              <div class="cal_box flex">
+                <div class="pic flex"></div>
+                <a href="#">
+                  <h2>#행사 이름</h2>
+                  <div class="icon flex">
+                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
+                  </div>
+                  <div class="icon flex">
+                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
+                  </div>
+                </a>
+                <div class="txt_box">
+                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section6">
+      <div class="fp-bg">
+        <div class="wrapper flex">
+          <h2 class="data_title flex">
             데이터
           </h2>
         </div>
       </div>
     </div>
-    <footer class="section fp-auto-height"><h1>footer</h1></footer>
+    <footer class="section fp-auto-height">
+        <nav class="footer_nav flex">
+          <ul>
+            <li>
+              <a href="#">이용약관</a>
+            </li>
+            <li class="footer_imp">
+              <a href="#">위치정보 이용약관</a>
+            </li>
+            <li class="footer_imp">
+              <a href="#">개인정보처리방침</a>
+            </li>
+            <li>
+              <a href="#">운영정책</a>
+            </li>
+            <li>
+              <a href="#">청소년보호정책</a>
+            </li>
+            <li>
+              <a href="#">Contact us</a>
+            </li>
+          </ul>
+          <div class="footer_bar">
+            <a href="#">관련사이트</a>
+          </div>
+        </nav>
+    </footer>
   </div>
 
 
