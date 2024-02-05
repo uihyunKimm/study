@@ -12,6 +12,7 @@ $(document).ready(function() {
     sectionsColor: ["", "", "green", "blue", "red", "purple"],
     normalScrollElements:'#map', 
     normalScrollElements:".reserv_search",
+    parallax:true
     }
     );
     });

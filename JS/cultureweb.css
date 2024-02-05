@@ -88,6 +88,11 @@ body {
     list-style: none;
 }
 
+#header-top2 .menu li:hover{
+    transition: all 1s ease;
+    transform: scale(1.1);
+}
+
 #header-top2 .menu li a{
     display: inline-block;
     padding: 15px 10px;
@@ -173,21 +178,18 @@ body {
     transition: all .3s .5s;
 }
 
-#section1 .wrapper .img-logo.active {
-    transform: translateY(-10rem);
-}
 #section1 .wrapper .img-styles {
     position: relative;
     z-index: 3;
     width: 40%;
 }
 
-/* /* @media screen and (min-width: 1025px){
+@media screen and (min-width: 1025px){
 .wrapper .img-logo {
     width: 100%;}
 .wrapper .img-styles {
     width: 50%;}
-} */
+}
 
 
 #section1 .wrapper button {
@@ -224,13 +226,21 @@ body {
     color: #ffffff;
     font-size: 1.3rem;
     color: rgb(63, 63, 63);
+    margin-bottom: 20rem;
 }
+
+#section1 .wrapper .low_notice a:hover {
+    text-decoration: underline;
+    }
+
 #section1 .wrapper .low_notice a {
     display: inline-block;
+    font-size: 1rem;
     margin-left: 20px;
     color: rgb(39, 39, 39);
     text-decoration: none;
 }
+
 #section1 .wrapper .low_notice a.visited {
     color: rgb(151, 136, 0)
 }
@@ -345,21 +355,32 @@ input[type=checkbox]:checked+label{
     width: 50%;
     height: 100%;
     margin-right: 2rem;
-    min-width: 15rem;
-    max-width: 25rem;
+    min-width: 5rem;
+    max-width: 15rem;
     background-color: rgb(236, 236, 236);
     border: 0.5px solid #cfcfcf;
     border-radius: 0.4rem;
+    overflow: hidden;
+}
+.map_search .map_sm_box .cal_box .pic .picpic{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.map_search .map_sm_box .cal_box a{
+.map_search .map_sm_box .cal_box a{    
+    text-decoration: none;
+    min-width: 18rem;
+    margin-bottom: 0.3rem 0;
+    position: relative;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    min-width: 12rem;
-    margin-bottom: 0.3rem 0;
 }
-
+.map_search .map_sm_box .cal_box a .contents{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
 .map_search .map_sm_box .cal_box a:visited{
     color: black;
 }
@@ -371,10 +392,13 @@ input[type=checkbox]:checked+label{
 }
 
 .map_search .map_sm_box .icon{
-    width: 12rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: left;
+}
+.map_search .map_sm_box .icon_plc{
+    font-weight: 700;
 }
 
 .map_search .map_sm_box .icon span{
@@ -384,15 +408,19 @@ input[type=checkbox]:checked+label{
 }
 
 .map_search .map_sm_box .txt_box{
+    display: flex;
+    align-content: center;
     text-overflow: ellipsis;
-    font-size: small;
+    font-size: 0.9rem;
     margin: 0;
     padding: 0;
     margin: 0;
 }
 
 .map_search .map_sm_box .txt_box p{
-    margin: 0;
+    align-content: center;
+    justify-content: center;
+    margin: 2rem;
 }
 
 #section3 .fp-bg {
@@ -442,7 +470,7 @@ input[type=checkbox]:checked+label{
 
 .place_thumb {
     margin-right: 1.2rem;
-    min-width: 7rem;
+    min-width: 9rem;
     min-height: 7rem;
     border: 0.5px solid #cfcfcf;
     border-radius: 0.4rem;
@@ -549,7 +577,7 @@ input[type=checkbox]:checked+label{
 
 .concert_thumb {
     margin-right: 1.2rem;
-    min-width: 7rem;
+    min-width: 9rem;
     min-height: 7rem;
     border: 0.5px solid #cfcfcf;
     border-radius: 0.4rem;
@@ -634,90 +662,46 @@ input[type=checkbox]:checked+label{
 }
 
 .reserv_search {
-    width: auto;
-    height: auto;
-    margin-top: 1rem;
-    max-width: 64rem;
-    border: none;
-    border-radius: 0.6rem;
-    overflow: auto;
-    margin-bottom: 2rem;
-    flex-direction: column;
-}
-
-.reserv_search .reserv_sm_box {
-    background-color: #ffffff;
+    display: block;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    text-shadow: none;
     width: 100%;
-    height: 12rem;
-    border: none;
-    border-radius: 0.5rem;
-    margin-bottom: 0.6rem;
-    display: flex;
-    position: relative;
-    justify-content: space-around;
-    padding: 1rem;
     overflow: hidden;
-    box-shadow: 5px 5px 5px -5px;
 }
 
-.reserv_search .reserv_sm_box .cal_box {
+.reserv_search .boardTable {
     width: 100%;
-    height: 100%;
-    position: relative;
-    overflow:hidden;
-    flex-wrap: nowrap;
+    height: calc( (var(--vh) * 50));
+    border-top: 2px solid #104908;
+    table-layout: fixed;
+    padding: 1rem;
+    color: #104908;
+    overflow: hidden;
+    text-indent: initial;
 }
 
-.reserv_search .reserv_sm_box .cal_box .pic{
-    width: 50%;
-    height: 100%;
-    margin-right: 2rem;
-    max-width: 25%;
-    min-width: 20%;
-    background-color: rgb(236, 236, 236);
-    border: 0.5px solid #cfcfcf;
-    border-radius: 0.4rem;
+.reserv_search .boardTable colgroup {
+    display: table-column-group;
+    font-size: 1.4rem;
 }
 
-.reserv_search .reserv_sm_box .cal_box a{
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    min-width: 12rem;
-    margin-right: 1rem;
+.reserv_search .boardTable .boardThead {
+    border-bottom: 1px solid #ffffff;
 }
 
-.reserv_search .reserv_sm_box .cal_box a:visited{
-    color: black;
+.reserv_search .boardTable .boardThead th{
+    display: table-cell;
 }
 
-.reserv_search .reserv_sm_box .cal_box h2{
-    margin: 0.7rem 0 1.2rem 0;
-    width: 50%;
-    font-size: 1.2rem;
+.reserv_search .boardTable #boardTbody {
+    display: table-row-group;
 }
 
-.reserv_search .reserv_sm_box .icon{
-    width: 12rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
+.reserv_search .boardTable #boardTbody tr{
+    display: table-row;
+    color: #1b7e0e;
 }
-
-.reserv_search .reserv_sm_box .icon span{
-    margin: 0.7rem 0 0 0;
-    font-size: 0.9rem;
-    margin-right: 1rem;
-}
-
-.reserv_search .reserv_sm_box .txt_box{
-    text-overflow: ellipsis;
-    font-size: small;
-    margin: 0;
-    padding: 0;
-    margin-right: 1rem;
-}
-
 
 #section6 .fp-bg {
     height: 100vh;
@@ -747,7 +731,11 @@ input[type=checkbox]:checked+label{
     color: #ffffff;
     font-weight: 500;
 }
-
+#myChart{
+    background-color: rgba(250, 250, 250, 0.8);
+    border: none;
+    border-radius: 0.4rem;
+}
 
 
 

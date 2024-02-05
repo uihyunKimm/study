@@ -2,23 +2,12 @@
     //jQuery
     //$(document) - 태그 찾기
     //$('#document')
-    const API_KEY = '58764d695a646d6c343949544d634e';
-    const url1 = `http://openapi.seoul.go.kr:8088/${API_KEY}//json/culturalEventInfo/1/100/`;
     const culturalEventList = []; // 정보
     let cEName, cELatitude, cELongitude, cEaddr, cEfcl, cEbgntoend;
-            
-            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-            mapOption = { 
-            center: new kakao.maps.LatLng(37.50221, 126.82926), // 지도의 중심좌표
-            level: 3 // 지도의 확대 레벨
-            };
-        
-            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-            var map = new kakao.maps.Map(mapContainer, mapOption); 
         
     function select2_click(obj){
         if (obj.checked) {
-        fetch(url1)
+        fetch(`http://openapi.seoul.go.kr:8088/58764d695a646d6c343949544d634e/json/culturalEventInfo/1/100/`)
         .then((response) => response.json())
         .then((data) => {
             // 대여소 정보 가져오기
@@ -48,16 +37,16 @@
               // [{1번 정거장 정보}, {2번 정거장 정보}, {}, ..., {100번 정거장}]
             culturalEventList.push(cEInfo);
             });
-            showMap (culturalEventList);
-        });
+            showEvent(culturalEventList);
+        });console.log(culturalEventList);
         
-        function showMap(positions) {
+        function showEvent(positions) {
             console.log(positions);
             // 지도 표시 영역
             let mapContainer = document.getElementById("map");
             // 지도 옵션
             let mapOption = {
-            center: new kakao.maps.LatLng(37.50221, 126.82926),
+            center: new kakao.maps.LatLng(37.5939491407769, 127.054890960564),
             level: 5,
             };
         
@@ -104,6 +93,4 @@
             infowindow.close();
         };
         }
-    }else {
-        null;
-        }};
+    }};

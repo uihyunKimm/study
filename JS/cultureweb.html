@@ -35,7 +35,7 @@ n.js"></script>
       </div>
       <ul class="menu">
         <li class="active" data -menuanchor="menu1">
-          <a href="#menu1">Home</a>
+          <a href="#menu1" onclick="style.color=red">Home</a>
         </li>
         <li data -menuanchor="menu2">
           <a href="#menu2">행사정보</a>
@@ -54,6 +54,14 @@ n.js"></script>
         </li>
       </ul>
     </nav>
+    <script type="text/javascript">
+      $(function(){
+        $('li').click(function(){
+          $('li').removeClass();
+          $(this).addClass('active');
+        });
+      });
+    </script>
   </header>
   <div id="fullpage">
     <div class="section" id="section1">
@@ -68,7 +76,7 @@ n.js"></script>
             </div>
             <button>more</button>
             <div class="low_notice flex">&nbsp; Event
-              <a href="#menu4">one two one two </a>
+              <a href="#menu4">세종문화회관 서울시국악관현악단 제362회 정기연주회 </a>
             </div>
           </div>
         </div>
@@ -88,18 +96,20 @@ n.js"></script>
             <div class="map_search flex">
               <div class="map_sm_box flex">
                 <div class="cal_box flex">
-                  <div class="pic flex"></div>
+                  <div class="pic flex"><img class="picpic" src="https://cphoto.asiae.co.kr/listimglink/1/2017062207410568839_1.jpg"/> </div>
                   <a href="#">
-                    <h2></h2>
+                    <div class="contents">
+                    <h2>종이로 만든 세상</h2>
                     <div class="icon flex">
-                        <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
+                        <span class="icon_plc flex">위치 : </span><span>서울특별시 구로구 오리로 1352</span>
                     </div>
                     <div class="icon flex">
-                        <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
+                        <span class="icon_plc flex">주최기관 : </span><span>궁동어린이도서관</span>
                     </div>
                     <div class="icon flex">
-                        <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
+                        <span class="icon_plc flex">기간 : </span><span>2024-01-27 ~ 2024-02-03</span> 
                     </div>
+                  </div>
                   </a>
                   <div class="txt_box">
                     <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
@@ -144,38 +154,20 @@ n.js"></script>
               <div class="place_thumb"></div>
               <div class="place_content">
                 <div class="place_content_title">공간이름</div>
-                <div class="place_content_date">이용가능일</div>
-                <div class="place_content_time">운영시간</div>
-                <div class="place_content_place">위치</div>
+                <div class="place_content_subjcode">영역</div>
+                <div class="place_content_date">휴무일</div>
+                <div class="place_content_addr">주소</div>
+                <div class="place_content_hompage">홈페이지</div>
               </div>
             </article>
-            <article class="place_item flex">
-              <div class="place_thumb"></div>
-              <div class="place_content">
-                <div class="place_content_title">공간이름</div>
-                <div class="place_content_date">이용가능일</div>
-                <div class="place_content_time">운영시간</div>
-                <div class="place_content_place">위치</div>
-              </div>
-            </article>
-          </div>
-          <div class="place_container flex">
-            <article class="place_item flex">
-              <div class="place_thumb"></div>
-              <div class="place_content">
-                <div class="place_content_title">공간이름</div>
-                <div class="place_content_date">이용가능일</div>
-                <div class="place_content_time">운영시간</div>
-                <div class="place_content_place">위치</div>
-              </div>
-            </article>
-            <article class="place_item flex">
+              <article class="place_item flex">
                 <div class="place_thumb"></div>
                 <div class="place_content">
                   <div class="place_content_title">공간이름</div>
-                  <div class="place_content_date">이용가능일</div>
-                  <div class="place_content_time">운영시간</div>
-                  <div class="place_content_place">위치</div>
+                  <div class="place_content_subjcode">영역</div>
+                  <div class="place_content_date">휴무일</div>
+                  <div class="place_content_addr">주소</div>
+                  <div class="place_content_hompage">홈페이지</div>
                 </div>
             </article>
           </div>
@@ -184,23 +176,56 @@ n.js"></script>
               <div class="place_thumb"></div>
               <div class="place_content">
                 <div class="place_content_title">공간이름</div>
-                <div class="place_content_date">이용가능일</div>
-                <div class="place_content_time">운영시간</div>
-                <div class="place_content_place">위치</div>
+                <div class="place_content_subjcode">영역</div>
+                <div class="place_content_date">휴무일</div>
+                <div class="place_content_addr">주소</div>
+                <div class="place_content_hompage">홈페이지</div>
               </div>
             </article>
+              <article class="place_item flex">
+                <div class="place_thumb"></div>
+                <div class="place_content">
+                  <div class="place_content_title">공간이름</div>
+                  <div class="place_content_subjcode">영역</div>
+                  <div class="place_content_date">휴무일</div>
+                  <div class="place_content_addr">주소</div>
+                  <div class="place_content_hompage">홈페이지</div>
+                </div>
+            </article>
+          </div>
+          <div class="place_container flex">
             <article class="place_item flex">
               <div class="place_thumb"></div>
               <div class="place_content">
                 <div class="place_content_title">공간이름</div>
-                <div class="place_content_date">이용가능일</div>
-                <div class="place_content_time">운영시간</div>
-                <div class="place_content_place">위치</div>
+                <div class="place_content_subjcode">영역</div>
+                <div class="place_content_date">휴무일</div>
+                <div class="place_content_addr">주소</div>
+                <div class="place_content_hompage">홈페이지</div>
               </div>
+            </article>
+              <article class="place_item flex">
+                <div class="place_thumb"></div>
+                <div class="place_content">
+                  <div class="place_content_title">공간이름</div>
+                  <div class="place_content_subjcode">영역</div>
+                  <div class="place_content_date">휴무일</div>
+                  <div class="place_content_addr">주소</div>
+                  <div class="place_content_hompage">홈페이지</div>
+                </div>
             </article>
           </div>
         </div>
+        <div class="slide" id="slide3-1">
+          <div class="fp-bg"></div>
+          <h1>Slide 2.1</h1>
       </div>
+      <div class="slide" id="slide3-2">
+          <div class="fp-bg"></div>
+          Slide 2.2
+      </div>
+      </div>
+      
     </div>
     <div class="section" id="section4">
       <div class="fp-bg">
@@ -212,19 +237,19 @@ n.js"></script>
             <article class="concert_item flex">
               <div class="concert_thumb"></div>
               <div class="concert_content">
-                <div class="concert_content_title">공연명</div>
-                <div class="concert_content_date">공연일</div>
-                <div class="concert_content_time">시간</div>
-                <div class="concert_content_place">장소</div>
+                <div class="concert_content_title">소프라노 박보라 귀국독창회</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240207</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 7시 30분</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
               </div>
             </article>
               <article class="concert_item flex">
                 <div class="concert_thumb"></div>
                 <div class="concert_content">
-                  <div class="concert_content_title">공연명</div>
-                  <div class="concert_content_date">공연일</div>
-                  <div class="concert_content_time">시간</div>
-                  <div class="concert_content_place">장소</div>
+                  <div class="concert_content_title">소프라노 윤현정 리더아벤트</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240208</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 7시 30분</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
                 </div>
             </article>
           </div>
@@ -232,19 +257,19 @@ n.js"></script>
             <article class="concert_item flex">
               <div class="concert_thumb"></div>
               <div class="concert_content">
-                <div class="concert_content_title">공연명</div>
-                <div class="concert_content_date">공연일</div>
-                <div class="concert_content_time">시간</div>
-                <div class="concert_content_place">장소</div>
+                <div class="concert_content_title">제4회 콘아니마 정기연주회</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240209</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 5시</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
               </div>
             </article>
             <article class="concert_item flex">
               <div class="concert_thumb"></div>
               <div class="concert_content">
-                <div class="concert_content_title">공연명</div>
-                <div class="concert_content_date">공연일</div>
-                <div class="concert_content_time">시간</div>
-                <div class="concert_content_place">장소</div>
+                <div class="concert_content_title">조한 플루트 독주회</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240212</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 5시</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
               </div>
             </article>
           </div>
@@ -252,19 +277,19 @@ n.js"></script>
             <article class="concert_item flex">
               <div class="concert_thumb"></div>
               <div class="concert_content">
-                <div class="concert_content_title">공연명</div>
-                <div class="concert_content_date">공연일</div>
-                <div class="concert_content_time">시간</div>
-                <div class="concert_content_place">장소</div>
+                <div class="concert_content_title">전진주 & 이윤희 듀오 연주회 브람스 전곡시리즈</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240213</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 7시 30분</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
               </div>
             </article>
             <article class="concert_item flex">
                 <div class="concert_thumb"></div>
                 <div class="concert_content">
-                  <div class="concert_content_title">공연명</div>
-                  <div class="concert_content_date">공연일</div>
-                  <div class="concert_content_time">시간</div>
-                  <div class="concert_content_place">장소</div>
+                  <div class="concert_content_title">유엔젤보이스 발렌타인콘서트<br>Love Letter</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240214</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 7시 30분</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
                 </div>
             </article>
           </div>
@@ -272,135 +297,55 @@ n.js"></script>
             <article class="concert_item flex">
               <div class="concert_thumb"></div>
               <div class="concert_content">
-                <div class="concert_content_title">공연명</div>
-                <div class="concert_content_date">공연일</div>
-                <div class="concert_content_time">시간</div>
-                <div class="concert_content_place">장소</div>
+                <div class="concert_content_title">2024 숭실성악교수 신년음악회</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240215</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 7시 30분</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
               </div>
             </article>
             <article class="concert_item flex">
               <div class="concert_thumb"></div>
               <div class="concert_content">
-                <div class="concert_content_title">공연명</div>
-                <div class="concert_content_date">공연일</div>
-                <div class="concert_content_time">시간</div>
-                <div class="concert_content_place">장소</div>
+                <div class="concert_content_title">에피소드 블렌드 시리즈 IV<br>〈하프, 친구를 만나다.〉</div>
+                <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240216</span></div>
+                <div class="concert_content_time">시간 &nbsp;&nbsp;<span>오후 7시 30분</span></div>
+                <div class="concert_content_place">장소 &nbsp;&nbsp;<span>세종체임버홀</span></div>
               </div>
             </article>
           </div>
         </div>
       </div>
     </div>
-    <div class="section" id="section5">
+    <div class="section" id="section5" onload="showBoard()">
       <div class="fp-bg">
         <div class="wrapper flex">
           <h2 class="reserv_title flex">
             공공서비스예약 현황
           </h2>
           <div class="reserv_search flex">
-            <div class="reserv_sm_box flex">
-              <div class="cal_box flex">
-                <div class="pic flex"></div>
-                <a href="#">
-                  <h2>#행사 이름</h2>
-                  <div class="icon flex">
-                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
-                  </div>
-                </a>
-                <div class="txt_box">
-                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
-                </div>
-              </div>
-            </div>
-            <div class="reserv_sm_box flex">
-              <div class="cal_box flex">
-                <div class="pic flex"></div>
-                <a href="#">
-                  <h2>#행사 이름</h2>
-                  <div class="icon flex">
-                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
-                  </div>
-                </a>
-                <div class="txt_box">
-                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
-                </div>
-              </div>
-            </div>
-            <div class="reserv_sm_box flex">
-              <div class="cal_box flex">
-                <div class="pic flex"></div>
-                <a href="#">
-                  <h2>#행사 이름</h2>
-                  <div class="icon flex">
-                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
-                  </div>
-                </a>
-                <div class="txt_box">
-                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
-                </div>
-              </div>
-            </div>
-            <div class="reserv_sm_box flex">
-              <div class="cal_box flex">
-                <div class="pic flex"></div>
-                <a href="#">
-                  <h2>#행사 이름</h2>
-                  <div class="icon flex">
-                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
-                  </div>
-                </a>
-                <div class="txt_box">
-                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
-                </div>
-              </div>
-            </div>
-            <div class="reserv_sm_box flex">
-              <div class="cal_box flex">
-                <div class="pic flex"></div>
-                <a href="#">
-                  <h2>#행사 이름</h2>
-                  <div class="icon flex">
-                      <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_dep flex">주최기관 : </span><span>어디어디</span>
-                  </div>
-                  <div class="icon flex">
-                      <span class="icon_date flex">주최기간 : </span><span>언제언제</span> 
-                  </div>
-                </a>
-                <div class="txt_box">
-                  <p>내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용</p>
-                </div>
-              </div>
-            </div>
+            <table class="boardTable">
+              <colgroup style="width: 100%;">
+                <col style="width:10%">
+                <col>
+                <col style="width:20%">
+                <col style="width:20%">
+                <col style="width:35%">
+              </colgroup>
+              <thead class="boardThead">
+                <tr class="boardThTr">
+                  <th>순위</th>
+                  <th>이름</th>
+                  <th>장소</th>
+                  <th>주소</th>
+                  <th>대상</th>
+                </tr>
+              </thead>
+              <tbody id="boardTbody">
+              </tbody>
+            </table>
           </div>
         </div>
-      </div>
+      </div>n
     </div>
     <div class="section" id="section6">
       <div class="fp-bg">
@@ -408,6 +353,34 @@ n.js"></script>
           <h2 class="data_title flex">
             데이터
           </h2>
+          <div class="data_div">
+            <canvas id="myChart"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx = document.getElementById('myChart');
+          
+            new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: ['2019', '2020', '2021', '2022', '2023', '2024(예상)'],
+                datasets: [{
+                  label: '문화사업 증가추이(전년도 대비 성장률(%))',
+                  data: [12, 11, -23, 2, 11, 13],
+                  borderWidth: 3,
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
         </div>
       </div>
     </div>
@@ -447,9 +420,8 @@ n.js"></script>
     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=988c813400454111de9062e5b467eca7"
   ></script>
   <script src="./cultureweb_TnFcltySttusInfo2001_1.js"></script>
-  <script src="./cultureweb_TnFcltySttusInfo2001_2.js"></script>
-
-
+  <script src="./cultureweb_culturalEventInfo.js"></script>
+  <script src="./cultureweb_PublicReservation.js"></script>
 </body>
 
 </html>

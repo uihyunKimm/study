@@ -104,7 +104,4 @@
         return function() {
             infowindow.close();
         };
-        }
-    }else {
-        null;
-        }};
+        }}};
