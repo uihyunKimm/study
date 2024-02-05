@@ -265,12 +265,28 @@ body {
     left: 0;
 }
 
-#section2 .tab li{
-    margin-left: 1.3rem;
+#section2 .wrapper .main_map_menu .tab li {
+    margin-left: 0;
     font-weight: 500;
     font-size: 1.3rem;
     color: #ffffff;
-    list-style-type: none;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+#section2 .wrapper .main_map_menu .tab li .selectCul{
+    opacity: 0;
+    border: 0;
+    width: 0;
+    height: 0;
+}
+
+input[type=checkbox]:checked+label{
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #0019c1;
+}
+
+#section2 .tab li{
     display: inline;
 }
 
@@ -294,7 +310,6 @@ body {
     height: 100%;
     border: none;
     border-radius: 0.6rem;
-    
 }
 
 .map_search {
@@ -342,7 +357,7 @@ body {
     align-items: center;
     text-decoration: none;
     min-width: 12rem;
-    margin-right: 1rem;
+    margin-bottom: 0.3rem 0;
 }
 
 .map_search .map_sm_box .cal_box a:visited{
@@ -350,7 +365,7 @@ body {
 }
 
 .map_search .map_sm_box .cal_box h2{
-    margin: 0.7rem 0 1.2rem 0;
+    margin: 0 0 1.2rem 0;
     width: 50%;
     font-size: 1.2rem;
 }
@@ -373,7 +388,11 @@ body {
     font-size: small;
     margin: 0;
     padding: 0;
-    margin-right: 1rem;
+    margin: 0;
+}
+
+.map_search .map_sm_box .txt_box p{
+    margin: 0;
 }
 
 #section3 .fp-bg {
@@ -442,21 +461,27 @@ body {
     margin: 0;
 }
 
-.place_content_date {
+.place_content_subjcode {
     font-size: 1rem;
     margin-top: 1rem;
     font-weight: 400;
     padding-bottom: 0;
 }
 
-.place_content_place {
+.place_content_date {
     line-height: 1.4;
     margin-top: 0.5rem;
     font-size: 0.9rem;
     color: rgb(108, 108, 108);
 }
 
-.place_content_time {
+.place_content_addr {
+    line-height: 1.4;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: rgb(108, 108, 108);
+}
+.place_content_hompage {
     line-height: 1.4;
     margin-top: 0.5rem;
     font-size: 0.9rem;

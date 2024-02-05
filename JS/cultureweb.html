@@ -8,8 +8,6 @@
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.extensions.mi
 n.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=988c813400454111de9062e5b467eca7"></script>
-  <script type="text/javascript" src="./cultureweb.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css" />
   <link rel="stylesheet" href="./cultureweb.css" />
   <link 
@@ -81,18 +79,18 @@ n.js"></script>
         <div class="wrapper flex">
           <div class="main_map_menu flex">
             <ul class="tab flex" id="tab">
-              <li class="on">공지사항</li>
-              <li>행사/이벤트</li>
+              <li><input type="checkbox" class="selectCul" id="select1" onclick="select1_click(this)"/><label for="select1">문화행사 정보</label></li>
+              <li><input type="checkbox" class="selectCul" id="select2" onclick="select2_click(this)"/><label for="select2">지역보육행사 정보</label></li>
             </ul>
             <div class="map_wrap flex">
-              <div id ="map"></div>
+              <div id="map"></div>
             </div>
             <div class="map_search flex">
               <div class="map_sm_box flex">
                 <div class="cal_box flex">
                   <div class="pic flex"></div>
                   <a href="#">
-                    <h2>#행사 이름</h2>
+                    <h2></h2>
                     <div class="icon flex">
                         <span class="icon_plc flex">주최장소 : </span><span>어디어디</span>
                     </div>
@@ -124,18 +122,20 @@ n.js"></script>
               <div class="place_thumb"></div>
               <div class="place_content">
                 <div class="place_content_title">공간이름</div>
-                <div class="place_content_date">이용가능일</div>
-                <div class="place_content_time">운영시간</div>
-                <div class="place_content_place">위치</div>
+                <div class="place_content_subjcode">영역</div>
+                <div class="place_content_date">휴무일</div>
+                <div class="place_content_addr">주소</div>
+                <div class="place_content_hompage">홈페이지</div>
               </div>
             </article>
               <article class="place_item flex">
                 <div class="place_thumb"></div>
                 <div class="place_content">
                   <div class="place_content_title">공간이름</div>
-                  <div class="place_content_date">이용가능일</div>
-                  <div class="place_content_time">운영시간</div>
-                  <div class="place_content_place">위치</div>
+                  <div class="place_content_subjcode">영역</div>
+                  <div class="place_content_date">휴무일</div>
+                  <div class="place_content_addr">주소</div>
+                  <div class="place_content_hompage">홈페이지</div>
                 </div>
             </article>
           </div>
@@ -441,7 +441,15 @@ n.js"></script>
   </div>
 
 
-  <script src="./cultureweb.js"></script>
+  <script src="./cultureweb_fullpage.js"></script>
+  <script
+    type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=988c813400454111de9062e5b467eca7"
+  ></script>
+  <script src="./cultureweb_TnFcltySttusInfo2001_1.js"></script>
+  <script src="./cultureweb_TnFcltySttusInfo2001_2.js"></script>
+
+
 </body>
 
 </html>

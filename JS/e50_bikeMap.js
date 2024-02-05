@@ -29,7 +29,6 @@ fetch(`http://openapi.seoul.go.kr:8088/${API_KEY}/json/bikeList/1/100/`)
       // [{1번 정거장 정보}, {2번 정거장 정보}, {}, ..., {100번 정거장}]
       stationList.push(stationInfo);
     });
-
     showMap(stationList);//stationList - 100개의 정거장에 대한 정보
   });
 
