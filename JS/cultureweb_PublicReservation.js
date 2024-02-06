@@ -5,6 +5,8 @@
 
     const PublicReservationList = []; // 정보
     let PrName, PrState, PrPlc, PrAddr, PrTgt;
+
+
 function showBoard(){
     fetch('http://openapi.seoul.go.kr:8088/58764d695a646d6c343949544d634e/json/ListPublicReservationCulture/1/100/')
     .then((response) => response.json())
@@ -31,13 +33,13 @@ function showBoard(){
         });
         showList(PublicReservationList);
     })
-    
+    };
 function showList(data) {
     data.forEach((a) => {
     let boardTbody = document.querySelector("#boardTbody");
+    console.log("sss : " + boardTbody)
     let tr = `<tr class="boardTbTr">
-    <td>${a.id}</td>
-    <td class="boardTbTitle">
+    <td id="boardTbTitle">
     ${a.PrName}
     </td>
     <td>${a.PrState}</td>
@@ -45,10 +47,10 @@ function showList(data) {
     <td>${a.PrAddr}</td>
     <td>${a.PrTgt}</td>
     </tr>`;
-    document.boardTbody.innerHTML += tr;
+    boardTbody.innerHTML += tr;
     });
     }
-};
+
 
 // const weatherImg = document.querySelector("#weather .wImg");
 

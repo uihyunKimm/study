@@ -5,6 +5,15 @@
     const culturalEventList = []; // 정보
     let cEName, cELatitude, cELongitude, cEaddr, cEfcl, cEbgntoend;
         
+
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+            center: new kakao.maps.LatLng(37.50221, 126.82926), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+            };
+        
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
     function select2_click(obj){
         if (obj.checked) {
         fetch(`http://openapi.seoul.go.kr:8088/58764d695a646d6c343949544d634e/json/culturalEventInfo/1/100/`)
@@ -20,8 +29,9 @@
                 cELatitude = row["LOT"];
                 cELongitude = row["LAT"];
                 cEaddr = row["PLACE"];
-                cEfcl = row["ORG_NAME"];
-                cEbgntoend = row["DATE"]
+                cEfcl = row["ORG-NAME"];
+                cEbgn = row["STRTDATE"];
+                cEend = row["END_DATE"];
         
             // 정보(stationInfo) 객체 생성
             const cEInfo = {
@@ -33,12 +43,10 @@
                 cEbgn : cEbgn, // 시작
                 cEend : cEend, // 끝
             };
-              // 정거장 정보(stationInfo)를 stationList 배열에 추가
-              // [{1번 정거장 정보}, {2번 정거장 정보}, {}, ..., {100번 정거장}]
             culturalEventList.push(cEInfo);
             });
             showEvent(culturalEventList);
-        });console.log(culturalEventList);
+        });
         
         function showEvent(positions) {
             console.log(positions);

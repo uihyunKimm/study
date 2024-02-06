@@ -29,9 +29,11 @@ n.js"></script>
     </nav>
     <nav id ="header-top2">
       <div class="mNav">
+        <a href="#menu1">
         <div class="icon_wrap">
           <div class="icon"><img src="https://ifh.cc/g/oh6KRf.png"></img></div>
         </div>
+      </a>
       </div>
       <ul class="menu">
         <li class="active" data -menuanchor="menu1">
@@ -74,9 +76,13 @@ n.js"></script>
             <div>
               <img src="https://ifh.cc/g/MAz6a0.png" alt="서울문화행사이모저모" class="img-styles">
             </div>
-            <button>more</button>
-            <div class="low_notice flex">&nbsp; Event
-              <a href="#menu4">세종문화회관 서울시국악관현악단 제362회 정기연주회 </a>
+            <a href="https://www.sfac.or.kr/index.do" target="blank"><button>서울문화재단 구경가기 ></button></a>
+            <div class="low_notice flex">Event
+              <ul id="rolling_notice" class="rolling">
+                <li><a href="#menu4">세종종문화회관 서울시국악관현악단 제362회 정기연주회</a></li>
+                <li><a href="#menu3">자신의 꿈을 펼칠 수 있는 문화공간을 지금 바로 만나보세요!</a></li>
+                <li><a href="#menu2">매일 업데이트 되는 새로운 행사 정보 바로보기</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -87,8 +93,8 @@ n.js"></script>
         <div class="wrapper flex">
           <div class="main_map_menu flex">
             <ul class="tab flex" id="tab">
-              <li><input type="checkbox" class="selectCul" id="select1" onclick="select1_click(this)"/><label for="select1">문화행사 정보</label></li>
-              <li><input type="checkbox" class="selectCul" id="select2" onclick="select2_click(this)"/><label for="select2">지역보육행사 정보</label></li>
+              <li><label for="select1"><input type="radio" class="selectCul" name="group1" id="select1" onclick="select1_click(this)"/>문화행사 정보</label></li>
+              <li><label for="select2"><input type="radio" class="selectCul" name="group1" id="select2" onclick="select2_click(this)"/>지역보육행사 정보</label></li>
             </ul>
             <div class="map_wrap flex">
               <div id="map"></div>
@@ -235,7 +241,7 @@ n.js"></script>
           </h2>
           <div class="concert_container flex">
             <article class="concert_item flex">
-              <div class="concert_thumb"></div>
+              <div class="concert_thumb"><img src="#" alt=""></div>
               <div class="concert_content">
                 <div class="concert_content_title">소프라노 박보라 귀국독창회</div>
                 <div class="concert_content_date">공연일 &nbsp;&nbsp;<span>20240207</span></div>
@@ -316,36 +322,41 @@ n.js"></script>
         </div>
       </div>
     </div>
-    <div class="section" id="section5" onload="showBoard()">
+    <div class="section" id="section5">
       <div class="fp-bg">
         <div class="wrapper flex">
+          <script src="./cultureweb_PublicReservation.js"></script>
+          <script>
+            showBoard();
+          </script>
           <h2 class="reserv_title flex">
             공공서비스예약 현황
           </h2>
           <div class="reserv_search flex">
             <table class="boardTable">
               <colgroup style="width: 100%;">
-                <col style="width:10%">
-                <col>
-                <col style="width:20%">
-                <col style="width:20%">
-                <col style="width:35%">
+                <col style="width:44%">
+                <col style="width:7%">
+                <col style="width:19%">
+                <col style="width:9%">
+                <col style="width:19%">
               </colgroup>
               <thead class="boardThead">
                 <tr class="boardThTr">
-                  <th>순위</th>
                   <th>이름</th>
-                  <th>장소</th>
+                  <th>상태</th>
                   <th>주소</th>
+                  <th>지역구</th>
                   <th>대상</th>
                 </tr>
               </thead>
               <tbody id="boardTbody">
+                
               </tbody>
             </table>
           </div>
         </div>
-      </div>n
+      </div>
     </div>
     <div class="section" id="section6">
       <div class="fp-bg">
@@ -355,20 +366,41 @@ n.js"></script>
           </h2>
           <div class="data_div">
             <canvas id="myChart"></canvas>
+            <canvas id="myChart2"></canvas>
           </div>
           
           <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
           
           <script>
             const ctx = document.getElementById('myChart');
-          
             new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
+                datasets: [{
+                  label: '분석 : 전년 대비 문화공연 및 전시회 증감률(%)',
+                  data: [-0.9, 7, 6.6, -1.6, -60, 126.3],
+                  borderWidth: 3,
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+          <script>
+            const atx = document.getElementById('myChart2');
+            new Chart(atx, {
               type: 'line',
               data: {
-                labels: ['2019', '2020', '2021', '2022', '2023', '2024(예상)'],
+                labels: ['2016', '2017', '2018', '2019', '2020', '2021'],
                 datasets: [{
-                  label: '문화사업 증가추이(전년도 대비 성장률(%))',
-                  data: [12, 11, -23, 2, 11, 13],
+                  label: '전체 문화공연 및 전시회 계',
+                  data: [12350, 13217, 14093, 13863, 5539, 12533],
                   borderWidth: 3,
                 }]
               },
@@ -421,7 +453,6 @@ n.js"></script>
   ></script>
   <script src="./cultureweb_TnFcltySttusInfo2001_1.js"></script>
   <script src="./cultureweb_culturalEventInfo.js"></script>
-  <script src="./cultureweb_PublicReservation.js"></script>
 </body>
 
 </html>
