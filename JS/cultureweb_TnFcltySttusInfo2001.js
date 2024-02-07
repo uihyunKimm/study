@@ -86,3 +86,29 @@ return function() {
     infowindow.close();
 };
 }
+
+    // // 이미지 마커 경로
+    // let imageSrc =
+    //     "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; // 이미지 마커 표시
+
+    // positions.forEach((item) => {
+    //     let imageSize = new kakao.maps.Size(24, 35);
+    //     let markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+    //     // 마커 생성
+    //     let marker = new kakao.maps.Marker({
+    //         // 마커를 표시할 지도
+    //         map: map,
+    //         // 마커를 표시할 위치
+    //         position: new kakao.maps.LatLng(
+    //         item.lELatitude,
+    //         item.lELongitude
+    //         ),
+    //         title: item.lEName, // 마커 타이틀(마우스오버 시, 출력)
+    //         image: markerImage, // 마커 이미지
+    //         });
+    //     let infowindow = new kakao.maps.InfoWindow({
+    //         content: item.lEName // 인포윈도우에 표시할 내용
+    //     });
+    //     kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+    //     kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+    //     });
