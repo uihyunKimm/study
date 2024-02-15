@@ -1,0 +1,35 @@
+create database userDB;
+use userDB;
+
+create table user_info(
+USER_ID INT NOT NULL,
+GENDER INT NULL,
+AGE INT NULL,
+JOINED DATE NOT NULL
+);
+
+SELECT * FROM user_info;
+
+-- 5
+SELECT count(*) AS USERS FROM user_info
+WHERE JOINED LIKE '2022%' AND AGE >= 20 AND AGE <= 29;
+
+/*
+-- 실전문제 5
+INSERT INTO USER_INFO VALUES(1, 1, 26, '2022-10-05');
+INSERT INTO USER_INFO VALUES(2, 0, NULL, '2022-11-25');
+INSERT INTO USER_INFO VALUES(3, 1, 22, '2021-11-30');
+INSERT INTO USER_INFO VALUES(4, 0, 31, '2022-12-03');
+INSERT INTO USER_INFO VALUES(5, 0, 28, '2021-12-16');
+INSERT INTO USER_INFO VALUES(6, 1, 24, '2022-01-03');
+INSERT INTO USER_INFO VALUES(7, 1, NULL, '2023-01-09');
+
+
+-- 실전문제 6
+INSERT INTO ANIMAL_INS VALUES('A0001', 'Dog', 'Injured', 'Raven', 'Spayed Female');
+INSERT INTO ANIMAL_INS VALUES('A0002', 'Dog', 'Normal', 'Lucy', 'Spayed Female');
+INSERT INTO ANIMAL_INS VALUES('A0003', 'Dog', 'Normal', 'Shadow', 'Neutered Male');
+INSERT INTO ANIMAL_INS VALUES('A0004', 'Dog', 'Normal', 'Lucy', 'Spayed Female');
+INSERT INTO ANIMAL_INS VALUES('A0005', 'Dog', 'Normal', 'Lucy', 'Spayed Female');
+INSERT INTO ANIMAL_INS VALUES('A0006', 'Cat', 'Normal', 'Raven', 'Spayed Female');
+*/
