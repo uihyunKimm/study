@@ -5,51 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>함수</title>
   </head>
-  <body onload="alert('이 사이트는 2024년 5월부터 www.naver.co,kr로 이전됩니다.')">
+  <body>
+    <h2>계산해봅시다</h2>
+    <hr>
+    <p id="q">2 + 4 = </p> <span id="A">답</span> <br />
+    <p id="q">4* 20 +64 =</p><span id="A">답</span> <br />
+    <p id="q">20/5-8*2 =</p><span id="A">답</span> <br />
 
-
-    <input type="radio" name="city" value="seoul" checked/>서울 
-    <input type="radio" name="city" />대전
-    <input type="radio" name="city" />대구
-    <input type="radio" name="city" />부산
-    <input type="button" value="find checked" onclick="findChecked()">
-  <h3>문서로딩완료</h3>
-  <form>  
-    <input type="checkbox" name="cap" value="10000" onclick="calc(this)"/>모자
-    <input type="checkbox" name="shoes" value="30000" onclick="calc(this)"/>신발 
-    <input type="checkbox" name="bag" value="80000" onclick="calc(this)"/>가방
-    지불할 돈<input type="text" id="result" value="0"/>
-    
-  </form>
+  </body>
     <script>
-      function test(){
-        console.log("test")
-      }
-      let kcity = document.getElementsByName("city")
-
-      function findChecked() {
-      let found = null;
-      let kcity = document.getElementsByName("city");
-
-      for(let i=0; i<kcity.length; i++) {
-      if(kcity[i].checked == true)
-      found = kcity[i];
-      }
-      if(found != null)
-      alert(found.value + "이 선택되었음");}
-
-      //
-      let sum =0;
-      function calc(cBox){
-        if(cBox.checked)
-        sum +=parseInt(cBox.value);
-      else
-        sum -=parseInt(cBox.value);
-
-        document.getElementById("result").value = sum;
-      }
-
-
+      let question = document.querySelector('#q');
+      let answer = document.querySelector('#A');
     </script>
   </body>
 </html>
