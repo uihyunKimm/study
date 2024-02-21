@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>웹사이트 레이아웃 구현</title>
+<link rel="stylesheet" href="01_market_layout.css">
+프론트엔드 강사 5:04 PM
+<link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+</head>
+<body>
+    <!-- 컨테이너 -->
+    <div class="container">
+        <header>
+            <!-- 헤더 박스 1 -->
+            <div class="header-box1">
+                <div class="header-box1-right">
+                    <a href="#">회원가입</a>
+                    <a href="#">로그인</a>
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            
+            <!-- 헤더 박스 2 -->
+            <div class="header-box2">
+                <div class="header-box2-left">
+                    <img src="hp_logo.png" alt="로고">
+                <span style="color: #5f0080;">텍스트</span>
+                </div>
+                <div class="header-box2-center">
+                    <form>
+                        <label for="search">검색어를 입력해주세요.</label>
+                        <input type="text" id="search" placeholder="검색어를 입력해주세요.">
+                        <button type="submit">
+                            <span class="material-symbols-outlined">search</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-box2-right">
+                    <span class="material-symbols-outlined">location_on </span>
+                    <span class="material-symbols-outlined">favorite </span>
+                    <span class="material-symbols-outlined">shopping_cart </span>
+                </div>
+            </div>
+        </header>
+    
+    <!-- 네비게이션 바 -->
+    <nav>
+        <div class="nav-left">
+            <span class="material-symbols-outlined"> menu </span>
+            <span class="category-text">카테고리</span>
+        </div>
+        <div class="nav-center">
+            <a href="#">신상품</a>
+            <a href="#">베스트</a>
+            <a href="#">알뜰쇼핑</a>
+            <a href="#">특가/혜택</a>
+        </div>
+        <div class="nav-right">
+            <button class="btn">샛별, 택배 배송안내</button>
+        </div>
+    </nav>
+    
+    <!-- 박스1 -->
+        <div class="box1" style="background-image: url(https://product-image.kurly.com/cdn-cgi/image/width=1900,height=370,quality=85/banner/main/pc/img/81e2acb0-799b-4707-867d-cb3b41451006.jpg); background-size : cover;">
+            <div class="box1-content">
+                <img src="image1.png" alt=""></img>
+                <h2></h2><br/><h2 class="h2_b"></h2>
+                <p class="p1"></p>
+                <p></p>
+            </div>
+        </div>
+
+    <!-- 박스2 -->
+        <div class="box2">
+            <h2 class="box2-title">이 상품 어때요?</h2>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/13d061a1-df1f-4e36-a676-03f687036cb1.jpeg" alt="상품1"></img>
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined"> local_mall </span>
+                    </div>
+                </div>
+                    <div class="card-content">
+                        <h3>[상품명] 상품명</h3>
+                        <p>가격: $50</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://img-cf.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/shop/data/goods/1653886849323l0.jpg" alt="상품2" ></img>
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined"> local_mall </span>
+                    </div>
+                </div>
+                    <div class="card-content">
+                        <h3>[상품명] 상품명</h3>
+                        <p>가격: $50</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://img-cf.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/shop/data/goods/1616753993587l0.jpg" alt="상품3"></img>
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined"> local_mall </span>
+                    </div>
+                </div>
+                    <div class="card-content">
+                        <h3>[상품명] 상품명</h3>
+                        <p>가격: $50</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://product-image.kurly.com/cdn-cgi/image/fit=crop,width=360,height=468,quality=85/product/image/4d9591da-48f2-4667-9458-7d23307a0e0e.jpg" alt="상품4"></img>
+                    <div class="card-icon">
+                        <span class="material-symbols-outlined"> local_mall </span>
+                    </div>
+                </div>
+                    <div class="card-content">
+                        <h3>[상품명] 상품명</h3>
+                        <p>가격: $50</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

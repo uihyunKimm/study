@@ -1,0 +1,300 @@
+
+  /* 기본 스타일 */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  /* 컨테이너 스타일 */
+  .container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  
+/* 헤더 스타일 */
+.header {
+  background-color: #333;
+  color: white;
+  width: 1000px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 헤더 박스 1 스타일 */
+.header-box1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50%;
+  gap: 20px;
+}
+
+.header-box1-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-box1-right a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/* 헤더 박스 2 스타일 */
+.header-box2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 1000px;
+  margin: 0 auto;
+}
+.header-box2-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-box2-left img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-box2-left span {
+  font-size: 24px;
+  font-weight: 500;
+}
+.header-box2-center form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #5f0080;
+  border-radius: 20px;
+  padding: 5px;
+  width: 600px;
+}
+.header-box2-center form button {
+  background-color: transparent;
+}
+.header-box2-center form button span{
+  color: #5f0080;
+}
+.header-box2-center label {
+  color: #5f0080;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.header-box2-center input[type="text"] {
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+  flex-grow: 1;
+
+}
+
+.header-box2-center button[type="submit"] {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+.header-box2-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+
+.header-box2-right img {
+  height: 30px;
+}
+
+  /* 네비게이션 바 스타일 */
+  nav {
+    height: 50px;
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-left img {
+    height: 30px;
+    margin-right: 5px;
+  }
+  .nav-left span {
+    font-size: 16px;
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+  .nav-center a{
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px; /* 여기 수정함 */
+    text-decoration: none;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  .btn {
+    border-radius: 20px;
+    padding:  5px 10px;
+    background-color: #ffc300;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #ffda5f;
+  }
+
+  /* 박스1 스타일 */
+  .box1 {
+    background-color: #f8e1ff;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .box1-content {
+    min-width: 80%;
+    text-align: left;
+    margin:auto;
+  }
+
+  .box1-content img{
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+}
+  .box1-content h2{
+    color: #5f0080;
+    font-size: 36px;
+    font-weight: 100;
+}
+.box1-content .h2_b {
+  color: #5f0080;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+  .box1-content p {
+      color: #fff;
+      font-size: 16px;
+  }
+  /* 박스2 스타일 */
+  .box2 {
+    background-color: #ddd;
+    height: auto;
+  }
+
+  /* 박스2 스타일 */
+.box2 {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px 0;
+  background-color: white;
+}
+
+/* 박스2 타이틀 스타일 */
+.box2-title {
+  color: #5f0080;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 카드 스타일 */
+.card {
+  width: 23%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* 카드 이미지 스타일 */
+.card-image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 카드 아이콘 스타일 */
+.card-icon {
+  position: absolute;
+  border-radius: 50%;
+  right: 10px;
+  bottom: 20px;
+  background-color: #5f0080;
+  padding: 10px;
+  align-items: center;
+}
+.card-icon span{
+  color: #fff;
+}
+
+/* 카드 내용 스타일 */
+.card-content {
+  padding: 10px;
+  text-align: left;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.card-content h3{
+  font-weight: 900;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* 카드 제목 스타일 */
+.card-title {
+  color: #5f0080;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* 카드 가격 스타일 */
+.card-price {
+  color: #999;
+  font-size: 14px;
+}
