@@ -197,7 +197,7 @@
     font-size: 36px;
     font-weight: 100;
 }
-.box1-content .h2_b {
+  .box1-content .h2_b {
   color: #5f0080;
   font-size: 36px;
   font-weight: 900;
@@ -214,7 +214,7 @@
   }
 
   /* 박스2 스타일 */
-.box2 {
+  .box2 {
   width: 1000px;
   margin: 0 auto;
   text-align: center;
@@ -223,20 +223,20 @@
 }
 
 /* 박스2 타이틀 스타일 */
-.box2-title {
+  .box2-title {
   color: #5f0080;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-.card-container {
+  .card-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /* 카드 스타일 */
-.card {
+  .card {
   width: 23%;
   border: 1px solid #ccc;
   border-radius: 4px;
