@@ -431,7 +431,7 @@
     <script>
         const cardContainer = document.querySelector('.card-container');
         cardContainer.addEventListener("click",(event)=>{
-            if(event.target.tagName == this){
+            if(event.target.tagName =="IMG"){
                 const card = event.target.parentElement;
                 window.location.href = "detail.html";
             }
