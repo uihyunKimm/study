@@ -179,9 +179,9 @@
         <p>© 2024 모든 습관. All Rights Reserved.</p>
     </footer>
     <script>
-        const cardContainer = document.querySelector('.section2-cards');
-        cardContainer.addEventListener("click",(event)=>{
-            if(event.target.tagName =="IMG"){
+        const cardContainer = document.querySelector('.section2-card');
+        cardContainer.addEventListener("click", (event)=>{
+            if(event.target.tagName == this){
                 const card = event.target.parentElement;
                 window.location.href = "detail2.html";
             }

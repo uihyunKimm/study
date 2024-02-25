@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="line">
+            <button id="clear">C</button>
+            <button id="backspace">←</button>
+            <button id="divide">/</button>
+        </div>
+        <div class="line">
+            <button id="seven">7</button>
+            <button id="eight">8</button>
+            <button id="nine">9</button>
+            <button id="multiply">*</button>
+        </div>
+        <div class="line">
+            <button id="four">4</button>
+            <button id="five">5</button>
+            <button id="six">6</button>
+            <button id="subtract">-</button>
+        </div>
+        <div class="line">
+            <button id="one">1</button>
+            <button id="two">2</button>
+            <button id="three">3</button>
+            <button id="add">+</button>
+        </div>
+        <div class="line">
+            <button id="zero">0</button>
+            <button id="decimal">.</button>
+            <button id="equals">=</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById('display');
+        const clear = document.getElementById('clear');
+        const backspace = document.getElementById('backspace');
+        const divide = document.getElementById('divide');
+        const seven = document.getElementById('seven');
+        const eight = document.getElementById('eight');
+        const nine = document.getElementById('nine');
+        const multiply = document.getElementById('multiply');
+        const four = document.getElementById('four');
+        const five = document.getElementById('five');
+        const six = document.getElementById('six');
+        const subtract = document.getElementById('subtract');
+        const one = document.getElementById('one');
+        const two = document.getElementById('two');
+        const three = document.getElementById('three');
+        const add = document.getElementById('add');
+        const zero = document.getElementById('zero');
+        const decimal = document.getElementById('decimal');
+        const equals = document.getElementById('equals');
+        
+        clear.addEventListener('click', () => { display.value = ''; });
+        backspace.addEventListener('click', () => { display.value = display.value.slice(0, -1); });
+        divide.addEventListener('click', () => { display.value += '/'; });
+        seven.addEventListener('click', () => { display.value += '7'; });
+        eight.addEventListener('click', () => { display.value += '8'; });
+        nine.addEventListener('click', () => { display.value += '9'; });
+        multiply.addEventListener('click', () => { display.value += '*'; });
+        four.addEventListener('click', () => { display.value += '4'; });
+        five.addEventListener('click', () => { display.value += '5'; });
+        six.addEventListener('click', () => { display.value += '6'; });
+        subtract.addEventListener('click', () => { display.value += '-'; });
+        one.addEventListener('click', () => { display.value += '1'; });
+        two.addEventListener('click', () => { display.value += '2'; });
+        three.addEventListener('click', () => { display.value += '3'; });
+        add.addEventListener('click', () => { display.value += '+'; });
+        zero.addEventListener('click', () => { display.value += '0'; });
+        decimal.addEventListener('click', () => { display.value += '.'; });
+        equals.addEventListener('click', () => { display.value = eval(display.value); });
+    </script>
+</body>
+</html>
