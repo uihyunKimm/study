@@ -15,3 +15,4 @@ const myURL2 = new URL("https://example.org/?bcode=B4250257160&page=300&category
 
 console.log(myURL2.searchParams);
 console.log(myURL2.searchParams.getAll('category'));
+console.log(myURL2.searchParams.get('page'));
