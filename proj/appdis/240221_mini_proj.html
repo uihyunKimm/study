@@ -53,10 +53,10 @@
                 <input type="radio" name="slide" id="slide3">
                 <input type="radio" name="slide" id="slide4">
                 <ul id="imgholder" class="imgs">
-                    <li><img src="https://ifh.cc/g/3zShH6.png"></li>
-                    <li><img src="https://ifh.cc/g/3zShH6.png"></li>
-                    <li><img src="https://ifh.cc/g/3zShH6.png"></li>
-                    <li><img src="https://ifh.cc/g/3zShH6.png"></li>
+                    <li class="main-slide"><img src="https://ifh.cc/g/3zShH6.png"></li>
+                    <li class="main-slide"><img src="https://ifh.cc/g/3zShH6.png"></li>
+                    <li class="main-slide"><img src="https://ifh.cc/g/3zShH6.png"></li>
+                    <li class="main-slide"><img src="https://ifh.cc/g/3zShH6.png"></li>
                 </ul>
                 <div class="bullets">
                     <label for="slide1">&nbsp;</label>
@@ -197,6 +197,21 @@
         <p>© 2024 모든 습관. All Rights Reserved.</p>
     </footer>
     <script>
+        const mainImage = document.getElementsByClassName("main-slide")
+        let animate
+        function init() {
+            mainImage.style.left = '0px';
+        }
+        function moveLeft() {
+            mainImage.style.left = '0px';
+            animate = setTimeout(moveLeft, 5000)
+        }
+        function stop() {
+            clearTimeout(animate);
+            mainImage.style.left = '0px';
+        }
+        window.onload = init;
+        
         const cardContainer = document.querySelector('.section2-card');
         cardContainer.addEventListener("click", (event)=>{
             if(event.target.tagName == this){

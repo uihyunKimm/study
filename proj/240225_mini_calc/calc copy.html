@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <img class="main-slide" src="/240225_mini_calc/hp_logo.png" alt="pic" style="width: 500px;">
+        <p>click</p>
+        <input type="button" value="start" onclick="moveLeft();">
+        <input type="button" value="end" onclick="stop();">
+    </form>
+    <script>
+        const mainImage = document.getElementsByClassName("main-slide")
+        let animate = null;
+        function init() {
+            mainImage.style.right = '0px';
+        }
+        function moveLeft() {
+            mainImage.style.left = '10px';
+            animate = setTimeout(moveLeft, 0)
+        }
+        function stop() {
+            clearTimeout(animate);
+            mainImage.style.right = '0px';
+        }
+        window.onload = init;
+    </script>
+</body>
+</html>
