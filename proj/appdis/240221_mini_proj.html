@@ -11,8 +11,8 @@
     crossorigin="anonymous"
     />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <link rel="stylesheet" href="240221_mini_proj.css" >
     <title>profile</title>
 </head>
@@ -25,34 +25,16 @@
         font-size: 16px;
     }
 
-    .card-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 10px;
-        margin-top: 10rem;
-    }
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        }
-    .card-btn {
-    width: 100%;
-    max-width: 200px;
-    margin-top: 1rem;
-    }
-
-
 </style>
 <body>
+    <div id="wrapper">
     <header>
         <div>
             <a href="https://imgbb.com/"><img src="https://ifh.cc/g/AYzQoY.png" alt="10823"></a>
         </div>
-        <div>
-            
+        <div class="header-details">
+                <a class="material-symbols-outlined" href="#">home</a>
+                <a class="material-symbols-outlined" href="#">search</a>
         </div>
     </header>
     <main>
@@ -97,12 +79,12 @@
             <nav>
                 <ul class="nav-list-con">
                     <div class="nav-lists">
-                        <span class="on">추천</span>
-                        <span>New</span>
-                        <span>Hot</span>
-                        <span>함께</span>
-                        <span>루틴공유</span>
-                        <span>미션</span>
+                        <a class="on">추천</a>
+                        <a>New</a>
+                        <a>Hot</a>
+                        <a>함께</a>
+                        <a>루틴공유</a>
+                        <a>미션</a>
                     </div>
                 </ul>
             </nav>
@@ -203,18 +185,19 @@
             </div>
         </div>
     </main>
-    <div class="low-menu">
-        <div class="low-menu-details">
-            <a class="material-symbols-outlined">search</a>
-            <a href="#">메뉴 2</a>
-            <a class="material-symbols-outlined">home</a>
-            <a href="#">메뉴 4</a>
-            <a class="material-symbols-outlined">menu </a>
-        </div>
-    </div>
     <footer>
         <p>© 2024 모든 습관. All Rights Reserved.</p>
     </footer>
+    <div class="low-menu">
+        <div class="low-menu-details">
+            <a class="material-symbols-outlined" href="#">home</a>
+            <a class="material-symbols-outlined" href="#">search</a>
+            <a class="material-symbols-outlined" id="add" href="#">add_circle</a>
+            <a class="material-symbols-outlined" href="#">bookmark</a>
+            <a class="material-symbols-outlined" href="#">menu </a>
+        </div>
+    </div>
+</div>
     <script>
         const mainImage = document.getElementsByClassName("main-slide")
         let animate
