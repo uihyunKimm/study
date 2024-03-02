@@ -452,6 +452,33 @@ main {
     width: 100%;
     height: 370px;
 }
+
+.low-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 87px;
+    bottom: 0;
+    left: 0;
+}
+
+.low-menu-details {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.low-menu-details a {
+    display: flex;
+    color: #333;
+    text-decoration: none;
+}
+
 footer {
     background-color: #1D446F;
     color: #fff;

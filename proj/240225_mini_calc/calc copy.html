@@ -14,13 +14,14 @@
     </form>
     <script>
         const mainImage = document.getElementsByClassName("main-slide")
-        let animate = null;
+        let animate;
         function init() {
-            mainImage.style.right = '0px';
+            mainImage.style.left = '0px';
+            mainImage.style.position = 'relative';
         }
-        function moveLeft() {
+        function moveRight() {
             mainImage.style.left = '10px';
-            animate = setTimeout(moveLeft, 0)
+            animate = setTimeout(moveLeft, 20);
         }
         function stop() {
             clearTimeout(animate);
