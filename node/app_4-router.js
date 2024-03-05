@@ -8,6 +8,8 @@ const userRouter = require('./routes/user');
 app.get("/", indexRouter);
 app.get("/user", userRouter);
 
+
+
 app.listen(3000, function () {
     console.log("Server Running at http://127.0.0.1:3000");
 });

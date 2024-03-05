@@ -24,7 +24,6 @@ app.get("/login", function (request, response) {
 });
 
 app.post("/login", function (request, response) {
-// 쿠키 생성
     const id = request.body.id;
     const password = request.body.password;
 // 출력
