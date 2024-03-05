@@ -1,0 +1,17 @@
+<%- include('header.ejs') %>
+<div>
+    <a href="/">연락처 목록</a>
+</div>
+<div>
+    <h2>연락처 추가</h2>
+<form method="post">
+    <label for="name">이름</label>
+    <input type="text" id="name" name="name" />
+    <label for="mail">메일주소</label>
+    <input type="text" id="mail" name="mail" />
+    <label for="tel">전화번호</label>
+    <input type="text" id="tel" name="tel" />
+    <input type="submit" value="저장하기">
+</form>
+</div>
+<%- include('footer.ejs') %>
