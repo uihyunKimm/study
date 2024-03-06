@@ -19,7 +19,7 @@ app.get('/', (req, response) => {
     if (req.session.count){
         //count값 1 증가
         req.session.count++;
-        response.send(`<h1>${req.session.count}번째 방문입니다.</h1>`);
+        response.send(`<h1>${req.session.i}번째 방문입니다.</h1>`);
     }else {
         req.session.count = 1;
         response.send(`<h1>${req.session.count}번째 방문입니다.</h1>`);
