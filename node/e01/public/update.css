@@ -1,0 +1,46 @@
+section {
+  max-width: 800px;
+  margin: 80px auto;
+}
+
+form {
+  position: relative;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.insertBtn {
+  width: 80px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: 0px;
+}
+
+.insertBtn:hover {
+  background-color: #0056b3;
+}

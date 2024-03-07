@@ -1,0 +1,19 @@
+.listTable {
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.listTableTr {
+  background-color: pink;
+  height: 50px;
+}
+
+td .btn {
+  color: #ccc;
+}
+
+a {
+  text-decoration: none;
+}

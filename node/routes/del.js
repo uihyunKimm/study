@@ -5,9 +5,9 @@ const mysql = require("./mysqlconn");
 const router = express.Router();
 
 // 페이지 라우트
-router.get("/", function (request, response) {
-    let num = request.body.number
-    mysql.query("DELETE FROM Book WHERE bookid = (id) VALUES (?)",[num], function (error, results) {
+router.get("/:id", function (request, response) {
+    let num = request.query.number
+    mysql.query("DELETE FROM Book WHERE bookid = ?",[num], function (error, results) {
         if (!error) {
         response.redirect("/");
         } else {
@@ -15,4 +15,4 @@ router.get("/", function (request, response) {
         }
     });
 });
-module.exports = router;
+module.exports = router; 

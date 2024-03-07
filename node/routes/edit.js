@@ -4,13 +4,28 @@ const mysql = require("./mysqlconn");
 // 라우터 객체 생성
 const router = express.Router();
 
-// 페이지 라우트
 
+// 페이지 라우트
+router.get("/:id", function (request, response) {
+    mysql.query(
+      "SELECT * FROM Book WHERE bookid = ?",
+      [request.params.id],
+      function (error, results) {
+        if (!error) {
+          response.render("update", { item: results[0] });
+        } else {
+          console.log("Error");
+        }
+      }
+    );
+  });
+
+// 페이지 라우트
 router.get("/", function (request, response) {
-    let num = response.body.number.value
-    let ttl = response.body.title.value
-    let pub = response.body.publisher.value
-    let prc = response.body.price.value
+    let num = request.body.number.value
+    let ttl = request.body.title.value
+    let pub = request.body.publisher.value
+    let prc = request.body.price.value
 
     response.render("list-add");
 
