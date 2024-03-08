@@ -7,7 +7,7 @@ const router = express.Router();
 
 // 페이지 라우트
 router.get("/", function (request, response) {
-  response.render("240221_mini_proj"/* { data: results } */);
+  response.render("land"/* { data: results } */);
 });
 
 module.exports = router;

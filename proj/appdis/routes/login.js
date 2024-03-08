@@ -6,51 +6,51 @@ const cookieParser = require("cookie-parser");
 // 라우터 객체 생성
 const router = express.Router();
 
-app.use(cookieParser());
+router.use(cookieParser());
 // application/x-www-form-urlencoded 방식 파싱
-app.use(express.urlencoded({ extended: false }));
+router.use(express.urlencoded({ extended: false }));
 
 // 페이지 라우트
 router.get("/", function (request, response) {
   response.render("login");
+  next();
 });
+router.get("/", function (request, response) {
+  if (request.cookies.auth) {
+  response.redirect("/logincomplete");
+  } else {
+  response.redirect("/login");
+  response.alert("일치하지 않는 정보입니다. 다시 입력해주세요");
+  }
+});
+
 
 router.post("/", function (request, response) {
-  const body = request.body;
-
-  mysql.query(
-    // "INSERT INTO Book(bookid, bookname, publisher, price) VALUES(?,?,?,?)",
-    // [body.bookid, body.bookname, body.publisher, body.price],
-    // function (error, results) {
-    //   if (!error) {
-    //     response.redirect("/");
-    //   } else {
-    //     console.log("Error");
-      }
-    }
-  );
-});
-
-
-app.post("/login", function (request, response) {
     const id = request.body.id;
     const password = request.body.password;
 // 출력
-    console.log(id, password);
-// 로그인 확인
-    if (id == "uihk" && password == "1234") {
-    // 로그인 성공
-        response.cookie("auth", true);
-        response.redirect("/");
-    } else {
-    // 로그인 실패
-        response.redirect("/login");
-    }
+    mysql.query(
+      "SELECT * FROM UserInfo WHERE id=? && password=?;",[id, password],
+      function (error, results) {
+        if (!error) {
+          response.cookie("auth", true);
+          response.redirect("/http://127.0.0.1:3000");
+        } else {
+          console.log("Error");
+          response.redirect("/login");
+          response.alert("일치하지 않는 정보입니다. 다시 입력해주세요");
+        }
+      }
+    );
 });
 
-app.get("/deleteCookie", (request, response) =>{
+router.get("/logincomplete", (request, response) =>{
+
+    response.render("logincomplete");
+});
+router.get("/logout", (request, response) =>{
     response.clearCookie("auth");
-    response.send("<h1>쿠키삭제</h1>");
+    response.redirect("/http://127.0.0.1:3000");
 });
 
 

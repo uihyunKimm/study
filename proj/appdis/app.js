@@ -1,13 +1,10 @@
 // 모듈 추출 및 서버 생성
 const express = require("express");
 const mysql = require("./routes/mysqlconn");
-const ejs = require("ejs");
+const cookieParser = require("cookie-parser");
 
 // 서버 생성
 const app = express();
-
-// application/x-www-form-urlencoded 방식 파싱
-app.use(express.urlencoded({ extended: false }));
 
 // 데이터베이스 연결
 mysql.connect();
@@ -16,19 +13,27 @@ mysql.connect();
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
+// application/x-www-form-urlencoded 방식 파싱
+app.use(express.urlencoded({ extended: false }));
+
+app.use(cookieParser());
+
+// public 폴더 지정 - css, image
+app.use(express.static("public"));
+
+// body-parser
+app.use(express.urlencoded({ extended: false }));
+
 // 라우터 연결
-const listRouter = require("./routes/list");
-const addRouter = require("./routes/add");
-const delRouter = require("./routes/del");
-const editRouter = require("./routes/edit");
+const landRouter = require("./routes/land");
+const loginRouter = require("./routes/login");
 
 
-// 라우터 설정
-app.use("/", listRouter);
-app.use("/add", addRouter);
-app.use("/del", delRouter);
-app.use("/edit", editRouter);
-
+// 라우터 연결
+app.use("/", landRouter);
+app.use("/login", loginRouter);
+// app.use("/del", delRouter);
+// app.use("/edit", editRouter);
 
 // 서버 실행
 app.listen(3000, function () {
