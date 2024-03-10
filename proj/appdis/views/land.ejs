@@ -18,16 +18,10 @@
 </head>
 <body>
     <div id="wrapper">
-    <header>
-        <div>
-            <a href="/"><img src="https://ifh.cc/g/AYzQoY.png" alt="10823"></a>
-        </div>
-        <div class="header-details">
-                <a class="material-symbols-outlined" href="#">home</a>
-                <a class="material-symbols-outlined" href="#">search</a>
-                <a class="material-symbols-outlined" href="/appdis/views/login.ejs">login</a>
-        </div>
-    </header>
+    <% if (cookie.auth) {%>
+        <%- include("header-logout")%>
+    <% }else {%>
+        <%- include("header-login")%> <% }; %>
     <main>
         <div class="container">
             <div class="section1">

@@ -40,6 +40,14 @@ header img{
     color: #E3FB7B;
     text-decoration: none;
 }
+.header-details a.string{
+    font-size: 24px;
+    display: flex;
+    color: #E3FB7B;
+    border: #E3FB7B solid 1px;
+    border-radius: 5%;
+    text-decoration: none;
+}
 
 main {
     display: flex;
@@ -51,8 +59,9 @@ main {
     background-color: #f0f0f0;
 }
 .container {
+    box-sizing: border-box;
     position: relative;
-    max-width: 1900px;
+    max-width: 2000px;
     height: 100%;
     margin: 0px auto 40px;
     padding: 0;
