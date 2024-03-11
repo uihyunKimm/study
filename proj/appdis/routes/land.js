@@ -7,7 +7,14 @@ const router = express.Router();
 
 // 페이지 라우트
 router.get("/", function (request, response) {
-  response.render("land"/* { data: results } */);
+  console.log("land-get")
+  if(request.cookies.auth){
+    response.render("land", { id:request.cookies.auth});
+  }
+else{
+  response.render("land", {id : false});
+}
+
 });
 
 module.exports = router;

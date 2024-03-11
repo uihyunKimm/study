@@ -20,6 +20,6 @@ app.get('/setCookie', (req, response) => {
     response.redirect('/getCookie');
 });
 
-app.listen(3000,function () {
-    console.log("Server Running at http://127.0.0.1:3000");
+app.listen(3001,function () {
+    console.log("Server Running at http://127.0.0.1:3001");
 })

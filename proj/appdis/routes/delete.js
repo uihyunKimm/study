@@ -8,7 +8,7 @@ var router = express.Router();
 // 127.0.0.1:3000/123
 router.get("/:id", function (request, response) {
   mysql.query(
-    "DELETE FROM Book WHERE bookid=?",
+    "DELETE FROM UserrInfo WHERE bookid=?",
     [request.params.id],
     function (error, results) {
       if (!error) {

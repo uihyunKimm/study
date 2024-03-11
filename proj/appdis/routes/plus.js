@@ -13,26 +13,15 @@ router.use(express.urlencoded({ extended: false }));
 // 페이지 라우트
 router.get("/", function (request, response) {
   if (request.cookies.auth) {
-    console.log("login-get")
-    response.render("http://127.0.0.1:3000");
-  }else {
-    response.render("login");
-  }
+    response.render("plus")
+    } else {
+    response.send(`<script type="text/javascript">alert("로그인 후 이용해주세요"); 
+    document.location.href="/login";</script>`);
+    }
 });
 
-// router.get("/", function (request, response) {
-//   if (request.cookies.auth) {
-//   response.render("/header-logout",{
 
-//   });
-//   } else {
-//   response.redirect("/login");
-//   response.alert("일치하지 않는 정보입니다. 다시 입력해주세요");
-//   }
-// });
-
-
-router.post("/", function (request, response) {
+router.post("/:id", function (request, response) {
     const id = request.body.id;
     const password = request.body.password;
 // 출력
@@ -41,9 +30,7 @@ router.post("/", function (request, response) {
       function (error, results) {
         if (!error) {
           response.cookie("auth", true);
-          console.log("login-post")
-         // response.render("land",{id: request.cookies.auth});
-          response.redirect("http://127.0.0.1:3000");
+          response.redirect("/http://127.0.0.1:3000");
         } else {
           console.log("Error");
           response.redirect("/login");
@@ -54,12 +41,13 @@ router.post("/", function (request, response) {
     );
 });
 
-router.get("/sign", (request, response) =>{
-    response.render("sign");
+router.get("/", (request, response) =>{
+
+    response.render("logincomplete");
 });
 router.get("/logout", (request, response) =>{
     response.clearCookie("auth");
-    response.redirect("http://127.0.0.1:3000");
+    response.redirect("/http://127.0.0.1:3000");
 });
 
 

@@ -27,13 +27,17 @@ app.use(express.urlencoded({ extended: false }));
 // 라우터 연결
 const landRouter = require("./routes/land");
 const loginRouter = require("./routes/login");
+const logoutRouter = require("./routes/logout");
+const signRouter = require("./routes/sign");
+const plusRouter = require("./routes/plus");
 
 
 // 라우터 연결
 app.use("/", landRouter);
 app.use("/login", loginRouter);
-// app.use("/del", delRouter);
-// app.use("/edit", editRouter);
+app.use("/logout", logoutRouter);
+app.use("/sign", signRouter);
+app.use("/plus", plusRouter);
 
 // 서버 실행
 app.listen(3000, function () {

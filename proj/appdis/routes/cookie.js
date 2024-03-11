@@ -20,26 +20,6 @@ app.get("/", function (request, response) {
   response.alert("일치하지 않는 정보입니다. 다시 입력해주세요");
   }
 });
-router.get("/", function (request, response) {
-  response.render("login");
-});
-
-// router.post("/", function (request, response) {
-//   const body = request.body;
-
-//   mysql.query(
-//     "INSERT INTO Book(bookid, bookname, publisher, price) VALUES(?,?,?,?)",
-//     [body.bookid, body.bookname, body.publisher, body.price],
-//     function (error, results) {
-//       if (!error) {
-//         response.redirect("/");
-//       } else {
-//         console.log("Error");
-//       }
-//     }
-//   );
-// });
-
 
 app.post("/:id", function (request, response) {
     const id = request.body.id;
@@ -47,7 +27,7 @@ app.post("/:id", function (request, response) {
 // 출력
     console.log(id, password);
 // 로그인 확인
-    if (id == "item.id" && password == "item.password") {
+    if (id === "item.id" && password === "item.password") {
     // 로그인 성공
         response.cookie("logincookie", true);
         response.redirect("/");
