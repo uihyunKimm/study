@@ -20,42 +20,48 @@
 <body>
     <body>
         <div id="wrapper">
-        <%- include("header-logout-white")%>
+            <header>
+                <a class="material-symbols-outlined" href="/login">Chevron_Left</a>
+                <div class="header-details">
+                </div>
+            </header>
             <div class="container">
                 <h3>회원가입하기</h3>
                 <form method="post" id="sign-form">
                     <div class="field">
-                        <label for="id">아이디</label>
+                        <span>아이디</span>
                         <input type="text" name="id" id="id" placeholder="아이디">
                     </div>
                     <div class="field">
-                        <label for="password">비밀번호</label>
+                        <span>비밀번호</span>
                         <input type="password" name="Password" id="Password" placeholder="비밀번호">
                     </div>
                     <div class="field">
-                        <label for="Passwordcheck">비밀번호확인</label>
+                        <span>비밀번호확인</span>
                         <input type="password" name="Passwordcheck" id="Passwordcheck" placeholder="비밀번호확인">
                     </div>
                     <div class="field">
-                        <label for="name">이름</label>
+                        <span>이름</span>
                         <input type="text" name="name" id="name" placeholder="이름">
                     </div>
                     <div class="field">
                         <span>생년월일</span>
                         <input type="text" name="birth" id="birth" placeholder="생년월일(1999-01-01 형식 작성)">
                     </div>
-                    <div class="field">
+                    <div class="field gender">
                         <span>성별</span>
-                        <div>
-                            <label><input type="radio" name="gender" value="male">남자</label>
-                            <label><input type="radio" name="gender" value="female">여자</label>
+                        <div id="radiodiv" name="gender">
+                            <input type="radio" name="gender" value="male"><span class="radiospan">남자</span>
+                            <input type="radio" name="gender" value="female"><span class="radiospan">여자</span>
                         </div>
                     </div>
                     <div class="field">
-                        <input type="text" name="email" placeholder="이메일">
+                        <span>이메일</span>
+                        <input type="text" name="email" id="email" placeholder="이메일">
                     </div>
                     <div class="field">
-                        <input type="number" name="phone" placeholder="휴대폰번호">
+                        <span>휴대폰번호</span>
+                        <input type="text" name="phone" id="phone" placeholder="휴대폰번호">
                     </div>
                     <div>
                         <input type="submit" value="회원가입하기">

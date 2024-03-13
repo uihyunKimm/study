@@ -37,7 +37,7 @@ router.post("/", function (request, response) {
     const password = request.body.password;
 // 출력
     mysql.query(
-      "SELECT * FROM UserrInfo WHERE id=? && password=?;",[id, password],
+      "SELECT * FROM UserrInfo WHERE id = ? && password = ?;",[id, password],
       function (error, results) {
         if (!error) {
           response.cookie("auth", true);

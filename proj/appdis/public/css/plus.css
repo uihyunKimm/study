@@ -1,3 +1,7 @@
+*{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
+
 html, body {
     box-sizing: border-box;
     margin: 0;
@@ -6,13 +10,14 @@ html, body {
     height: 100%;
     font-size: 16px;
     overflow-x: hidden;
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
+
 #wrapper {
     display: flex;
     flex-direction: column;
     height: auto;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -23,6 +28,68 @@ header {
     width: 100%;
     min-width: 375px;
     height: 76px;
+}
+header img{
+    height: 48px;
+    margin-left: 10px;
+}
+header .material-symbols-outlined{
+    text-decoration: none;
+    color: #E3FB7B;
+    font-size: 42px;
+}
+
+.header-details {
+    display: flex;
+    justify-content:flex-end;
+    flex-grow: 1;
+    margin: 0;
+}
+.header-details a{
+    font-size: 28px;
+    margin-right: 10px;
+    display: flex;
+    color: #E3FB7B;
+    text-decoration: none;
+    justify-content: center;
+}
+.header-details a:hover{
+    color: rgb(227, 251, 123, 0.7);
+    }
+.header-details a.string{
+    font-size: 14px;
+    padding: 2px;
+    display: flex;
+    color: #E3FB7B;
+    border: #E3FB7B solid 1px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.header-details a.string:hover{
+background-color: rgb(227, 251, 123, 0.1);
+}
+
+.container {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 2000px;
+    height: 100%;
+    margin: 0px auto 40px;
+    padding: 20px;
+}
+#btn-modal {
+    display: inline-block;
+    padding: 10px 20px;
+    width: 300px;
+    height: 60px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
 }
 .sign-wrapper{
     width: 400px;
@@ -72,3 +139,30 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.low-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 87px;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.low-menu-details {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.low-menu-details a {
+    font-size: 30px;
+    display: flex;
+    color: #333;
+    text-decoration: none;}

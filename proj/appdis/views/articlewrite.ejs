@@ -13,30 +13,27 @@
     <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
-    <link rel="stylesheet" href="/css/login.css" >
+    <link rel="stylesheet" href="/css/articlewrite.css" >
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <title>profile</title>
 </head>
 <body>
     <div id="wrapper">
-        <header>
-            <a class="material-symbols-outlined" href="/">Chevron_Left</a>
-            <div class="header-details">
+        <form action="post" id="write-form">
+            <header>
+                <a class="material-symbols-outlined" href="/">Chevron_Left</a>
+                <h3>의견</h3>
+                <div class="header-details"><input type="submit" value="남기기"></div>
+            </header>
+            <div class="container">
+                <div class="field">
+                    <input type="text" name="name" placeholder="(선택) 제목을 입력하세요">
+                </div>
+                <div class="field">
+                    <input type="password" name="password" placeholder="욕설, 비방 등 상대방을 불쾌하게 하는 의견은 남기지 말아주세요.">
+                </div>
             </div>
-        </header>
-        <div class="container">
-            <h3>로그인</h3>
-            <form method="post" id="login-form">
-                <div class="field">
-                    <input type="text" name="id" placeholder="회원 ID">
-                </div>
-                <div class="field">
-                    <input type="password" name="password" placeholder="비밀번호">
-                </div>
-                <input type="submit" value="로그인">
-                <a href="/sign">회원가입</a>
-                <a href="http://127.0.0.1:3000">뒤 로</a>
-            </form>
+        </form>
         </div>
     </div>
     <script>

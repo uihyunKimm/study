@@ -8,14 +8,12 @@ const router = express.Router();
 // 페이지 라우트
 router.get("/", function (request, response) {
   mysql.query("SELECT * FROM article", function (error, results) {
-  if(request.cookies.auth){
-    response.render("land", { id : request.cookies.auth, data: results});
-  }else{
-    console.log(error);
-  response.render("/", {id : false});
-  }
+    if (!error) {
+      response.render("articlelist", { data: results });
+    } else {
+      console.log("Error");
+    }
+  });
 });
-});
-
 
 module.exports = router;
