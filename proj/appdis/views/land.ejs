@@ -17,12 +17,12 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
     <title>profile</title>
 </head>
-<body>
+<body> 
     <div id="wrapper">
-    <% if (id) {%>
-        <%- include("header-logout")%>
+    <% if (data.id) {%>
+        <%- include("header-login")%>
     <% }else {%>
-        <%- include("header-login")%> <% }; %>
+        <%- include("header-logout")%> <% }; %>
     <main>
         <div class="container">
             <div class="section1">

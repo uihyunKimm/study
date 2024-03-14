@@ -13,15 +13,13 @@ router.get("/", function (request, response) {
 router.post("/", function (request, response) {
   const body = request.body;
   mysql.query(
-    "NSERT INTO routine (todonum, starttime, dotime, doendtime, todo) VALUES(?,?,?,?,?)",
+    "INSERT INTO routine (todonum, starttime, dotime, doendtime, todo) VALUES(?,?,?,?,?)",
     [body.todonum, body.starttime, body.dotime, body.doendtime, body.todo],
     function (error, results) {
-      Error.stackTraceLimit = 0; // disables it
-      Error.stackTraceLimit = Infinity; // disables any limit
       if (!error) {
         response.redirect("/plus");
       } else {
-        console.log(Error);
+        console.log("Error");
       }
     }
   );

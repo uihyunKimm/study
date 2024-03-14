@@ -16,7 +16,9 @@ router.get("/", function (request, response) {
     console.log("login-get")
     response.render("http://127.0.0.1:3000");
   }else {
+    console.log("login-get 실패")
     response.render("login");
+ //  response.redirect("/");
   }
 });
 
@@ -37,12 +39,14 @@ router.post("/", function (request, response) {
 // 출력
     mysql.query(
       "SELECT * FROM UserrInfo WHERE id = ? && password = ?;",[id, password],
-      function (error, results) {
+      function (error, results) { // results = [{id:test, pw : 1234}, {id:test2, pw : 5678}]
         if (!error) {
           response.cookie("auth", true);
           console.log("login-post")
          // response.render("land",{id: request.cookies.auth});
-          response.render("land", {data: results});
+         console.log(results[0])
+         response.redirect("/");
+        //  response.render("land", {data: results[0]}); // data = {id:test, pw : 1234}
         } else {
           console.log(Error);
           response.redirect("login");

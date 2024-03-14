@@ -7,12 +7,14 @@ const router = express.Router();
 
 // 페이지 라우트
 router.get("/", function (request, response) {
+  console.log("ttttttttttttttt")
   mysql.query("SELECT * FROM article", function (error, results) {
   if(request.cookies.auth){
     response.render("land", {id : request.cookies.auth, data: results});
   }else{
-    console.log(error);
-  response.render("login", {id : false});
+    console.log(results); // null
+ // response.render("login", {id : false});
+ response.redirect("/login");
   }
 });
 });
