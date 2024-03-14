@@ -45,7 +45,7 @@ router.get("/", function (request, response) {
       console.log(results);
       response.render("articledetail", { item: results });
     } else {
-      console.log(Error);
+      console.log('Error');
     }
   });
 });

@@ -29,10 +29,13 @@ const landRouter = require("./routes/land");
 const loginRouter = require("./routes/login");
 const logoutRouter = require("./routes/logout");
 const signRouter = require("./routes/sign");
-const plusRouter = require("./routes/plus");
 const articleListRouter = require("./routes/articleList");
 const articledetailRouter = require("./routes/articledetail");
 const articlewriteRouter = require("./routes/articlewrite");
+const plusRouter = require("./routes/plus");
+const plusaddRouter = require("./routes/plusadd");
+const plusdelRouter = require("./routes/plusdel");
+const plusupdRouter = require("./routes/plusupd");
 
 
 // 라우터 연결
@@ -40,10 +43,13 @@ app.use("/", landRouter);
 app.use("/login", loginRouter);
 app.use("/logout", logoutRouter);
 app.use("/sign", signRouter);
-app.use("/plus", plusRouter);
 app.use("/articleList", articleListRouter);
 app.use("/articledetail", articledetailRouter);
 app.use("/articlewrite", articlewriteRouter);
+app.use("/plus", plusRouter);
+app.use("/plusadd", plusaddRouter);
+app.use("/plusdel", plusdelRouter);
+app.use("/plusupd", plusupdRouter);
 
 // 서버 실행
 app.listen(3000, function () {

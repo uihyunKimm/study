@@ -29,6 +29,7 @@ header {
         width: 100%;
         min-width: 375px;
         height: 60px;
+        border-bottom: 1px solid #F0F0F2;
 }
 header .header-details1{
     display: flex;
@@ -49,7 +50,13 @@ header h3{
     font-weight: 600;
     margin: 0;
 }
-header span{
+header .header-details{
+    margin-right: 10px;
+}
+header .header-details a{
+    text-decoration: none;
+}
+header .header-details span{
     color: #757575;
     font-size: 16px;
 }
@@ -58,8 +65,8 @@ header span{
     position: relative;
     max-width: 2000px;
     height: 100%;
-    margin: 0px auto 40px;
-    padding: 20px;
+    margin: 0px auto 70px;
+    padding: 0 20px;
 }
 .container h2{
     color: #292929;
@@ -87,7 +94,7 @@ header span{
     justify-content:space-between;
     align-items:baseline;
     width: 100%;
-    height: 200px;
+    height: 240px;
     margin: 0;
     padding: 1rem;
     background-color: #ffffff;
@@ -96,6 +103,7 @@ header span{
     box-shadow: 2px 2px 2px 2px #4955630a;
     margin-top: 24px;
 }
+
 .articles p{
     font-size: 16px;
     color: #525252;
@@ -115,5 +123,31 @@ header span{
     margin: 0;
     margin-top: 30px;
 }
+.low-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 87px;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
 
+.low-menu-details {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.low-menu-details a {
+    font-size: 30px;
+    display: flex;
+    color: #333;
+    text-decoration: none;
+}
 

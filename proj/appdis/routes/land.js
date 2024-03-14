@@ -9,13 +9,12 @@ const router = express.Router();
 router.get("/", function (request, response) {
   mysql.query("SELECT * FROM article", function (error, results) {
   if(request.cookies.auth){
-    response.render("land", { id : request.cookies.auth, data: results});
+    response.render("land", {id : request.cookies.auth, data: results});
   }else{
     console.log(error);
-  response.render("/", {id : false});
+  response.render("login", {id : false});
   }
 });
 });
-
 
 module.exports = router;

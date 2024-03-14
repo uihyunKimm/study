@@ -17,72 +17,93 @@
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
     <title>plus page</title>
 </head>
-<body>
+<body onload="init()">
     <div id="wrapper">
         <header>
             <a class="material-symbols-outlined" href="/">Chevron_Left</a>
+            <h3>루틴 만들기</h3>
             <div class="header-details">
             </div>
         </header>
     <main>
         <div class="container">
+            <div class="js-clock">
+                <p class="currDate"></p>
+                <p class="currTime"></p>
+            </div>
+            <div class="routine">
+                <a id="add-routine" href="/plusadd"><i class="material-symbols-outlined">add</i></a>
+            </div>
             <div>
+                <% data.forEach(function(item, index) { %>
+                    <div class="routine2">
+                        <div class="routinecon">
+                            <div class="info">
+                                <div class="title">
+                                        <div class="sub-title"><%= item.todonum %></div>
+                                        <h2><%= item.starttime %> <br/><%= item.doendtime %></h2>
+                                    </div>
+                                    <p class="dotime"><%= item.dotime %></p>
+                                <div class="content"><p class="todo"><%= item.todo %></p></div>
+                                <a href="/plusupd/<%= item.todonum %>" class="btn-update" title="수정">
+                                    <i class="material-symbols-outlined">update</i>
+                                </a>
+                                <a href="/plusdel/<%= item.todonum %>" class="btn-delete" title="삭제">
+                                    <i class="material-symbols-outlined">close</i>
+                                </a>
+                            </div>
+                            <span class="checkbox"><input type="checkbox" id="checkbox" /><label for="checkbox"></label></span>
+                        </div>
+                    </div>
+                <% }); %>
             </div>
-            <a id="btn-modal">추가</a>
-            </div>
-        <div id="modal" class="modal-overlay">
-            <div class="modal-window">
-                <div class="title">
-                    <h2>모달</h2>
+            <!-- <div id="modal" class="modal-overlay">
+                <div class="modal-window">
+                    <div class="title">
+                        <h2>모달</h2>
+                    </div>
+                    <div class="close-area">X</div>
+                    <div class="content">
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </div>
                 </div>
-                <div class="close-area">X</div>
-                <div class="content">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                </div>
-            </div>
+            </div> -->
+            
         </div>
+        
         <%- include("lowmenu")%>
     </main>
     <script>
-        const modal = document.getElementById("modal")
+        const clockContainer = document.querySelector(".js-clock"),
+      dateTitle = clockContainer.querySelector(".currDate"),
+      clockTitle = clockContainer.querySelector(".currTime");
 
-        function modalOn() {
-            modal.style.display = "flex"
-        }
+function getDate(){
+    const date = new Date();
+    const week = new Array ('[일]','[월]','[화]','[수]','[목]','[금]','[토]');
+    const year = date.getFullYear();
+    const month = date.getMonth()+1;
+    const day = date.getDay();
+    const dayName = week[date.getDay()];
+    dateTitle.innerText = `${year}년
+        ${month <10 ? `0${month}` : month}월 ${day < 10 ? `0${day}` : day}일 ${dayName}`;
+}
 
-        function isModalOn() {
-            return modal.style.display === "flex"
-        }
+function getTime(){
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}`: seconds}`;
+}
 
-        function modalOff() {
-            modal.style.display = "none"
-        }
-
-
-        const btnModal = document.getElementById("btn-modal")
-        btnModal.addEventListener("click", e => {
-            modalOn()
-        })
-
-        const closeBtn = modal.querySelector(".close-area")
-        closeBtn.addEventListener("click", e => {
-            modalOff()
-        })
-
-        modal.addEventListener("click", e => {
-            const evTarget = e.target
-            if(evTarget.classList.contains("modal-overlay")) {
-                modalOff()
-            }
-        })
-
-        window.addEventListener("keyup", e => {
-            if(isModalOn() && e.key === "Escape") {
-                modalOff()
-            }
-        })
+function init() {
+    getDate();
+    getTime();
+    setInterval(getTime, 1000);
+}
     </script>
 </body>
 </html>

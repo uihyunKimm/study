@@ -31,7 +31,6 @@ router.get("/", function (request, response) {
 //   }
 // });
 
-
 router.post("/", function (request, response) {
     const id = request.body.id;
     const password = request.body.password;
@@ -43,12 +42,11 @@ router.post("/", function (request, response) {
           response.cookie("auth", true);
           console.log("login-post")
          // response.render("land",{id: request.cookies.auth});
-          response.redirect("http://127.0.0.1:3000");
+          response.render("land", {data: results});
         } else {
-          console.log("Error");
-          response.redirect("/login");
-          response.send(`<script type="text/javascript">alert("일치하지 않는 정보입니다. 다시 입력해주세요"); 
-        document.location.href="/auth/register";</script>`);
+          console.log(Error);
+          response.redirect("login");
+          ;
         }
       }
     );

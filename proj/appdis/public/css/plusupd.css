@@ -22,44 +22,43 @@ html, body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #131313;
     color: #fff;
-    padding: 10px;
+    padding: 5px 10px 0 0;
     width: 100%;
     min-width: 375px;
-    height: 60px;
-    border-bottom: 1px solid #F0F0F2;
+    height: 76px;
 }
 header .header-details1{
-display: flex;
-width: auto;
-height: auto;
-justify-content: center;
-align-items: center;
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 header .material-symbols-outlined{
-text-decoration: none;
-color: #010001;
-font-size: 42px;
+    text-decoration: none;
+    color: #E3FB7B;
+    font-size: 42px;
 }
 header h3{
-color: #010001;
-font-size: 21px;
-font-weight: 600;
-margin: 0;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
 }
 header .header-details{
-margin-right: 10px;
+    margin-right: 10px;
 }
 header .header-details a{
-text-decoration: none;
+    text-decoration: none;
 }
 header .header-details span{
-color: #757575;
-font-size: 16px;
+    color: #757575;
+    font-size: 16px;
 }
 
 .container {

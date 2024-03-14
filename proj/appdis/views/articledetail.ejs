@@ -20,43 +20,53 @@
 </head>
 <body>
     <div id="wrapper">
-        <div class="header-details1">
-            <a class="material-symbols-outlined" href="/articleList">Chevron_Left</a>
-            <h3>목록</h3>
-            <div class="header-details">
+        <header>
+            <div class="header-details1">
+                <a class="material-symbols-outlined" href="/articleList">Chevron_Left</a>
+                <h3>목록</h3>
             </div>
-        </div>
+            <div class="header-details">
+                <a href="<% item.commentnum %>"><span>새로고침</span></a>
+            </div>
+        </header>
         <main>
             <div class="container">
                 <div class="article">
-                    <div class="article content">
+                    <div class="article-content">
                         <h2><%= item[0].title %></h2>
-                        <div>
-                        <p class="time"><%= item[0].time %></p>
-                        <p class="time"><a href="#"></a></p>
+                        <div class="sub-title">
+                            <p class="time"><%= item[0].time %></p>
+                            <h5><i class="material-symbols-outlined" href="#">chat_bubble</i><%= item.length %></h5>
                         </div>
-                        <p><%= item[0].content %></p>
-                        <p><%= item[0].author %></p>
+                        <p id="content"><%= item[0].content %></p>
+                        <p class="author">by <%= item[0].author %></p>
                     </div>
                     </a>
                 </div>
                 <div class="comment">
-                    <div class="comment content">
-                        <h2>댓글 <%= item.length %></h2>
-                        <div>
-                            <div class="pic"></div>
-                            <a href="/articlewrite">댓글 남기기</a>
+                    <div class="comment-content">
+                        <div class="insert">
+                            <h2>댓글 <%= item.length %></h2>
+                            <div class="inserts">
+                                <div class="pic"></div>
+                                <a class="towrite" href="/articlewrite">댓글 남기기</a>
+                            </div>
                         </div>
                         <div><% if (item.length != 0) { %>
                             <% item.forEach(function(item, index) { %>
                                 <div class="comments">
                                     <div></div>
                                     <p class=""><%= item.commentcontent %></p>
-                                    <h2><%= item.commenttitle %></h2>
+                                    <h3><%= item.commenttitle %></h3>
                                     <p><%= item.commentcontent %></p>
                                     <p class="time"><%= item.time %></p>
                                 </div>
-                            <% })}; %>
+                                <div>
+                                    <i class="material-symbols-outlined" href="#">Thumb_up</i>
+                                </div>
+                            <% })}else { %>
+                                <p> 등록 된 게시글이 없습니다</p>
+                                <% }; %>
                             
                         </div>
                     </div>

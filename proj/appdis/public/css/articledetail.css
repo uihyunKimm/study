@@ -19,46 +19,54 @@ html, body {
     height: 100%;
 }
 header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #ffffff;
-        color: #fff;
-        padding: 10px;
-        width: 100%;
-        min-width: 375px;
-        height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    min-width: 375px;
+    height: 60px;
+    border-bottom: 1px solid #F0F0F2;
 }
 header .header-details1{
-    display: flex;
-    width: auto;
-    height: auto;
-    justify-content: center;
-    align-items: center;
+display: flex;
+width: auto;
+height: auto;
+justify-content: center;
+align-items: center;
 }
 
 header .material-symbols-outlined{
-    text-decoration: none;
-    color: #010001;
-    font-size: 42px;
+text-decoration: none;
+color: #010001;
+font-size: 42px;
 }
 header h3{
-    color: #010001;
-    font-size: 21px;
-    font-weight: 600;
-    margin: 0;
+color: #010001;
+font-size: 21px;
+font-weight: 600;
+margin: 0;
 }
-header span{
-    color: #757575;
-    font-size: 16px;
+header .header-details{
+margin-right: 10px;
+}
+header .header-details a{
+text-decoration: none;
+}
+header .header-details span{
+color: #757575;
+font-size: 16px;
 }
 .container {
     box-sizing: border-box;
     position: relative;
     max-width: 2000px;
     height: 100%;
-    margin: 0px auto 40px;
+    margin: 0px auto 70px;
     padding: 20px;
+    background-color: #F3F4F6;
 }
 .container h2{
     color: #292929;
@@ -75,11 +83,51 @@ header span{
     align-items: center;
     margin: 0 auto;
     /* border: 1px solid #000; */
-    padding: 0 20px;
-    margin-bottom: 20px;
+    padding: 20px;
     letter-spacing: -1px;
+    background-color: #ffffff;
 }
-.article a{
+.article-content{
+    padding: 0 20px;
+}
+.article-content h2{
+    font-size: 32px;
+    text-decoration: none;
+}
+#content{
+    margin-top: 40px;
+    font-size: 18px;
+    color: #686868;
+    text-decoration: none;
+    line-height: 1.8em;
+}
+
+.sub-title {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.sub-title .time{
+    display: flex;
+    font-size: 14px;
+    color: #8B95A1;
+}
+.sub-title h5{
+    display: flex;
+    font-size: 18px;
+    color: #8B95A1;
+    margin-right: 4px;
+}
+.sub-title .material-symbols-outlined{
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    margin-right: 2px;
+    color: #8B95A1;
+}
+.article-content .content{
+    font-size: 24px;
     text-decoration: none;
 }
 .articles{
@@ -93,7 +141,7 @@ header span{
     border: 1px solid #dadada;
     border-radius: 8px;
     box-shadow: 2px 2px 2px 2px #4955630a;
-    margin-top: 24px;
+    margin: 24px 0 0 24px;
 }
 .articles p{
     font-size: 16px;
@@ -114,5 +162,85 @@ header span{
     margin: 0;
     margin-top: 30px;
 }
+.comment{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 0 40px 0;
+    margin: 20px;
+}
+.comment .comment-content{
+    width: 100%;
+}
+.comment .comment-content h2{
+    font-size: 21px;
+    font-weight: 700;
+}
+.comment .comment-content .insert{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #F0F0F2;
+    margin-bottom: 24px;
+}
+.comment .comment-content .inserts{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+.comment .comment-content .inserts div.pic{
+    min-width: 54px;
+    height: 54px;
+    display: flex;
+    background-color: #D0E6FD;
+    border: 1px solid #C9D9F2;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.comment .comment-content .inserts .towrite{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 100%;
+    text-decoration: none;
+    color: #B2B3B8;
+    font-size: 19px;
+}
+.comment .comment-content .inserts .towrite:active{
+    background-color: #C9D9F2;
+    height: 54px;
+    border-radius: 3px;
+    padding: 2px;
+}
 
+.low-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    height: 87px;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
 
+.low-menu-details {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.low-menu-details a {
+    font-size: 30px;
+    display: flex;
+    color: #333;
+    text-decoration: none;
+}

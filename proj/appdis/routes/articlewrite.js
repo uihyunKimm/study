@@ -7,13 +7,28 @@ const router = express.Router();
 
 // 페이지 라우트
 router.get("/", function (request, response) {
-  if(request.cookies.auth){
-    response.render("articlewrite", { id : request.cookies.auth});
-  }
-else{
-  response.render("articlewrite", {id : false});
-}
+  mysql.query("SELECT * FROM comment", function (error, results) {
+      if (!error) {
+        response.render("articlewrite", { data: results });
+      } else {
+        console.log("Error");
+      }
+    });
+  });
 
+router.post("/", function (request, response) {
+  const body = request.body;
+  mysql.query(
+    "INSERT INTO comment(commentnum, titlenum, commenttitle, commentcontent, time, id) VALUES(?,?,?,?,?,?)",
+    [body.commentnum, body.titlenum ,body.commenttitle, body.commentcontent, now(), body.id],
+    function (error, results) {
+      if (!error) {
+        response.redirect("/");
+      } else {
+        console.log("Error");
+      }
+    }
+  );
 });
 
 module.exports = router;
