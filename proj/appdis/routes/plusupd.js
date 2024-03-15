@@ -10,10 +10,10 @@ router.get("/", function (request, response) {
 });
 
 // 페이지 라우트
-router.get("/:id", function (request, response) {
+router.get("/:todonum", function (request, response) {
   mysql.query(
     "SELECT * FROM routine WHERE todonum = ?",
-    [request.params.id],
+    [request.params.todonum],
     function (error, results) {
       if (!error) {
         response.render("plusupd", { item: results[0] });
