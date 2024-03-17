@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      // 빈 배열 생성
+      let degrees = [];
+
+      // 배열에 데이터 추가
+      degrees[0] = 15.1;
+      degrees[1] = 15.4;
+      degrees[2] = 16.1;
+      degrees[3] = 17.5;
+      degrees[4] = 19.2;
+      degrees[5] = 21.4;
+
+      let sum = 0;
+
+      for (let i = 0; i < degrees.length; i++) {
+        sum += degrees[i]; // 온도의 합
+      }
+
+      document.write("평균 온도는 " + sum / degrees.length + "<br>");
+    </script>
+  </body>
+</html>

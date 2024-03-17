@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      let size;
+      let numbers = [20, 5, 8, 15, 20];
+
+      document.write("let numbers = [20, 5, 8, 15, 20]<br>");
+
+      // 별 출력
+      for (let i = 0; i < numbers.length; i++) {
+        // numbers 배열의 i번째 값을 찾아서 size에 저장
+        size = numbers[i]; // numbers[0] : 20, numbers[1] : 5 ... numbers[4] : 20
+
+        // size의 값이 0 이상인 경우 반복
+        while (size > 0) {
+          document.write("*");
+          size--; // 20 -> 19 -> 18
+        }
+
+        document.write(numbers[i] + "<br>"); // i = 0, i = 1
+      }
+    </script>
+  </body>
+</html>

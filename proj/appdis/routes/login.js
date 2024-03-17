@@ -44,8 +44,8 @@ router.post("/", function (request, response) {
           response.cookie("auth", true);
           console.log("login-post")
          // response.render("land",{id: request.cookies.auth});
-         console.log(results[0])
-         response.redirect("/");
+        console.log(results[0])
+        response.redirect("/");
         //  response.render("land", {data: results[0]}); // data = {id:test, pw : 1234}
         } else {
           console.log(Error);

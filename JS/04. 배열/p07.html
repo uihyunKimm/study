@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      let scores = [];
+      let score = 0;
+      let stuNum = 0;
+
+      for (let i = 0; i < 5; i++) {
+        score = parseInt(prompt("학생의 점수를 입력하세요"));
+        scores.push(score);
+      }
+
+      for (let j = 0; j < scores.length; j++) {
+        stuNum = stuNum + 1;
+
+        if (scores[j] >= 60) {
+          document.write(
+            stuNum + "번 학생 : " + scores[j] + "점, 합격입니다.<br>"
+          );
+        } else {
+          document.write(
+            stuNum + "번 학생 : " + scores[j] + "점, 불합격입니다.<br>"
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

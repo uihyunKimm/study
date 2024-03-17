@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      let score = [];
+      let sum = 0;
+      let average = 0;
+
+      /*
+      score[0] = Math.floor(Math.random() * 101);
+      score[1] = Math.floor(Math.random() * 101);
+      score[2] = Math.floor(Math.random() * 101);
+      score[3] = Math.floor(Math.random() * 101);
+      score[4] = Math.floor(Math.random() * 101);
+
+      for (let i = 0; i < score.length; i++) {
+        sum += score[i];
+      }
+      */
+
+      for (let i = 0; i < 5; i++) {
+        // score.length = 0
+        // 1~100까지의 랜덤한 숫자 5개 생성
+        score[i] = Math.floor(Math.random() * 101);
+
+        // 배열 데이터의 합 계산
+        sum += score[i];
+      }
+
+      // 평균 계산
+      average = sum / score.length; // score.length = 5
+
+      document.write("배열 score 출력<br>");
+      document.write(score + "<br>");
+      document.write("<hr>");
+      document.write("score 합계 출력<br>");
+      document.write(sum);
+      document.write("<hr>");
+      document.write("score 평균 출력<br>");
+      document.write(average);
+    </script>
+  </body>
+</html>

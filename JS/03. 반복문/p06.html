@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <script>
+      // 1~100까지 숫자 중 랜덤하게 선택된 숫자 찾기
+      let answer = Math.floor(Math.random() * 101);
+
+      let guess = 0;
+
+      while (true) {
+        guess = prompt("정답을 추측해보세요");
+        guess = parseInt(guess);
+
+        if (guess > answer) {
+          alert("다운");
+        } else if (guess < answer) {
+          alert("업");
+        } else {
+          break;
+        }
+      }
+
+      document.write("숫자는 " + answer + "입니다.<br>");
+      document.write("정답입니다!");
+    </script>
+  </body>
+</html>

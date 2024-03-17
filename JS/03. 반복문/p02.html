@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+  </head>
+  <body>
+    <h1>
+      <script>
+        let num = parseInt(prompt("1 이상의 정수를 입력하세요")); // 10
+
+        document.write("입력한 수 : ", num, "<br>");
+        document.write(num, "의 약수 : ");
+
+        for (let i = 1; i <= num; i++) {
+          if (num % i == 0) {
+            document.write(i + " ");
+          }
+        }
+      </script>
+    </h1>
+  </body>
+</html>

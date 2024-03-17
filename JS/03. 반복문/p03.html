@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>document.write()로 표만들기</h3>
+    <hr />
+
+    <script>
+      document.write("<table><tr>");
+      document.write("<th>n</th>");
+
+      for (let i = 0; i < 10; i++) {
+        document.write("<td>"); // <td>9</td>
+        document.write(i);
+        document.write("</td>");
+      }
+
+      document.write("</tr><tr>");
+      document.write("<th>");
+      document.write("n<sup>2");
+      document.write("</th>");
+
+      for (let j = 0; j < 10; j++) {
+        document.write("<td>");
+        document.write(j * j);
+        document.write("</td>");
+      }
+
+      document.write("</tr></table>");
+    </script>
+  </body>
+</html>

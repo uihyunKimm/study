@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      span {
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>로또 1등 당첨 번호</h1>
+    <hr />
+    <script>
+      let randNum;
+      let rotto = [];
+
+      while (rotto.length < 6) {
+        // 1~45까지의 랜덤 숫자 생성
+        randNum = Math.floor(Math.random() * 45) + 1;
+
+        // 로또 배열이 randNum을 포함하지 않는 경우
+        if (rotto.indexOf(randNum) == -1) {
+          // 로또 배열에 randNum 추가
+          rotto.push(randNum);
+        }
+      }
+      document.write("<span>" + rotto.join() + "</span>");
+    </script>
+  </body>
+</html>
