@@ -1,31 +1,28 @@
-import App from "./components/React실습#01/#5App";
-import "./App.css"
-/* import App from "./components/React실습#01/#2App"; */
-/* import HeaderComponents from "./components/HeaderComponents";
-import BodyComponents from "./components/BodyComponents";
-import FooterComponents from "./components/FooterComponents";
+import React from "react";
+import Profile from "./components/React실습#02/E02";
+import ChildComponent from "./components/React실습#02/E03"; 
+import './components/React실습#02/E02.css';
+import Prac01 from "./components/React실습#02/E04";
 
-const App = () => {
-    return (
-        <>
-        <HeaderComponents />
-          <BodyComponents />ddde
-        <FooterComponents />
-        </>
-    )
-}; */
+// 2
+// function App(){
+//   return(
+//     <>
+//       <Profile age= {23} address="서울" />
+//     </>
+//   )
+// }
 
-/* const App2Run = () => {
-  <>
-    <App />
-  </>
-} */
-const Run = () => {
-  return(
-  <>
-    <App />
-  </>
+// function App() {
+// return (
+//   <ChildComponent>리액트</ChildComponent>
+//   );
+//   }
+
+function App() {
+  return (
+    <Prac01/>
   )
-}
+};
 
-export default Run;
+export default App;
