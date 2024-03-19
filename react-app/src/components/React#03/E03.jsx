@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 
 
-const ChangeColor = (prop) => {
+const ChangeColor = () => {
     const [value, setValue] = useState('글자색바꾸기');
     let [fcolor, setColor] = useState('black');
 
