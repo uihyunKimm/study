@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="link" href="https://www.naver.com">클릭하세요</a>
+    <script>
+    let link = document.getElementById("link");
+    link.addEventListener("click", linkClick);
+    function linkClick(e){
+        e.preventDefault();
+        console.log('Link is clicked');
+        }
+        //form에서 submit의 새로고침을 방지
+    </script>
+    </body>
+</html>

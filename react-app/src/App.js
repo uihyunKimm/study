@@ -1,70 +1,29 @@
 import React, { useState } from "react";
-import ChildComponent from "./components/React#03/ChildComponent";
-import AddNum from "./components/React#03/E01";
-import LoginOut from "./components/React#03/E02";
-import ChangeColor from "./components/React#03/E03";
-import E05_UserID from "./components/React#03/E05_UserID";
-import E05_UserPW from "./components/React#03/E05_UserPW";
+import Counter from "./components/React#04/Counter";
+import AddNameTag from "./components/React#04/AddNameTag";
+import AddNameTagEdit from "./components/React#04/AddNameTagEdit";
+import PreventDefaultClick from "./components/React#04/PreventDefaultClick";
+import ChangeFont from "./components/React#04/ChangeFont";
+import EventOnChange from "./components/React#04/EventOnChange";
+import NameForm from "./components/React#04/NameForm";
+import TextArea from "./components/React#04/TextArea";
+import Select from "./components/React#04/Select";
+import InsertImages from "./components/React#04/InsertImages";
+import CheckBox from "./components/React#04/CheckBox";
+import E01 from "./components/React#04/E01";
+import E02 from "./components/React#04/E02";
+import E03 from "./components/React#04/E03";
+
 
 function App(){
 
-  const [id,inputId] = useState();
-  const [pw,inputPw] = useState();
-
-  function addIdHandler(idData){
-    inputId(idData);//id
+  return (
+      <>
+      {/* <E01 /> */}
+      {/* <E02 /> */}
+      <E03 />
+      </>
+    )
   }
 
-  const addpwHandler = (pwData) => {
-    inputPw(pwData);//pw
-    }
-
-  const loginAlert = () => {
-    if(id === "uihkk" && pw === "1234"){
-        alert("로그인성공")
-        console.log(id, pw)
-      }else{
-        alert("로그인실패")
-        console.log(id, pw)
-      }
-}
-
-
-  return(
-    <>
-      <div>
-        1,2번<AddNum />
-      </div>
-      <hr />
-      <div>
-        3번<LoginOut />
-      </div>
-      <hr />
-      <div>
-        4번<ChangeColor />
-      </div>
-      <hr />
-      <div>
-        5번
-        <form>
-          <E05_UserID onAddIdData = {addIdHandler}/><br/>
-          <E05_UserPW onAddPwData = {addpwHandler}/><br/>
-          <input type="submit" value="Login" onClick={loginAlert}/>
-        </form>
-      </div>
-      <hr />
-    </>
-  )
-}
-
 export default App;
-  // const addDataHandler = (data)=>{
-  //   setValue(data);
-  // }
-
-  // return(
-  //   <>
-  //     <h3>전달받은 데이터는? {value}</h3>
-  //     <ChildComponent AddData={addDataHandler}/>
-  //   </>
-  // )
