@@ -21,7 +21,12 @@ function App(){
       <>
       {/* <E01 /> */}
       {/* <E02 /> */}
-      <E03 />
+      <div className="title">
+        <h1>total : {count}</h1>
+      </div>
+      <div className="container">
+      <E03 onCount={on}/>
+      </div>
       </>
     )
   }
