@@ -1,0 +1,12 @@
+$primary-color: black;
+
+.container {
+/* 지역 변수*/
+$primary-color: red !global;
+
+background-color: $primary-color;
+}
+.hello {
+color: $primary-color;
+
+}

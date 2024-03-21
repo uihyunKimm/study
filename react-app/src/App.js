@@ -1,34 +1,52 @@
 import React, { useState } from "react";
-import Counter from "./components/React#04/Counter";
-import AddNameTag from "./components/React#04/AddNameTag";
-import AddNameTagEdit from "./components/React#04/AddNameTagEdit";
-import PreventDefaultClick from "./components/React#04/PreventDefaultClick";
-import ChangeFont from "./components/React#04/ChangeFont";
-import EventOnChange from "./components/React#04/EventOnChange";
-import NameForm from "./components/React#04/NameForm";
-import TextArea from "./components/React#04/TextArea";
-import Select from "./components/React#04/Select";
-import InsertImages from "./components/React#04/InsertImages";
-import CheckBox from "./components/React#04/CheckBox";
-import E01 from "./components/React#04/E01";
-import E02 from "./components/React#04/E02";
-import E03 from "./components/React#04/E03";
-
+import styled from "styled-components";
+import E01 from "./components/React#05/E01";
 
 function App(){
+const Wrapper = styled.div`
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 768px) { 
+      Header {
+        width: 100%;
+        padding: 16px;
+        justify-content: center;
+        height: 120px;
+      }
+    }
+    `;
 
+const Header = styled.header`
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 1024px;
+    height: 120px;
+    padding: 16px;
+    background-color: black;
+    align-items: center;
+    `;
+
+const Button = styled.button`
+    background: ${(props)=>(props.primary ? "blue":"white")};
+    padding: 4px;
+    margin-right: 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: ${(props)=>(props.primary? "2px solid yellow": "none")};
+    color: ${(props)=>(props.primary ? "white":"black")};
+    `;
+  
   return (
-      <>
-      {/* <E01 /> */}
-      {/* <E02 /> */}
-      <div className="title">
-        <h1>total : {count}</h1>
-      </div>
-      <div className="container">
-      <E03 onCount={on}/>
-      </div>
-      </>
-    )
+    <Wrapper>
+      <Header>
+        <Button>버튼1</Button>
+        <Button primary>버튼2</Button>
+      </Header>
+      <E01/>
+    </Wrapper>
+      )
   }
 
 export default App;

@@ -1,0 +1,7 @@
+.container {
+  border: 1px solid black;
+  width: 400px;
+  height: 500px;
+  background: url("./apple.png");
+  background-size: cover;
+}

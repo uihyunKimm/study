@@ -1,0 +1,9 @@
+div {
+    background-color: yellowgreen;
+    $x: 400px;
+
+    width: $x/2;
+    height: (100px / 2);
+    font-size: 10px + 30px / 3;
+    margin: (50px / 2);
+    }

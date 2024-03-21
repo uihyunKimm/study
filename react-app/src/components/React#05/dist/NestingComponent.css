@@ -1,0 +1,15 @@
+.container {
+  background-color: yellow;
+  border: 3px solid red;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  color: red;
+  padding: 20px;
+}
+ul li:nth-child(3) {
+  color: blue;
+}

@@ -1,0 +1,40 @@
+.container {
+    $PlusValue: 50px;
+    width: 100%;
+    display: flex;
+    &-red{
+        width: (+$PlusValue);
+        height: (+$PlusValue);
+        background-color: red;
+    }
+    &-orange{
+        width: (+$PlusValue*2);
+        height: (+$PlusValue*2);
+        background-color: orange;
+    }
+    &-yellow{
+        width: (+$PlusValue*3);
+        height: (+$PlusValue*3);
+        background-color: yellow;
+    }
+    &-green{
+        width: (+$PlusValue*4);
+        height: (+$PlusValue*4);
+        background-color: greenyellow;
+    }
+    &-blue{
+        width: (+$PlusValue*5);
+        height: (+$PlusValue*5);
+        background-color: blue;
+    }
+    &-indigo{
+        width: (+$PlusValue*6);
+        height: (+$PlusValue*6);
+        background-color: indigo;
+    }
+    &-purple{
+        width: (+$PlusValue*7);
+        height: (+$PlusValue*7);
+        background-color: purple;
+    }
+}
