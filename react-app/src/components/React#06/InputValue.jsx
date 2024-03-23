@@ -6,11 +6,20 @@ const InputValue = () => {
     const style = {
     margin: "30px",
     };
+
+    const nameRef = useRef();
+    const ageRef = useRef();
+
+    function changeHandler() {
+        setName(nameRef.current.value);
+        setAge(ageRef.current.value);
+        }
+
     return (
         <div style={style}>
             <h1>input 태그 value 값 지정</h1>
-            이름 : <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-            나이 : <input type="number" value={age} onChange={(e) => setAge(e.target.value)} />
+            이름 : <input type="text" value={name} ref={nameRef} onChange={(e) => changeHandler()}/> {/* setName(e.target.value)}>  */}
+            나이 : <input type="number" value={age} ref={ageRef} onChange={(e) => changeHandler()}/> {/* setName(e.target.value)}>  */}
         </div>
     );
 };

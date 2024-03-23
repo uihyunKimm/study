@@ -7,6 +7,7 @@ import UseRefComponent2 from "./components/React#06/UseRefComponent2";
 import UseRefComponent3 from "./components/React#06/UseRefComponent3";
 import UseRefDom from "./components/React#06/UseRefDom";
 import InputValue from "./components/React#06/InputValue";
+import { CgAdd } from "react-icons/cg";
 
 function App(){
 /* const Wrapper = styled.div`
@@ -46,7 +47,7 @@ const Button = styled.button`
    */
   return (
     <>
-      <InputValue/>
+      {CgAdd}<InputValue/>
     </>
       )
   }
