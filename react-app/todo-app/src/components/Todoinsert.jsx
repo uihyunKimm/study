@@ -3,15 +3,23 @@ import { CgAdd } from "react-icons/cg";
 import "../style/TodoInsert.scss"
 
 
-function addToList(){
+const TodoInsert = ({insertItem}) => {
+    const [item, setItem] = useState("");
 
-}
+    function submitHandler(e){
+        e.preventDefault();
+        if(item.trim()===""){
+            return;
+        }
+        insertItem(item);
 
-const TodoInsert = () => {
-    console.log("insert완료")
+        setItem("");
+    }
+    
+    const changeHandler = (e) => {setItem(e.target.value)};
     return(
-        <form className="TodoInsert">
-            <input type="text" placeholder="할 일을 입력하세요"/>
+        <form className="TodoInsert" onSubmit={submitHandler}>
+            <input type="text" placeholder="할 일을 입력하세요" value={item} onChange={changeHandler}/>
             <button type="submit"><CgAdd/></button>
         </form>
     )

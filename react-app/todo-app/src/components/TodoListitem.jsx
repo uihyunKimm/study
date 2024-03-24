@@ -2,14 +2,15 @@ import React from "react";
 import { IoIosRemoveCircleOutline } from "react-icons/io";
 import "../style/TodoListitem.scss"
 
-const TodoListitem = () =>{
+const TodoListitem = (props) =>{
+    const {todo, removeItem} =props;
     return (
         <div className="TodoListitem">
             <div className="todo">
                 <input type="checkbox" className="checkbox"/>
-                <div className="text">할 일</div>
+                <div className="text">{todo.text}</div>
             </div>
-            <div className="remove">
+            <div className="remove" onClick={()=>removeItem(todo.id)}>
             < IoIosRemoveCircleOutline />
             </div>
         </div>

@@ -4,6 +4,7 @@ import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
 
 function App() {
+    const nextId = useRef(4);
     const [todos, setTodos]= useState(
       [
         {
@@ -23,10 +24,26 @@ function App() {
         }
       ]
     )
+    
+    const insertHandler = (item) => {
+      const todo = {
+        id : nextId.current,
+        text: item,
+        status: false,
+      };
+      setTodos([...todos,todo]);
+
+      nextId.current += 1;
+    };
+
+    const removeHandler = (deleted) => {
+      setTodos(todos.filter((prevtodo) => prevtodo.id !== deleted))
+    }
+
   return (
     <TodoTemplate>
-      <TodoInsert/>
-      <TodoList/>
+      <TodoInsert insertItem = {insertHandler}/>
+      <TodoList todos={todos} removeItem = {removeHandler}/>
     </TodoTemplate>
   )
 }
