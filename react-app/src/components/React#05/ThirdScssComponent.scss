@@ -2,7 +2,7 @@ $primary-color: black;
 
 .container {
 /* 지역 변수*/
-$primary-color: red !global;
+$primary-color: red !default /* !global */;
 
 background-color: $primary-color;
 }

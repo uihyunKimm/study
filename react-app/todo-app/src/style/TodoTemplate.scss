@@ -1,0 +1,19 @@
+
+.TodoTemplate {
+    width: 500px;
+    border : 1px solid black;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+    .Title {
+        background-color: #555555;
+        color: #ffffff;
+        height: 50px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

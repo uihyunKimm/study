@@ -1,10 +1,7 @@
 import React, { useRef, useState } from "react";
-import './App.css';
 import TodoTemplate from "./components/TodoTemplate";
-import Todoinsert from "./components/Todoinsert";
+import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
-import TodoListItem from "./components/TodoListitem";
-
 
 function App() {
     const [todos, setTodos]= useState(
@@ -26,13 +23,10 @@ function App() {
         }
       ]
     )
-    const nextId = useRef(4);
   return (
     <TodoTemplate>
-      <Todoinsert insertItem = {insertHandler}/>
-      <TodoList todos={todos}>
-        <TodoListItem/>
-      </TodoList>
+      <TodoInsert/>
+      <TodoList/>
     </TodoTemplate>
   )
 }

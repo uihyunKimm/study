@@ -1,12 +1,13 @@
 import React from "react";
 import TodoListItem from "./TodoListitem";
+import "../style/TodoList.scss"
 
-function TodoList({children},props){
-    const {todos} = props;
+function TodoList(){
     return( 
-        <div className="listcontainer">
-            { todos.map(todo =><TodoListItem todo={todo} key={todo.id}/>)}
-            {children}
+        <div className="TodoList">
+            <TodoListItem/>
+            <TodoListItem/>
+            <TodoListItem/>
         </div>
     );
 };

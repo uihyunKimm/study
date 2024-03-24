@@ -1,10 +1,5 @@
-.TodoTemplate {
-  width: 500px;
-  border: 1px solid black;
-  border-radius: 4px;
-  margin: 0 auto;
-  margin-top: 50px;
-  overflow: hidden;
+.TodoInsert {
+  display: flex;
 }
 
 .Title {

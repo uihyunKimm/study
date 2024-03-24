@@ -1,16 +1,19 @@
 import React from "react";
-import { CgAdd } from "react-icons/cg";
+import { IoIosRemoveCircleOutline } from "react-icons/io";
+import "../style/TodoListitem.scss"
 
-function TodoListItem(){
+const TodoListitem = () =>{
     return (
-        <div className="itemcontainer">
-            <div className="itemcontainer2">
-                <input type="checkbox" />
-                할 일
+        <div className="TodoListitem">
+            <div className="todo">
+                <input type="checkbox" className="checkbox"/>
+                <div className="text">할 일</div>
             </div>
-            <button><CgAdd/></button>
+            <div className="remove">
+            < IoIosRemoveCircleOutline />
+            </div>
         </div>
     );
 };
 
-export default TodoListItem;
+export default TodoListitem;

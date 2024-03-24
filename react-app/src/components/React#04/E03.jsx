@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 const boxStyle = {
-    width : "300px",
+    'Width' : "300px",
     height : "auto",
     display: "flex",
 }

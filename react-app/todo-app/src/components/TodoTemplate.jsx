@@ -1,12 +1,11 @@
 import React from "react";
-import "./TodoTemplate.scss";
+import "../style/TodoTemplate.scss"
 
-function TodoTemplate({children}){
-
+const TodoTemplate = ({children}) => {
     return (
-        <div className="wrapper">
-            <div className="title">일정관리</div>
-            {children}
+        <div className="TodoTemplate">
+            <div className="Title">일정관리</div>
+            <div className="content">{children}</div>
         </div>
     );
 };

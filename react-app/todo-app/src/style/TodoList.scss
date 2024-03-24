@@ -1,0 +1,6 @@
+.TodoList {
+    min-height: 100px;
+    max-height: 500px;
+    // max-height 넘쳤을 때 스크롤 생성
+    overflow-y : auto;
+    }
