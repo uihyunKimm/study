@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import TodoTemplate from "./components/TodoTemplate";
 import TodoInsert from "./components/TodoInsert";
 import TodoList from "./components/TodoList";
@@ -25,7 +25,7 @@ function App() {
       ]
     )
     
-    const insertHandler = (item) => {
+    const insertHandler = useCallback((item) => {
       const todo = {
         id : nextId.current,
         text: item,
@@ -34,7 +34,11 @@ function App() {
       setTodos([...todos,todo]);
 
       nextId.current += 1;
-    };
+    },[]);
+
+    const updateHandler = (updated) =>{
+      setTodos(todos.map(prevTodo => prevTodo.id === updated.id ? updated : prevTodo))
+    }
 
     const removeHandler = (deleted) => {
       setTodos(todos.filter((prevtodo) => prevtodo.id !== deleted))
@@ -43,7 +47,7 @@ function App() {
   return (
     <TodoTemplate>
       <TodoInsert insertItem = {insertHandler}/>
-      <TodoList todos={todos} removeItem = {removeHandler}/>
+      <TodoList todos={todos} removeItem = {removeHandler} updateItem = {updateHandler}/>
     </TodoTemplate>
   )
 }
