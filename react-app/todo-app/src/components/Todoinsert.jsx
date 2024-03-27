@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { CgAdd } from "react-icons/cg";
 import "../style/TodoInsert.scss"
 
@@ -16,7 +16,18 @@ const TodoInsert = ({insertItem}) => {
         setItem("");
     }
     
-    const changeHandler = (e) => {setItem(e.target.value)};
+    const changeHandler = useCallback((e) => {
+        //새로고침 방지
+        e.preventDefault();
+
+        //빈칸 추가 X
+        if(item.trim() ===""){
+            return;
+        }
+        //아이템추가
+        insertItem(item)
+        setItem(e.target.value)},[insertItem,item]);
+
     return(
         <form className="TodoInsert" onSubmit={submitHandler}>
             <input type="text" placeholder="할 일을 입력하세요" value={item} onChange={changeHandler}/>

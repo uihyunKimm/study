@@ -1,4 +1,5 @@
 function berger(state,action){
+    
     switch(action.type){
         case 'berger':
             return state + action.price;
