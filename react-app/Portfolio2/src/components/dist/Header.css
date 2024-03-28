@@ -1,0 +1,18 @@
+#header {
+  font-size: 30px;
+  font-family: "Helvetica";
+}
+
+body {
+  background-color: black;
+}
+
+.parent-small {
+  font-size: 10px;
+}
+.parent-medium {
+  font-size: 30px;
+}
+.parent-large {
+  font-size: 50px;
+}
