@@ -4,7 +4,7 @@ import "./Column1.scss";
 
 const Column1 = () => {
   return (
-  <div>
+  <div className="wrapper">
     <h1>Welcom to Roobits 👻</h1>
     <div>소중한 사람들과 추억을 남겨보세요!</div>
     <div>D-Day를 더 특별하게 만들어 드립니다.</div>
