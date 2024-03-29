@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./Main.module.scss"
 
 const Main = ({children}) => {
     return (
-        <div className="wrapper-module">
+        <div className={ styles.main }>
             {children}
         </div>
     );

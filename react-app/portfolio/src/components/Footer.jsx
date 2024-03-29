@@ -1,13 +1,14 @@
 import React from "react";
+import styles from "./Footer.module.scss"
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="footer__contents">
-            <div className="footer__contents footer__contents--special">
-
-            </div>
-            </div>
+        <footer className={styles.footer}>
+            <div className={styles.content}>하이
+                <div className={styles.inner_content}>
+                    <h3 className={styles.title}>푸터임</h3>
+                </div>
+            </div> 
         </footer>
     );
 };

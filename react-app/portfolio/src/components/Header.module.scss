@@ -1,0 +1,87 @@
+$white: #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000000 !default;
+
+$main-font: "Helvetica";
+@mixin title($font) {
+    font-size: 30px;
+    font-family: $font;
+}
+
+/* #header {
+    @include title($main-font);
+}
+
+.parent {
+    &-small { font-size: 10px; }
+    &-medium { font-size: 30px; }
+    &-large { font-size: 50px; }
+    } */
+
+.Header_ {
+    position: fixed;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 84px;
+    background-color: transparent;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3%;
+    flex: 1;
+}
+
+.contents {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: white;
+
+    h3 {
+        margin: 0;
+        font-weight: 300;
+    }
+    p {
+        margin: 0;
+        font-weight: 100;
+        font-size: 1.2rem;
+    }
+    span {
+        margin: 0;
+        font-weight: 100;
+    }
+}
+
+.contents_low {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+    .contents_low_low{
+        font-size: 1rem;
+        font-weight: 100;
+        color: #b2b4ff;
+    }
+}
