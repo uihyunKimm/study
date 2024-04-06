@@ -4,9 +4,12 @@
 body {
     $primary-color: #242595 !global;
     
-    background-color: $primary-color;
+    
+    background: radial-gradient( #6969fc 10%, #0c0e7c 80% );
     
     }
 .layout {
     padding-top: 160px;
+    display: block;
+    position: relative;
 }

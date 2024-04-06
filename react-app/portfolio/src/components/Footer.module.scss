@@ -1,6 +1,9 @@
+$footerHeight: 100px;
+
 .footer {
-    height: 100px;
-    margin-top: auto;
+    height: $footerHeight;
+    position: relative;
+    margin-top: $footerHeight;
     background-color: #dde0ea;
 
     .content {

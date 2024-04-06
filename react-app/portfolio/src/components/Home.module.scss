@@ -1,0 +1,97 @@
+.title{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 2800px;
+}
+.title_inner{
+    opacity: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-top: 8rem;
+    max-width: 1120px;
+    width: 90%;
+
+    .title_inner_text{
+        display: flex;
+        font-size: 2.4rem;
+        color: #b2b4ff;
+        line-height: 4rem;
+        margin: 0;
+    }
+    .title_inner_logo{
+        width: 100%;
+        height: auto;
+        background-image: url(https://i.ibb.co/GkDF5Yn/10837-2x.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .title_inner_info{
+        display: block;
+        width: 100%;
+        color: #b8b9ff;
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 180%;
+        margin-bottom: calc(4.62963vh + 9rem);
+        margin-top: 4rem;
+        text-align: center;
+    
+        span {
+            display: block;
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 600px){
+    .title .title_inner .title_inner_text {
+    font-size: clamp(1.2rem, 5vw, 3rem);
+    top: clamp(0rem, 1.3333333333vw, 0.8rem)}
+    }
+
+
+.flowText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    font-size: 20rem;
+    font-weight:bold;
+    color: #ffffff0e;
+    justify-content: center;
+    z-index: 1;
+
+    /* &:hover{
+        color: #242595;
+
+        .flowWrap {
+            animation-play-state: paused;
+            cursor: pointer;
+          }
+      } */
+}
+
+.flowWrap {
+  animation: textLoop 200s linear infinite;
+  padding-right: 1.4881vw;
+}
+
+@keyframes textLoop {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
