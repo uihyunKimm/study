@@ -40,3 +40,7 @@ html, body {
     display: block;
     height: 300px;
 }
+
+.bg-info{
+    padding-left: 200px;
+}
