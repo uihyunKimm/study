@@ -44,3 +44,19 @@ html, body {
 .bg-info{
     padding-left: 200px;
 }
+
+.btnSetLocalData {
+    width: 120px;
+    background-color: #00ffff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    padding: 10px 25px;
+}
+
+.btnSetLocalData:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.35s;
+    cursor: pointer;
+}
