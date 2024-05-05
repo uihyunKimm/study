@@ -1,0 +1,21 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+body {
+    $primary-color: #242595 !global;
+    
+    
+    background: radial-gradient( #6969fc 10%, #0c0e7c 80% );
+    
+    }
+.layout {
+    padding-top: 160px;
+    display: block;
+    position: relative;
+}
+.main {
+    display: flex;
+    position: relative;
+    padding: 0 1.2rem;
+    min-height: calc(auto - 180px);
+}
