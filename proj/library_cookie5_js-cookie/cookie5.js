@@ -30,6 +30,34 @@ console.clear();
 // Cookies.remove('dogid');
 // Cookies.remove('dogid',{path:'/'});
 
+
+//[7] js-cookie 전체 삭제 --> Not possible
+//보여지는 쿠키들에 대한 전체 삭제를 한다면?
+console.clear();
+console.log(Object.keys(Cookies.get())); //쿠키 이름만 가져올 때
+
+
+Object.keys(Cookies.get()).forEach(function(cName){
+    
+    //할 일 처리
+    let neededOptions = {
+        /* domain:"test.com" //이 조건을 넣으면 도메인이 안 맞아서 삭제 안됨 (없으면 전체 삭제) */
+        domain:"localhost" //삭제 잘됨 
+    };
+    Cookies.remove(cName,neededOptions)
+});
+
+
+function allDelCookies (){  //[7]의 완성코드
+    Object.keys(Cookies.get()).forEach(function(cName){
+        //할 일 처리
+        let neededOptions = {
+            domain:"localhost"
+        };
+        Cookies.remove(cName,neededOptions)
+    });
+    alert("쿠키가 전체 삭제되었습니다.")
+}
 Cookies.set('catid','cat1004',{expires:7,path:'/study/proj/library_cookie5_js-cookie/'})
 // Cookies.remove('catid')
 Cookies.remove('catid',{path:'/study/proj/library_cookie5_js-cookie/'});
