@@ -63,6 +63,24 @@ Cookies.set('catid','cat1004',{expires:7,path:'/study/proj/library_cookie5_js-co
 Cookies.remove('catid',{path:'/study/proj/library_cookie5_js-cookie/'});
 
 
+//[8] userGetCookie 함수 만들기 - 일반적인 For 반복문으로 순회하면서 처리
+console.clear();
+console.log(document.cookie); //userid=superman1004; username=batman; cname=antman
+
+/* //쿠키 읽기
+const getCookie = function(){
+    //로컬에 저장된 모든 쿠키 읽어오기
+    const allCookies2 = document.cookie; //하나의 문자열로 리턴
+    console.log(allCookies2);
+}
+getCookie('userid'); */
+//쿠키 읽기
+const userGetCookie = function(cname){
+    //로컬에 저장된 모든 쿠키 읽어오기
+    
+}
+console.log('userGetCookie함수로 리턴된 값은 =' + userGetCookie('userid'))
+
 //쿠키 삭제 함수
 const delCookie = function (cname) {
     event.preventDefault();
