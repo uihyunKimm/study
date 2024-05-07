@@ -63,6 +63,8 @@ Cookies.set('catid','cat1004',{expires:7,path:'/study/proj/library_cookie5_js-co
 Cookies.remove('catid',{path:'/study/proj/library_cookie5_js-cookie/'});
 
 
+
+
 //[8] userGetCookie 함수 만들기 - 일반적인 For 반복문으로 순회하면서 처리
 console.clear();
 console.log(document.cookie); //userid=superman1004; username=batman; cname=antman
@@ -77,9 +79,29 @@ getCookie('userid'); */
 //쿠키 읽기
 const userGetCookie = function(cname){
     //로컬에 저장된 모든 쿠키 읽어오기
-    
+    let name = cname + '=';
+    console.log(name); //userid=
+
+    let allCookies = document.cookie.split(';'); //한 칸 띄어쓰기 주의
+    console.log(allCookies)
+
+    //encodeURIComponent는 자바스크립트에서 string을 UTF-8로 인코딩해주는 함수.
+    //decodeURIComponent는 encodeURIComponent로 esxape된 문자열을 다시 원래의 문자열로 리턴해주는 함수
+    // 비슷한 메서드 --> encodeURI, decodeURI, escape, unescape
+
+    let cval = [];
+    for(let i=0; i<allCookies.length; i++){
+        console.log(allCookies[i].trim().indexOf(name));
+        //indexOf 메서드의 리턴값 --> 배열일 경우 --> 검색된 항목의 index값.
+        //문자열일 경우 --> 검색된 문자열의 첫 글자의 index값.
+        //검색결과가 없을 경우 --> -1리턴
+    }
 }
 console.log('userGetCookie함수로 리턴된 값은 =' + userGetCookie('userid'))
+
+
+
+
 
 //쿠키 삭제 함수
 const delCookie = function (cname) {
