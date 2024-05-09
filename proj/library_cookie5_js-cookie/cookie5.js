@@ -97,11 +97,31 @@ const userGetCookie = function(cname){
         //검색결과가 없을 경우 --> -1리턴
     }
 }
-console.log('userGetCookie함수로 리턴된 값은 =' + userGetCookie('userid'))
+console.log('userGetCookie함수로 리턴된 값은 =' + userGetCookie('userid'));
 
 
+//[9] forEach 메서드를 활용한 userGetCookie2 함수 만들기
+console.clear();
+console.log(document.cookie);//username=batman; cname=antman; userid=superman1004; 
+const userGetCookie2 = function(cname){
+    //1.객체변수 선언
+    let cookie = {}; //{username:"batman"; cname:"antman",userid:"superman1004"} <-- 이렇게 저장시키려고
 
+    //2. 반복처리 - forEach
+    document.cookie.split(';').forEach(function(el){
+        /* el = el.trim(); //위에서 공백 제거를 처리하지 않고 여기서 한다면..
+        console.log(el)  */
 
+        let [k,v] = el.split('=');//username, _(공백)cname,_(공백)userid
+        console.log(k)//(k.trim()); //공백 제거를 여기서 할 수도 있다
+
+        cookie[k.trim()]=v;//bat
+        console.log(cookie)
+    });
+    //return cookie[cname];//antman
+    return (cookie[cname] != undefined)?cookie[cname]:"no result";//예외처리
+}
+console.log('userGetCookie2함수로 리턴된 값은 =' + userGetCookie2('cname'));
 
 //쿠키 삭제 함수
 const delCookie = function (cname) {
