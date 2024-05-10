@@ -12,3 +12,6 @@ button:hover {
     color: #fff;
     transition: all .35s;
 }
+button:focus{
+    border: #00FFFF;
+}
