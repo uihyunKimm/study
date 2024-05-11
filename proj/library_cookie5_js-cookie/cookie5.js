@@ -62,6 +62,23 @@ Cookies.set('catid','cat1004',{expires:7,path:'/study/proj/library_cookie5_js-co
 // Cookies.remove('catid')
 Cookies.remove('catid',{path:'/study/proj/library_cookie5_js-cookie/'});
 
+//쿠키 삭제 함수
+const delCookie = function (cname) {
+    event.preventDefault();
+
+    cname = document.getElementById('cname')
+    let cval = cname.value;
+    console.log(cval); //userid
+
+    Cookies.remove(cval);
+    cname.value ='';
+    cname.focus();
+    alert(`${cval}쿠키를 삭제하였습니다.`)
+
+}
+
+const form = document.getElementById('form');
+form.addEventListener('submit', delCookie);
 
 
 
@@ -100,6 +117,8 @@ const userGetCookie = function(cname){
 console.log('userGetCookie함수로 리턴된 값은 =' + userGetCookie('userid'));
 
 
+
+
 //[9] forEach 메서드를 활용한 userGetCookie2 함수 만들기
 console.clear();
 console.log(document.cookie);//username=batman; cname=antman; userid=superman1004; 
@@ -123,20 +142,33 @@ const userGetCookie2 = function(cname){
 }
 console.log('userGetCookie2함수로 리턴된 값은 =' + userGetCookie2('cname'));
 
-//쿠키 삭제 함수
-const delCookie = function (cname) {
-    event.preventDefault();
 
-    cname = document.getElementById('cname')
-    let cval = cname.value;
-    console.log(cval); //userid
 
-    Cookies.remove(cval);
-    cname.value ='';
-    cname.focus();
-    alert(`${cval}쿠키를 삭제하였습니다.`)
 
+//[10] ES6버전으로 userGetCookie3 함수 만들기
+console.clear();
+console.log(document.cookie);//username=batman; cname=antman; userid=superman1004;
+
+const userGetCookie3 =function(cname){
+    //1.cname 수정
+    cname = cname+'='; //userid=
+
+    //2.문자열(쿠키명) 찾기
+    const str= document.cookie;
+    const isCookieIdx = str.indexOf(cname);
+    /* boolean isCookie = str.contains(cname);//Java에서는 contains()사용 -->대신 --> indexOf() 메서드 사용. */
+    console.log(isCookieIdx); // cname 검색시 --> ?? 17이 반환
+
+    //3. 쿠키 가져와서 분리 --> 처리
+    let result = 'no result';
+    if(isCookieIdx >= 0){
+        //할 일 처리
+        
+        console.log(isCookieIdx);
+    }
+    return result;
 }
+console.log('userGetCookie3 함수로 리턴된 값은 ='+userGetCookie3('userid'))
 
-const form = document.getElementById('form');
-form.addEventListener('submit', delCookie);
+
+
