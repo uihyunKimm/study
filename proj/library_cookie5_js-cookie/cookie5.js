@@ -163,12 +163,24 @@ const userGetCookie3 =function(cname){
     let result = 'no result';
     if(isCookieIdx >= 0){
         //할 일 처리
-        
+        result=document.cookie //username=batman; cname=antman; userid=superman1004;
+        .split(';')
+        .find (item => item.startsWith(cname))//특정 문자열로 시작하는지를 체크 --> true 반환, 아니면 false. IE는 Edge부터
+        .split('=')[1];
         console.log(isCookieIdx);
     }
     return result;
 }
 console.log('userGetCookie3 함수로 리턴된 값은 ='+userGetCookie3('userid'))
 
-
+function showCval(cname){
+    const rst = document.getElementById('cval');
+    rst.textContent = userGetCookie3(cname);
+    //rst.value 로 하면 안되는 이유 div에 넣기 때문에 div,span 에는 textContent로
+}
+function clearCval(cname){
+    const rst = document.getElementById('cval');
+    rst.value = '';
+    //rst.value 로 하면 안되는 이유 div에 넣기 때문에 div,span 에는 textContent로
+}
 
