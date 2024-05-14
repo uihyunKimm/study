@@ -178,9 +178,28 @@ function showCval(cname){
     rst.textContent = userGetCookie3(cname);
     //rst.value 로 하면 안되는 이유 div에 넣기 때문에 div,span 에는 textContent로
 }
-function clearCval(cname){
+function clearCval(){
     const rst = document.getElementById('cval');
     rst.value = '';
-    //rst.value 로 하면 안되는 이유 div에 넣기 때문에 div,span 에는 textContent로
 }
 
+
+
+
+//[10-1] startsWith() 사용법
+//문자열 검색시 특정 문자열로 시작하는지를 체크 --> true 또는 false로 반환.
+//즉, 검색할 문자열로 시작하면 true, 아니면 false.
+//str.startsWith(검색문자열[, position] )
+//position 옵션은 '검색문자열'을 탐색할 위치 지정. 기본값 --> 0
+//대소문자 구분
+
+//문자열인 경우
+console.clear();
+const str = "간장 공장 공장장은 강공장장 이름이고, 된장 공장 공장장은 장공장장 이름이다."
+
+console.log(str.startsWith('강공장장')); //false
+console.log(str.startsWith('박공장장')); //false
+console.log(str.startsWith('강공장장', 10)); //false
+
+console.log(str.startsWith('간장')); //true
+console.log(str.startsWith('강공장장', 11)); //true
