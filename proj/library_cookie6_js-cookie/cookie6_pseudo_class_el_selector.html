@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo Class vs Element</title>
+    <style>
+        /* 
+        1. 가상 클래스, 가상 요소, 가상 선택자
+        Pseudo-class, Pseudo-element, Pseudo-selector
+        이것들을 이용하면 HTML 문서 내에 쓸데 없는 태그 작성이나 수정 없이 CSS에서 디자인적 요소 추가해 디자인 가능
+        즉 문서내에 존재 X 필요에 의해 임의로 가상의 선택자를 지정, 디자인하는 것
+
+        2. 가독성 좋게 만듬
+
+        3. 사용방법 :, :: 호환성을 위해 둘 다 가능
+
+        4. 가상 클래스 class --> 실제 클래스 만들어서 사용 X, 선택 자 뒤에 붙여서 꾸밈
+                        선택자:가상클래스 {property:value;}
+                        :link {...}, :hover{...}, a:active{...}, :visited{...}, :focus{...}, :nth-child(n), :first,last-child :checked..
+
+        5. 가상 요소 element --> 실제로 문서에 없는 요소를 아예 있는 것 처럼 만들어서 사용
+
+                        선택자::가상클래스 {property::value;}
+                        ::before {content:"";}  //content 옵션은 없어도 필수로 넣어야함
+                        ::after {content:url('./image경로');}
+                        ::marker {...}  //ul ol 등 사용할 때 나오는 마커
+                        ::selection {...}  //마우스 드래그 --> 형광펜 기능
+                        ::first-line {...}  //첫번 째 줄
+                        ::first-letter {...}  //첫 번 째 글자
+
+        6.
+        ::before, ::after
+        특정 요소 앞이나 뒤에 텍스트, 이미지, 박스 등 내용 만들어 넣을 수 있음
+        content 지정을 꼭 해야 동작
+        :, :: 둘 다 가능
+        */
+    </style>
+    <body>
+        <!-- 예제 1 -->
+        <a href="example.html">가상 클래스</a>
+        <style>
+            a:link {color: red;}
+        </style>
+    </body>
+</html>

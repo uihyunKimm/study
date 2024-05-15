@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Cookie</title>
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./cookie6.css">
+</head>
+    <body>
+
+        <div class="container">
+            <h3 style="text-align: center;padding-top: 50px;">
+                Popup window
+                <small class="text-muted">with js-Cookie Library</small>
+            </h3>
+            <br />
+            
+            <table class="table table-bordered table-striped table-dark table-hover">
+                <caption>List of Cookies</caption>
+                <thead class="thead-light text-center">
+                    <tr>
+                        <th width="60%">Check list</th>
+                        <th>Click</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <form id="form">
+                            <td class="align-middle">
+                                <input type="text" name="cname" value="" id="cname" placeholder="Cookie Name"required>
+                            </td>
+                            <td>
+                                <button type="submit">Del cookie</button>
+                            </td>
+                        </form>
+                    </tr>
+                    <tr>
+                        <td class="align-middle">쿠키 전체 삭제하기</td>
+                        <td><button onclick="allDelCookies();">All Del Cookies</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Popup Window -->
+        <div class="popup">
+            <div class="banner">
+                <h1 class="title">notice</h1>
+                <div class="body">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+                <a href="#" class="btnClose">Close</a>
+                <a href="#" class="btnConcealWindowToday">오늘 하루 창 닫기</a>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+        <script src="./cookie6.js"></script>
+    </body>
+</html>

@@ -203,3 +203,30 @@ console.log(str.startsWith('강공장장', 10)); //false
 
 console.log(str.startsWith('간장')); //true
 console.log(str.startsWith('강공장장', 11)); //true
+
+console.clear();
+const ar = "dog=5; cat=7; hippo=9; lion=4; tiger=2";
+console.log(typeof ar); //string
+
+const ar2 = ar.split(";");
+console.log(ar2)
+console.log(typeof ar2) // object
+
+const ar3 = ar2.find(item => item.startsWith('hippo=9')); //주어진 조건의 함수를 만족하는 첫번 째 요소 값을 반환.
+const ar33 = ar2.find(item => item.startsWith('hippo=ads')); //없다면 undefined
+console.log(ar3);
+
+const ar4 = ar3.split('=');
+console.log(ar4); //["hippo","9"];
+
+console.log(ar4[1]); //9
+console.log(ar3.split("=")[1]); //9 --> ar3에서 바로 출력.
+
+const ar5 = ar2.findIndex(item => item.startsWith('hippo=')); //주어진 조건의 함수를 만족하는 첫번 째 요소의 index 반환. 없다면 undefined
+console.log(ar5); //2
+
+//배열 요소의 위치를 찾고자 하면 --> .indexOf()
+//배열 요소가 해당 배열에 존재하는 지 체크하려면 --> .indexOf()또는 .includes()
+
+
+
