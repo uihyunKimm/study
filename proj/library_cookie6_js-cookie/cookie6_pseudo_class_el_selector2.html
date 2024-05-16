@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class vs Element</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        #footer {
+            border: 1px solid #ccc;
+            background-color: #ddd;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        footer{
+            border: 0px solid;
+            width: 1170px;
+            margin: 0 auto;
+            margin-top: 450px;
+            padding: 15px;
+            background-color: #fff;
+        }
+        ul::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        ul{
+            border: 0px solid red;
+            /* overflow: auto; /*--> float를 박스에 넣을 수 있음 */
+            /*ㄴ비권장 가상요소 clear:both 권장  */
+            display: inline-block;/* 박스 여백 콘텐츠 만큼만 */
+            padding: 2px 0;
+            /* 아래 세 줄이 가운데 정렬 효과 */
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+
+
+            /* inline , block, inline-block
+                inline :
+                대표태그 span
+                width, height 적용불가
+                margin,padding 일부 불가
+                line-height 제대로 사용 불가
+                
+                block:
+                대표태그 div
+                inline과 반대 특징
+                기본적으로 100%의 너비를 차지 (한 줄). 다음 태그는 줄 바꿈 적용
+
+                inline-block:
+                둘 다의 속성 가짐
+                width, height, margin, padding 적용 가능
+                줄바꿈 X
+                */
+        }
+        
+        li{
+            list-style: none;
+            float: left;
+            padding: 0 80px;
+            border: 0px solid;
+        }
+        li::after{
+            content: "|";
+            color: red;
+            font-weight: 600;
+            float: right;
+            margin-right: -90px;
+        }
+        li:last-child::after{
+            content: "";
+        }
+
+    </style>
+</head>
+<body>
+    <div style="background-color: red; display: inline;">대한민국</div><div style="background-color: green;">Korea</div>
+    <!-- 예제 3 -->
+    <div id="footer">
+        <footer>
+            <ul>
+                <li>회사소개</li>
+                <li>이용약관</li>
+                <li>자주 묻는 질문</li>
+                <li>제휴문의</li>
+                <li>사이트맵</li>
+            </ul>
+        </footer>
+    </div>
+    <!-- //예제 3 -->
+
+</body>
+</html>

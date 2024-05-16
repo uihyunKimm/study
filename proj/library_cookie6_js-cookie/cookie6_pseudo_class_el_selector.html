@@ -37,9 +37,43 @@
     </style>
     <body>
         <!-- 예제 1 -->
-        <a href="example.html">가상 클래스</a>
         <style>
-            a:link {color: red;}
+            a:link {color: red; text-decoration: none;}
+            a:hover {color: blue; text-decoration: underline;}
+            a:active {color: yellow;}
+            a:visited {color: green;}
+            a:focus {background-color: #000; color: yellowgreen;}
+            input:last-child:focus {background-color: aqua;}
+            input:focus {background-color: red; color: #fff;}
         </style>
+        <a href="#">가상 클래스</a>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+
+        <!-- 예제 2 -->
+        <style>
+            .test {border: 1px solid}
+            .test ul li:first-child {font-weight: bold;color: blue;}
+            .test ul li:first-child::first-letter {font-weight: bold; color: red; font-size:200%}
+            
+            .test2::first-line {background-color: green; color: #fff;font-weight: bold;font-size: 200%;}
+            .test2::before {content: url(https://media.istockphoto.com/id/598565838/ko/%EC%82%AC%EC%A7%84/%EB%A1%9C%EC%A6%88%EB%8A%94-%EB%B9%99%EC%82%B0%EC%9D%B4%EB%9D%BC%EA%B3%A0-%EB%B6%88%EB%A0%80%EB%8B%A4.jpg?s=612x612&w=0&k=20&c=NUmjgwPTBoDc1eDIMKLoHTw-fHoQL1bSnkuW-OPwp9M=)}
+            .test2::after {content: url(https://media.istockphoto.com/id/598565838/ko/%EC%82%AC%EC%A7%84/%EB%A1%9C%EC%A6%88%EB%8A%94-%EB%B9%99%EC%82%B0%EC%9D%B4%EB%9D%BC%EA%B3%A0-%EB%B6%88%EB%A0%80%EB%8B%A4.jpg?s=612x612&w=0&k=20&c=NUmjgwPTBoDc1eDIMKLoHTw-fHoQL1bSnkuW-OPwp9M=)}
+            /* before, after -->content 에서는 사이즈 조정 불가
+                backgroud-image 로 조절
+            */
+            .btnClose::before {content:"❌";}
+        </style>
+        <p class="btnClose">창 닫기</p>
+        <br><br>
+        <div class="test">
+            <ul>
+                <li>영화보니 기분 좋다</li>
+                <li>보는 내내 뭐가뭐가 좋았다</li>
+                <li>한국 영화 좋다</li>
+            </ul>
+        </div>
+        <p class="test2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </body>
 </html>
