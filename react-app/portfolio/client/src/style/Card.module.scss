@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    padding-top: 2rem;
+    justify-content: center;
+
+    .cardcontainer {
+        width: 340px; height: 220px;
+        transition: all 0.1s;
+        box-shadow: 10px 10px 20px #101170;
+    }
+    .card{
+        height: 100%;
+        background: url(https://i.ibb.co/5TMSQ8r/cd-Check-BGNDB7.png) center;      
+        background-size: cover;
+    }
+
+}

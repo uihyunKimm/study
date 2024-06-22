@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://websfont.github.io/gmarket/gmarket.css");
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+// setting
+@import "setting/fonts";
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+
+// section
+@import "Header";
+@import "Home";
+@import "Skill";
+@import "Site";
+@import "Port";
+@import "Contact";
+@import "Footer";
+
+:root {
+    --mainEng-font: "Montserrat";
+    --mainKor-font: "Spoqa Han Sans Neo";
+    --mainNum-font: "gmarket";
+  
+    --mainBg-color: #f3ede8;
+    --subBg100: #969aff;
+    --subBg200: #a1a4ff;
+    --subBg300: #b2b4ff;
+    --subBg400: #c5c7ff;
+    --subBg500: #a6afa2;
+  
+    --white: #fff;
+    --white2: #b2b4ff;
+    --white3: #6267ff;
+    --black: #000;
+    --black100: #2b2b2b;
+    --black200: #434343;
+    --black300: #686868;
+    --black400: #e0e0e0;
+  
+    /* 기본 폰트 설정 */
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+body {
+    color: var(--black100);
+    background-color: var(--mainBg-color);
+}
+.container {
+    padding: 0 5%;
+    flex: 1;
+}
