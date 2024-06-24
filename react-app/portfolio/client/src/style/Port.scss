@@ -115,6 +115,19 @@
                     color: var(--white);
                 }
             }
+            .site2 {
+                border: 1px solid var(--black100);
+                display: block;
+                text-align: center;
+                padding: 0.625rem 1.5rem;
+                margin-top: 1.5rem;
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: var(--black100);
+                    color: var(--white);
+                }
+            }
         }
     }
 }
