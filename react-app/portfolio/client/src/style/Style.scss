@@ -62,9 +62,15 @@
     }
 }
 
-body {
-    color: var(--black100);
-    background-color: var(--mainBg-color);
+#main {
+    $primary-color: #242595 !global;
+    background: radial-gradient( #6969fc 10%, #0c0e7c 80% );
+    }
+
+.wrap {
+    padding-top: 160px;
+    display: block;
+    position: relative;
 }
 .container {
     padding: 0 5%;

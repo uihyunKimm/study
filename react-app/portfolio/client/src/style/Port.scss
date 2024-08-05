@@ -7,24 +7,26 @@
     padding: 16px;
 
     .port__title {
-        width: 100%;
+        position: sticky;
+        top: 10rem;
+        left: 0;
+        width: 70%;
         height: 5vw;
         font-size: 4vw;
         font-weight: 900;
         line-height: 1.6;
-        font-family: var(--mainKor-font);
+        font-family: 'Spoqa Han Sans Neo';
         text-transform: uppercase;
-        color: var(--black100);
-        border-bottom: 0.4vw solid var(--black100);
-        margin-bottom: 16px;
-        text-indent: -0.26vw;
-
-        em {
-            font-size: 1.25rem;
-            font-weight: 400;
-            line-height: 2;
-        }
+        color: #fff;
+        border-bottom: 0.1vw solid #b2b4ff;
+        margin-bottom: 100px;
     }
+    .port__title em {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 2;
+    }
+
     .port__wrap {
         display: flex;
         flex-wrap: wrap;

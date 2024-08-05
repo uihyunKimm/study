@@ -31,15 +31,15 @@ body {
     display: flex;
     flex-direction: column;
     
-    .title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100rem;
-    }
 }
 
 
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rem;
+}
 .title_inner{
     opacity: 1;
     position: absolute;
